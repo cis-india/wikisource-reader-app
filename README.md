@@ -1,6 +1,6 @@
-# Landing page for Wikimedia Commons Mobile App
+# Website for Wikisource Reader App
 
-This is the landing page for the [Wikimedia Commons Mobile App](https://github.com/commons-app/apps-android-commons). You can visit it at: https://commons-app.github.io/
+This is the website for the [Wikisource Reader App](https://github.com/cis-india/Wikisource-Reader). You can visit it at: [cis-india.github.io/wikisource-reader-app/](https://cis-india.github.io/wikisource-reader-app/)
 
 ## Contributing
 
