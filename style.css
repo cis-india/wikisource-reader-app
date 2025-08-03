@@ -126,8 +126,8 @@ body {
 /* Jumbotron */
 
 .jumbotron {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg');
-    background-position: center top;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1024px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg');
+    background-position: center center;
     background-size: cover;
     color: #fff;
 }
