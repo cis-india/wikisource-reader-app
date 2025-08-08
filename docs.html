@@ -34,37 +34,30 @@
     <div class="container text-left my-3" id="docs">
         
         <h2 id="language-fallback"><a href="#language-fallback">What is Wikisource Reader?</a></h2>
-        <p>Wikisource Reader app is a mobile application built for Android users to read public domain and copyright free contents which are hosted in the open and free digital library website of Wikisource, which is an extensive online repository of copyright-free pre-published texts and media resources in various languages of the world, which are transcribed and proofread by a vibrant community. Its diverse content encompasses books, scholarly articles, speeches, newspapers, periodicals, manuscripts etc. that are not subject to copyright restrictions and serves as a valuable resource for students, educators, researchers, and anyone seeking access to public domain materials.</p>
+        <p>Wikisource Reader app is a free and open-source mobile application built for Android users to read public domain and copyright free contents which are hosted in the open and free digital library website of Wikisource, which is an extensive online repository of copyright-free pre-published texts and media resources in various languages of the world, which are transcribed and proofread by a vibrant community. Its diverse content encompasses books, scholarly articles, speeches, newspapers, periodicals, manuscripts etc. that are not subject to copyright restrictions and serves as a valuable resource for students, educators, researchers, and anyone seeking access to public domain materials.</p>
         
-        <h2 id="geotagging"><a href="#geotagging">Location</a></h2>
-        <p>Pictures with geolocation data are much more valuable, so please enable geotagging in your camera app. Here is how to do on Pixel phones: tap on the settings button at the bottom-left of the camera main screen, tap "More settings", enable "Save location". In other camera apps it may be  labelled <b>Location (tags)</b> or <b>GPS (tags)</b>.</p>
-        <p>If your phone's GPS is slow to start, before taking pictures considering launching the free <a href="https://play.google.com/store/apps/details?id=com.silentlexx.gpslock">GPS Locker</a> app. It will prevent the GPS from going to sleep. Please be aware that it consumes battery power, though.</p>
-        <p>If the Commons app tells you that pictures do not have location, even though you took them after enabling location in your camera app, then follow these steps:</p>
+        <h2 id="selection"><a href="#selection">Which books can be found on Wikisource?</a></h2>
+        <p>The app displays public domain and copyright free texts which are available on Wikisource. But the Wikisource community has to follow certain steps on Wikisource website to have the contents displayed in the app.</p>
         <ol>
-            <li>In the Commons Android app's settings, enable "Use document based photo picker".</li>
-            <li>Install an EXIF viewer app and check whether the pictures actually have location or not. Some galleries also can show a map if location is present, for instance on the Google Photos app this is achieved by swiping up. If there is no location, try a different camera app.</li>
-            <li>If that does not fix the issue, try uninstalling and reinstalling the Commons Android app.</li>
-            <li>If that still does not fix the issue, try resetting cache and storage of both your camera app and your gallery app. Do not forget to turn on "save location" on the camera app.</li>
+            <li>Digitised copy of the selected copyright-free content needs to be uploaded on Wikimedia sites.</li>
+            <li>There should be corresponding index pages on Wikisource.</li>
+            <li>The digitized contensts should be completley transcribed and proofread.</li>
+            <li>The proofread contents should be completely transcluded with divisions of chapters, if any.</li>
+            <li>The descriptive metadata of the transcluded contens should be stored on Wikidata following <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> its bibliographic data model</a> with the following linkages on respective Wikidata items.</li>
+                <ol type="a">
+                    <li>Wikisource sitelink of transcluded page with proofread or validated badges.</li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P1476"> title (P1476)</a> in native language</li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P407"> language of work or name (P407)</a></li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P50"> author(s) (P50)</a></li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P655"> translator(s) (P655)</a>, if any</li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P98"> editor(s) (P98)</a>, if any</li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P123"> publisher (P123)</a>, if any</li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P291"> place of publication (P291)</a></li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P577"> date of publication (P577)</a></li>
+                    <li><a href="https://www.wikidata.org/wiki/Property:P1957"> Wikisource index page url (P1957)</a></li>
+                </ol>
         </ol>
-        <p>Even if you add location to a picture in Google Photos, that location is not readable by other apps such as Commons (see the "Share a photo with a location" section of <a href="https://support.google.com/photos/answer/6153599">this Google Photos Help Center article</a>).</p>
         
-        <h2 id="need-to-be-anonymous"><a href="#need-to-be-anonymous">Need to be anonymous?</a></h2>
-        <p>Pictures you upload may lead to your identity. Let's say you live under a dictatorship and take a picture revealing leaders corruption: you want to upload the picture to Commons but you probably do not want to be identified as the photographer or as the uploader. Below are a few steps you can take to reduce the risks of being identified, but remember that zero risk does not exist.</p>
-        <ol>
-            <li>Use a VPN.</li>
-            <li>Remove the EXIF from your picture. Only a few persons on Earth use the same camera model, same firmware version, same settings as you, and all of this information is available in the EXIF, making it easy to link from this picture to your other pictures. The application <a href="https://gitlab.com/juanitobananas/scrambled-exif">Scrambled Exif</a> (<a href="https://f-droid.org/packages/com.jarsilio.android.scrambledeggsif/">F-Droid</a> , <a href="https://play.google.com/store/apps/details?id=com.jarsilio.android.scrambledeggsif">Google Play</a> ) makes the process easy.</li>
-            <li>Create a throwaway Wikimedia account without an email address, and only use it for that picture or set of pictures. Then afterwards avoid modifying these pictures with your usual account.</li>
-            <li>Even lens/camera imperfections might theoretically allow a very motivated organization to match your pictures.</li>
-        </ol>
-
-        <h2 id="editing"><a href="#editing">Editing your picture before upload</a></h2>
-        <p>Most editors degrade picture quality, making pictures less accurate <b>and</b> bigger in file size. If you need to edit a picture before upload, please try to only use <a href="https://github.com/lossless-jpg/data#readme">lossless JPEG editors</a>.</p>
-        <p><a href="https://play.google.com/store/apps/details?id=jp.kame.jpegcropper">JPEG Cropper</a> allows lossless rotation, lossless cropping, and even lets you blur parts of a picture without recompressing the surrounding areas.</p>
-        <p>Between taking a picture and uploading it, please do not apply color filters, flip horizontally/vertically, add stickers/text, nor apply any restoration/AI/upscaling. Such operations lose original data. If you really want to apply such transformations, please upload the original first, then upload the transformed picture as a new version using <a href="https://commons.wikimedia.org">the desktop website</a>.</p>
-
-        <h2 id="fixing-errors-in-nearby"><a href="#fixing-errors-in-nearby">Fixing errors in Nearby</a></h2>
-        <p>Nearby is a fantastic way to find interesting places. But imagine that you go to the place pinned on the map, and it is not at all what was expected? In such cases, fixing the problem is very important, and you can do it easily! It will benefit not only Commons but also all other Wikimedia projects and in particular Wikipedia. Here is how to proceed:</p>
-
         <h3 id="obsolete-items"><a href="#obsolete-items">Obsolete items</a></h3>
         <p><b>Scenario</b>: Yes there used to be a castle here, but now there is absolutely nothing left, maybe it is just green fields or a factory or recent houses. There is not even a plaque indicating that there used to be a castle.</p>
 
