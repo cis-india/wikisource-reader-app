@@ -69,141 +69,19 @@
 
         <p>The books are categorized based on their literary forms which are stored on Wikidata. The literary forms, which are available for categorization in the apps are
             
-            <ul>Novels</ul>
-            <ul>Plays</ul>
-            <ul>Poetry</ul>
-            <ul>Short Stories</ul>
-            <ul>Narration</ul>
-            <ul>Essays</ul>
-            <ul>Dictionaries</ul>
-            <ul>Encyclopedias</u>
+            <ul>
+                <li>Novels</li>
+                <li>Plays</li>
+                <li>Poetry</li>
+                <li>Short Stories</li>
+                <li>Narration</li>
+                <li>Essays</li>
+                <li>Dictionaries</li>
+                <li>Encyclopedias</li>
+            </ul>
 
         <p>It is important that the Wikidata statements for the literary forms are stored in the items for <a href="https://www.wikidata.org/wiki/Q7725634">literary works</a> and not in the items for <a href="https://www.wikidata.org/wiki/Q3331189">version, edition or translation</a> as compliant with the <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> Wikidata's bibliographic data model</a> </p>
-            
-        <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Wikidata_screenshot_-_Add_statement.png" alt="">
-        <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Wikidata_screenshot_-_select_%22ended%22_property.png" alt="">
-        <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Wikidata_screenshot_-_date.png" alt="">
-        <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Wikidata_screenshot_-_custom-no-unknown_value_menu.png" alt="">
-        <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Wikidata_screenshot_-_unknown_value.png" alt="">
-
-        <h3 id="wrong-coordinates"><a href="#wrong-coordinates">Wrong coordinates</a></h3>
-        <p><b>Scenario</b>: The pin shows the "Bodleian Library" here, but actually you know this library it is at a different place, maybe 10 meters across the street or even a few kilometers away. Make sure your GPS is correct, and double-check locations.</p>
-
-        <p><b>How to fix it</b>: With the place selected, tap the bottom bar that shows the place name. In the toolbar that appears, tap the Wikidata icon (which looks like a barcode). As the mobile Wikidata website does not allow statements edition, either open that page on a desktop web browser (via the "<i>Share</i>" button) or go to the three-dots menu and open the page in your web browser app, enable Desktop mode, and remove the "<i>m.</i>" part from the URL. On the Wikidata item's page, find the "<i>coordinate location</i>" statement, click its "<i>edit</i>" button, and click on what looks like a grey point surrounded by two white triangles, at the left. It will popup the rank selector, select "<i>Deprecated rank</i>". Then click "<i>add value</i>" and enter the right location (most latitude/longitude formats are accepted), and click the "<i>publish</i>" button. Finally, go to the talk page and explain why you think this is the real location. Erroneous data often comes from external databases, deprecating rather than replacing gives these databases valuable feedback and prevents the erroneous data from being imported again into Wikidata.</p>
-
-        <h2 id="nearby-query"><a href="#nearby-query">Customizing the Nearby query</a></h2>
-        <p>You can customize the Nearby query to show things that interest you, show labels in your preferred languages, etc. The Nearby query is written in SPARQL, which is very powerful but also hard to debug. We suggest you start from the default query and modify things little by little. The good news is that you can always go back to the default: just reset and apply. You can copy/paste various queries as text files or email drafts and paste the one you want to use when the need arises.</p>
-        <p>The names of the outputs can not be changed.</p>
-        <p>Variable names are replaced by the app before executing the query.</p>
-        
-        <h2 id="app-versions"><a href="#app-versions">App versions</a></h2>
-        <p>To know what version of the app you are using, open the "About" dialog and check the string immediately below the "Commons" title.</p>
-        <p>This string also tells you what channel you are using:</p>
-        <ol>
-            <li>Stable if the version string contains one dot. Example: 3.0</li>
-            <li>Beta if the version string contains two dots. Example: 3.0.1</li>
-            <li>Alpha if the version string contains three dots. Example: 3.0.1.1019</li>
-        </ol>
-        <p>If you want to switch back to a previous version, please <a href="https://github.com/commons-app/apps-android-commons/releases">download the source of the corresponding version</a> and <a href="https://github.com/commons-app/commons-app-documentation/blob/master/android/Quick-start-guide-for-Developers.md#building-the-source-code">build the 'prod' flavor of the APK</a> and install it (you may need to uninstall first).</p>
-
-        <h2 id="getting-app-logs-from-android-studio"><a href="#getting-app-logs-from-android-studio">Getting app logs from Android Studio</a></h2>
-        <p>How to get app logs if you encounter an issue:</p>
-        <ol>
-            <li>On your computer, <a href="https://developer.android.com/studio/">download</a> and <a href="https://developer.android.com/studio/install">install</a> Android Studio.</li>
-            <li>On your phone, <a href="https://developer.android.com/studio/debug/dev-options#enable">enable developer options and USB debugging</a>.</li>
-            <li>Connect your phone to your computer with a USB cable.</li>
-            <li><a href="https://developer.android.com/studio/debug/am-logcat#running">View the logs</a>.</li>
-        </ol>
-        
-        <h2 id="get-content"><a href="#get-content">What is Document based picker?</a></h2>
-        <p>The Commons app lets you pick what picture(s) you want to upload, using either the camera button or what we call a "picker". The "custom picker" has an icon that includes a small Commons logo, because it has Commons-specific features such as checking whether a picture exists on the Commons server or not. The "normal picker" now has two variants: the "Document based picker" and the "Media picker" (you may choose your favourite variant from Settings). To sum up, the app now has 3 pickers:</p>
-        <p>
-            <ul>
-                <li>The custom picker that you may use in the Contributions tab:</li>
-                <center>
-                    <figure>
-                         <img src="images/custom_picker.jpeg" height="400">
-                         <figcaption>Custom Picker</figcaption>
-                     </figure>
-                </center>
-                <li>The Document based picker that you may use in the Contributions and Nearby tabs:</li>
-                <center>
-                    <figure>
-                         <img src="images/classic_picker.png" height="400">
-                         <figcaption>Document based picker</figcaption>
-                     </figure>
-                </center>
-                <li>The media picker that you may try in the Contributions and Nearby tab, it varies from device to device:
-                    <center>
-                        <figure>
-                            <img src="images/get_content_picker_without_takeover.png" height="400">
-                            <figcaption>The traditional media picker (does not strip location)</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/get_content_picker_with_takeover.png" height="460">
-                            <figcaption>The new media picker (strips location)</figcaption>
-                        </figure>
-                    </center>
-                </li>
-            </ul>
-        </p>
-
-        <h4>How is the new media picker (a.k.a new Android picker) different from the Document based picker?</h4>
-        <p>Android recently introduced a new photo picker for devices having Android 11 or higher. Unfortunately, this photo picker removes location tags from the EXIF metadata of images.</p> 
-        <p>In order to preserve location information, we decided to go with the Document based picker by default and skipped the new Android picker.</p>
-        
-        <p>To summarize the advantages and disadvantages:</p>
-
-        <p><b>Media Picker:</b>
-            <ul>
-                <li><b>Merits:</b> The traditional media picker lists all image providers as marked in red in the figure above, user-friendly interface. You may open the traditional media picker within the new media picker via "Browse" by following the steps mentioned in the next section.</li>
-                <li><b>Demerit:</b> The new media picker removes location tags from EXIF metadata.</li>
-            </ul>
-        </p>
-        <p><b>Document based Picker:</b>
-            <ul>
-                <li><b>Merit:</b> Preserves location tags on all devices.</li>
-                <li><b>Demerit:</b> Only allows selection from within the app and Google Drive, no third-party image providers displayed.</li>
-            </ul>
-        </p>
-        <p>You may like to use the Document based picker when:</p>
-        <ul>
-            <li>You want to share the location information present in the EXIF metadata of the images</li>
-            <li>You choose images from within the file picker and do not use any other Gallery app providers</li>
-        </ul>
-        <p>You may like to use the media picker when:</p>
-        <ul>
-            <li>You love sharing images from third-party Gallery apps and other such providers and prefer the existing UI</li>
-            <li>You are using a device in which the media picker does not strip location. Please refer to the images above to identify if your media picker strips location.</li>
-            <li>You do not wish to share the location information in the EXIF metadata and want to use the new Android picker.</li>
-        </ul>
-
-        <h4>Can we enjoy the third-party Gallery apps even while using the new Android photo picker?</h4>
-        <p>Absolutely yes! You can either use 'Browse' within the new Android picker or disable the "takeover" on your device by running a simple command. This will enable the app to display all image providers, allowing you to use them within the app.</p>
-        <h5>Method 1: Using 'Browse' within the new Android picker</h5>
-        <p1>To open the system file picker with all the third-party Gallery apps listed, follow the steps given below:</p1>
-        <ol>
-            <li>Ensure that the new Android picker is enabled in the Settings.</li>
-            <li>Open the normal picker. This will open the new Android picker for you.</li>
-            <li>Tap the options icon (the three-dots at the top right corner).</li>
-            <li>Click Browse.</li>
-                <img src="images/new_android_picker_browse.gif" height="400">
-            <li>Tap the hamburger icon (the three horizontal bars on the top left corner).</li>
-        </ol>
-        <p>You can now enjoy all the third-party apps without losing image location!</p>
-        <h5>Method 2: Using adb commands</h5>
-        <p>To run the adb commands, follow these steps:</p>
-        <ol>
-            <li>Enable developer options and USB debugging on your phone.</li>
-            <li>Connect your phone to your computer using a USB cable.</li>
-            <li>Open the terminal on your computer.</li>
-            <li>To ensure that your phone is connected to the adb server, run the following command:</li>
-            <pre><code>adb devices -l</code></pre>
-            <li>Once you have confirmed the connection, execute the following command to disable the takeover:</li>
-            <pre><code>adb shell cmd device_config put storage_native_boot take_over_get_content false</code></pre>
-        </ol>
-        <p>Now you can easily access all the image providers without losing picture locations while using the new Android picker!</p>
-
+       
         <p align="right"><i><a href="https://github.com/commons-app/commons-app.github.io/blob/master/docs.html">Edit this page</a></i></p>
     </div>
 
