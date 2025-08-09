@@ -37,7 +37,7 @@
         <p>Wikisource Reader app is a free and open-source mobile application built for Android users to read public domain and copyright free pre-published contents in various languages of the world, which are hosted in the open and free digital library website of Wikisource. The digitized contents on Wikisoruce are transcribed and proofread by a vibrant community to make them freely and openly accessible and searchable for everyone to read. Wikisource Reader App is a step further to make these contents available for android mobile users.</p>
 
         <h2 id="who"><a href="#who">Who are behind the app?</a></h2>
-        <p><a href="https://meta.wikimedia.org/wiki/CIS-A2K">Centre for Internet and Society (CIS)</a> was approached to sponsor the development of the app by September 2024, which sponsored the early development of the app until March 2025. The app has been developed by <a href="https://meta.wikimedia.org/wiki/User:Saiphani02"> Sai Phanindra</a> and <a href="https://meta.wikimedia.org/wiki/User:Bodhisattwa">Bodhisattwa</a>, who have been developing the app from the start and now in their volunteer capacity, since March 2025. CIS is hosting the app on Google Play store.</p>
+        <p><a href="https://meta.wikimedia.org/wiki/CIS-A2K">Centre for Internet and Society (CIS)</a> was approached to support the development of the app by September 2024, which sponsored the early development of the app until March 2025. The app has been developed by <a href="https://meta.wikimedia.org/wiki/User:Saiphani02"> Sai Phanindra</a> and <a href="https://meta.wikimedia.org/wiki/User:Bodhisattwa">Bodhisattwa</a> from the start and they continues to work in their volunteer capacity, since March 2025. CIS is hosting the app on Google Play store.</p>
 
         <h2 id="selection"><a href="#selection">Which books can be found on Wikisource?</a></h2>
         <p>The app displays public domain and copyright free texts which are available on Wikisource. But the Wikisource community has to follow certain steps on Wikisource website to have the contents displayed in the app.</p>
@@ -60,7 +60,26 @@
                     <li><a href="https://www.wikidata.org/wiki/Property:P1957"> Wikisource index page url (P1957)</a></li>
                 </ol>
         </ol>
-    
+
+        <h2 id="metadata-api"><a href="#metadata-api">How are the books catalogued?</a></h2>
+
+        <p>An <a href="https://wsindex.toolforge.org/books/">API<a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://codeberg.org/ph4ni/wsindex">here</a></p>
+
+        <h2 id="metadata-api"><a href="#metadata-api">How are the books categorized in the app?</a></h2>
+
+        <p>The books are categorized based on their literary forms which are stored on Wikidata. The literary forms, which are available for categorization in the apps are
+            
+            <ul>Novels</ul>
+            <ul>Plays</ul>
+            <ul>Poetry</ul>
+            <ul>Short Stories</ul>
+            <ul>Narration</ul>
+            <ul>Essays</ul>
+            <ul>Dictionaries</ul>
+            <ul>Encyclopedias</u>
+
+        <p>It is important that the Wikidata statements for the literary forms are stored in the items for <a href="https://www.wikidata.org/wiki/Q7725634">literary works</a> and not in the items for <a href="https://www.wikidata.org/wiki/Q3331189">version, edition or translation</a> as compliant with the <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> Wikidata's bibliographic data model</a> </p>
+            
         <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Wikidata_screenshot_-_Add_statement.png" alt="">
         <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Wikidata_screenshot_-_select_%22ended%22_property.png" alt="">
         <img class="shadow my-2 img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Wikidata_screenshot_-_date.png" alt="">
