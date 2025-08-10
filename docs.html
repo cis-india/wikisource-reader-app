@@ -65,13 +65,13 @@
 
         <p>An <a href="https://wsindex.toolforge.org/books/">API<a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://codeberg.org/ph4ni/wsindex">here</a></p>
 
-        <h2 id="metadata-api"><a href="#metadata-api">What languages are supported in the app?</a></h2>
+        <h2 id="language"><a href="#language">What languages are supported in the app?</a></h2>
 
         <p>The app can support books written in any languages, however, in order to be displayed in the app, it is important that the descriptive metadata follow the above mentioned steps. After fullfiling above mentioned criteria, addition of new languages can be <a href="https://github.com/cis-india/Wikisource-Reader/issues">requested here.<a></p>
             
         <p>The languages which are currently supported in the app are Assamese, Bangla, Czech, Danish, English, Spanish, French, Hindi, Indonesian, Italian, Javanese, Marathi, Malay, Polish, Punjabi, Swedish, Tamil, Telugu, Ukrainian and Vietnamese.</p>
             
-        <h2 id="metadata-api"><a href="#metadata-api">How are the thumbnails of the books generated?</a></h2>
+        <h2 id="thumbnail"><a href="#thumbnail">How are the thumbnails of the books generated?</a></h2>
 
         <p>The thumbnails can be generated in either of the following two ways.</p>
 
@@ -80,7 +80,7 @@
             <li><a href="https://www.wikidata.org/wiki/Property:P4714"> title page number (P4714)</a> added as a qualifier to the value of <a href="https://www.wikidata.org/wiki/Property:P996"> document file on Wikimedia Commons (P996)</a></li>
         </ol>
             
-        <h2 id="metadata-api"><a href="#metadata-api">How are the books categorized in the app?</a></h2>
+        <h2 id="categorization"><a href="#categorization">How are the books categorized in the app?</a></h2>
 
         <p>The books are categorized based on their literary forms which are stored on Wikidata. The literary forms, which are available for categorization in the apps are
             
@@ -97,9 +97,13 @@
 
         <p>It is important that the Wikidata statements for the literary forms are stored in the items for <a href="https://www.wikidata.org/wiki/Q7725634">literary works</a> and not in the items for <a href="https://www.wikidata.org/wiki/Q3331189">version, edition or translation</a> as compliant with the <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> Wikidata's bibliographic data model</a> </p>
 
-        <h2 id="metadata-api"><a href="#metadata-api">What is the book format and how is it generated?</a></h2>
+        <h2 id="format"><a href="#format">What is the book format and how is it generated?</a></h2>
 
         <p>The books are displayed in <a href="https://en.wikipedia.org/wiki/EPUB">EPUB format</a>, a popular e-book format designed for book readers. The files are generated through <a href="https://ws-export-app.wmcloud.org/">WS-Export tool</a>. Issues related to EPUB file generation can be reported <a href="https://phabricator.wikimedia.org/tag/ws_export/">Wikimedia Phabricator.</a> 
+
+        <h2 id="reading"><a href="#reading">What is behind the reading experience of the app?</a></h2>
+
+        <p>The interface of the app is built upon <a href="https://github.com/Pool-Of-Tears/Myne/">Myne app</a> developed by <a href="https://krsh.dev/">Shivam</a> and <a href="https://github.com/readium/kotlin-toolkit">Readium mobile</a> by <a href="https://www.edrlab.org/software/readium-mobile/">The European Digital Reading Lab (EDRLab)</a> is used for the actual reading experience in the Wikisource reader app.</p>
             
         <p align="right"><i><a href="https://github.com/commons-app/commons-app.github.io/blob/master/docs.html">Edit this page</a></i></p>
     </div>
