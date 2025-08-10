@@ -64,21 +64,30 @@
         <h2 id="metadata-api"><a href="#metadata-api">How are the books catalogued?</a></h2>
 
         <p>An <a href="https://wsindex.toolforge.org/books/">API<a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://codeberg.org/ph4ni/wsindex">here</a></p>
-    
+
+        <h2 id="metadata-api"><a href="#metadata-api">How are the thumbnails of the books generated?</a></h2>
+
+        <p>The thumbnails can be generated in the following two ways.</p>
+
+        <ol>
+            <li><a href="https://www.wikidata.org/wiki/Property:P18"> image (P18)</a> added to the Wikidata item of the edition; or,</li>
+            <li><a href="https://www.wikidata.org/wiki/Property:P4714"> title page number (P4714)</a> added as a qualifier to the value of <a href="https://www.wikidata.org/wiki/Property:P996"> document file on Wikimedia Commons (P996)</a></li>
+        </ol>
+            
         <h2 id="metadata-api"><a href="#metadata-api">How are the books categorized in the app?</a></h2>
 
         <p>The books are categorized based on their literary forms which are stored on Wikidata. The literary forms, which are available for categorization in the apps are
             
-            <ul>
-                <li>Novels</li>
-                <li>Plays</li>
-                <li>Poetry</li>
-                <li>Short Stories</li>
-                <li>Narration</li>
-                <li>Essays</li>
-                <li>Dictionaries</li>
-                <li>Encyclopedias</li>
-            </ul>
+        <ul>
+            <li>Novels</li>
+            <li>Plays</li>
+            <li>Poetry</li>
+            <li>Short Stories</li>
+            <li>Narration</li>
+            <li>Essays</li>
+            <li>Dictionaries</li>
+            <li>Encyclopedias</li>
+        </ul>
 
         <p>It is important that the Wikidata statements for the literary forms are stored in the items for <a href="https://www.wikidata.org/wiki/Q7725634">literary works</a> and not in the items for <a href="https://www.wikidata.org/wiki/Q3331189">version, edition or translation</a> as compliant with the <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> Wikidata's bibliographic data model</a> </p>
        
