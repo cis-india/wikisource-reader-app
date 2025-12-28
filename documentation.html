@@ -33,7 +33,126 @@
     </nav>
 
     <div class="container text-left my-3" id="docs">
-        
+        <h2 id="docs_title"><a href="#docs_title">Wikisource Reader Docs</a></h2>
+        <p>Welcome to Wikisource Reader app documentation!</p>
+
+        <h2 id="docs_what"><a href="#docs_what">What is Wikisource Reader?</a></h2>
+        <p>Wikisource Reader app is a free and open-source mobile application built for Android users to read public domain and copyright free pre-published contents in various languages of the world, which are hosted in the open and free digital library website of Wikisource. The digitized contents on Wikisoruce are transcribed and proofread by a vibrant community to make them freely and openly accessible and searchable for everyone to read. Wikisource Reader App is a step further to make these contents available for android mobile users.</p>
+                
+        <h2 id="docs_usage"><a href="#docs_usage">How to use the docs</a></h2>
+        <p>The docs are organized into 2 sections:</p>
+
+        <ol>
+            <li><a href="#api"> WSIndex </a> which is an API built in Django </li>
+            <li><a href="#android"> Wikisource Reader App </a> which is an Android Application Built in Kotlin</li>
+        </ol>
+
+        <h3 id="api"><a href="#api">WSIndex</a></h3>
+        <p>Wikisource catalog API for proofread and validated books. Loosely based on <a href="https://github.com/garethbjohnson/gutendex">https://github.com/garethbjohnson/gutendex </a></p>
+        <p>This is a simple API which gets data from Wikidata following the Books Data Model for Wikisource works.</p>
+        <p>Source Code : <a href="https://codeberg.org/ph4ni/wsindex"> https://codeberg.org/ph4ni/wsindex </a> </p>
+        <p>Hosted on toolforge at: <a href="https://wsindex.toolforge.org/books/"> https://wsindex.toolforge.org/books/ </a> </p>
+
+        <h5 id="technologies_api" href="#technologies_api" class="font-weight-bold font-italic">Built With: </h5>
+        <p>The following core technologies were used to build this application:</p>
+        <ul>
+            <li>Python ^3.10 - The primary programming language.</li>
+            <li>Django ^5.1.3 - The high-level Python Web framework.</li>
+        </ul>
+
+        <h5 id="geting_started_api" href="#geting_started_api" class="font-weight-bold font-italic"> Getting Started Locally:</h5>
+        <p>Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.</p>
+
+        <h5 id="Prerequisites_api" href="#Prerequisites_api" class="font-weight-bold font-italic"> Prerequisites: </h5>
+        <p>You will need to ensure your system meets the following requirements:</p>
+
+        <ul>
+            <li>Hardware Requirements</li>
+            <ol>
+                <li> RAM: 4GB or higher </li>
+                <li> Storage: 20GB or more of free space </li>
+            </ol>
+
+            <li> Supported Operating Systems </li>
+            <ol>
+                <li>Windows: 10+ </li>
+                <li> Linux: Kernel 3.8+ </li>
+                <li> MacOS: X 10.7+ </li>
+            </ol>
+
+            <li> Software Environment </li>
+            <ol>
+                <li> Python: version 3.10 or above </li>
+                <li> Environment: A tool to manage your python environment (e.g., virtualenv, venv) </li>
+            </ol>
+        </ul>
+
+        <h5 id="running_api_locally" href="#running_api_locally" class="font-weight-bold font-italic"> Running project Locally: </h5>
+        <p>To run wsindex locally, create a fork of the following repository <a href="https://codeberg.org/ph4ni/wsindex">https://codeberg.org/ph4ni/wsindex</a> to your codeberg account then follow these steps: </p>
+
+        <ol>
+            <li>
+                <p><strong>Clone the Repository</strong></p>
+                <p>Replace <code>YOUR_USERNAME</code> with your actual Codeberg username.</p>
+                <pre><code>git clone ssh://git@codeberg.org/YOUR_USERNAME/wsindex.git</code></pre>
+                <pre><code>cd wsindex </code> </pre>
+                        
+            </li>
+
+            <li>
+            <p><strong>Initialize and Activate Virtual Environment</strong></p>
+            <pre><code># Initialize virtual environment: </code> </pre>
+            <pre><code>virtualenv venv </code> </pre>
+            <pre><code># For Linux/macOS: </code> </pre>
+            <pre><code>source venv/bin/activate </code> </pre>
+            <pre><code># For Windows: </code> </pre>
+            <pre><code>.\venv\Scripts\activate </code> </pre>
+            </li>
+
+            <li>
+                <strong>Install Dependencies</strong>
+                <pre><code>pip install -r requirements.txt</code></pre>
+            </li>
+
+            <li>
+            <p><strong>Replace the database settings in wsindex/settings.py with the following for a lightweight SQLite database:</strong></p>
+            <pre><code>DATABASES = {</code></pre>
+            <pre><code>    'default': {</code></pre>
+            <pre><code>        'ENGINE': 'django.db.backends.sqlite3',</code></pre>
+            <pre><code>        'NAME': BASE_DIR / 'db.sqlite3',</code></pre>
+            <pre><code>    } </code></pre>
+            <pre><code>} </code></pre>
+            </li>
+
+            <li>
+                <p><strong>Apply Database Migrations</strong></p>
+                <pre><code>python manage.py migrate</code></pre>
+            </li>
+
+            <li>
+                <p><strong>Import Books from Wikidata</strong></p>
+                <pre><code>python manage.py updatecatalog</code></pre>
+            </li>
+
+            <li>
+                <p><strong>Run Local Server</strong></p>
+                <pre><code>python manage.py runserver</code></pre>
+            </li>
+            <li>
+                <p><strong>Navigate to the following address to view imported books.</strong></p>
+                <pre><code>http://127.0.0.1:8000/books/</code></pre>
+            </li>
+            <li>
+                <p>Incase of a <strong> 404 or Not found </strong> error, add <strong> 127.0.0.1:8000 </strong> to allowed hosts in <strong> wsindex/settings.py </strong>.</p>
+            </li>
+        </ol>
+
+
+
+
+  
+        <!-- <h2 id="android"><a href="#android">Wikisource Reader App</a></h2> -->
+
         
     </div>
     <div class="section-divider"></div>
