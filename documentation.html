@@ -47,7 +47,10 @@
             <li><a href="#android"> Wikisource Reader App </a> which is an Android Application Built in Kotlin</li>
         </ol>
 
-        <h3 id="api"><a href="#api">WSIndex</a></h3>
+        <div class="section-divider"></div>
+
+        <h3 id="api"><a class="text-primary" href="#api">WSIndex</a></h3>
+
         <p>Wikisource catalog API for proofread and validated books. Loosely based on <a href="https://github.com/garethbjohnson/gutendex">https://github.com/garethbjohnson/gutendex </a></p>
         <p>This is a simple API which gets data from Wikidata following the Books Data Model for Wikisource works.</p>
         <p>Source Code : <a href="https://codeberg.org/ph4ni/wsindex"> https://codeberg.org/ph4ni/wsindex </a> </p>
@@ -57,7 +60,7 @@
         <p>The following core technologies were used to build this application:</p>
         <ul>
             <li>Python ^3.10 - The primary programming language.</li>
-            <li>Django ^5.1.3 - The high-level Python Web framework.</li>
+            <li> <a href="https://docs.djangoproject.com/en/6.0/">Django ^5.1.3 </a> - The high-level Python Web framework.</li>
         </ul>
 
         <h5 id="geting_started_api" href="#geting_started_api" class="font-weight-bold font-italic"> Getting Started Locally:</h5>
@@ -147,11 +150,112 @@
             </li>
         </ol>
 
-
+        <div class="section-divider"></div>
 
 
   
-        <!-- <h2 id="android"><a href="#android">Wikisource Reader App</a></h2> -->
+        <h2 id="android"><a class="text-primary" href="#android">Wikisource Reader App</a></h2>
+
+        <p>This is the mobile client for the Wikisource Reader, providing an optimized interface for reading validated public domain texts. It consumes data from the WSIndex API to display curated collections.</p> 
+        <p>The app is built using modern Android standards with a focus on offline accessibility and ePUB rendering.</p> 
+        <p>Source Code : <a href="https://github.com/cis-india/Wikisource-Reader"> https://github.com/cis-india/Wikisource-Reader </a> </p> 
+        <p>Available on: <a href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader"> Google Play Store </a> </p>
+
+        <h5 id="technologies_android" href="#technologies_android" class="font-weight-bold font-italic">Built With: </h5> 
+        <p>The following core technologies and frameworks were used to build the mobile application:</p> 
+        <ul> 
+            <li> <a href="https://kotlinlang.org/docs/home.html"> Kotlin ^2.0.21 </a> - The primary programming language for modern Android development.</li> 
+            <li> <a href="https://developer.android.com/develop/ui/compose/documentation">Jetpack Compose </a> - The modern toolkit for building UI.</li> 
+            <li> <a href="https://developer.android.com/training/data-storage/room"> Room Database </a>- For local storage of book metadata and reading progress.</li> 
+            <li> <a href="https://readium.org/kotlin-toolkit/2.4.0/"> Readium </a> - The heavy-duty engine used for ePUB parsing and rendering.</li> 
+        </ul>
+
+        <h5 id="getting_started_android" href="#getting_started_android" class="font-weight-bold font-italic"> Getting Started Locally:</h5> 
+        <p>Follow these instructions to set up the development environment and run the application on an emulator or physical device.</p>
+
+        <h5 id="Prerequisites_android" href="#Prerequisites_android" class="font-weight-bold font-italic"> Prerequisites: </h5> 
+        <p>You will need to ensure your development environment meets the following requirements:</p>
+
+        <ul> 
+            <li>Hardware Requirements</li> 
+                <ol> 
+                    <li> RAM: 8GB or higher (16GB recommended for Android Studio) </li> 
+                    <li> Storage: 10GB or more of free space for SDKs and Build tools </li> 
+                </ol>
+            <li> Software Environment </li>
+                <ol>
+                    <li> Android Studio: Ladybug (2024.2.1) or above </li>
+                    <li> JDK: Java Development Kit (JDK) 17 </li>
+                    <li> Android SDK: API Level 34 (Target SDK) </li>
+                </ol>
+        </ul>
+
+        <h5 id="running_android_locally" href="#running_android_locally" class="font-weight-bold font-italic"> Running project Locally: </h5> 
+        <p>To build and run the app locally, follow these steps:</p>
+
+        <ol> 
+        <li> 
+            <p><strong>Clone the Repository</strong></p> 
+            <pre><code>git clone https://github.com/cis-india/Wikisource-Reader.git</code></pre> 
+            <pre><code>cd Wikisource-Reader </code> </pre> 
+        </li>
+
+        <li>
+            <p><strong>Open in Android Studio</strong></p>
+            <p>Launch Android Studio, select <strong>File > Open</strong>, and navigate to the cloned project directory. Allow Gradle to sync and download necessary dependencies.</p>
+        </li>
+
+        <li>
+            <p><strong>Run on Device or Emulator</strong></p>
+            <p>Connect a physical device via USB (with Debugging enabled) or start a Virtual Device (AVD). Press <strong>Shift + F10</strong> or click the green <strong>Run</strong> button in the toolbar.</p>
+            <p>You can also pair your devece via WIFI instead of using USB. Once you enable developer mode on your android phone, You will find both pair via usb or WIFI.</p>
+        </li>
+
+        <li>
+            <p><strong>Pointing to Local API (Optional)</strong></p>
+            <p>If you are running WSIndex locally and want the app to connect to it, update the <code>baseApiUrl</code> in the <code>api/BookApi</code> to your local IP:</p>
+
+            <pre><code>// If you are running on Emulator</code></pre>
+
+            <pre><code>private val baseApiUrl = "http://10.0.2.2:8000/books"</code></pre>
+
+            <pre>// Use IP address of your host machine(PC), when you want to run in physical device.</code></pre>
+
+            <pre><code>private val baseApiUrl = "http://192.168.100.2:8000/books".</code></pre>
+
+
+        </li>
+        </ol>
+
+        <h5 id="allow_http_traffic" href="#allow_http_traffic" class="font-weight-bold font-italic"> Allowing HTTP Traffic for Local Development: </h5> <p>By default, Android prevents apps from connecting to servers via unencrypted HTTP. To connect the app to your local instance of <strong>WSIndex</strong>, follow these steps to configure Network Security:</p>
+
+<ol> <li> <p><strong>Create the Network Security Directory</strong></p> <p>In your project explorer, navigate to <code>app/src/main/res</code>. If an <code>xml</code> folder does not exist, right-click <strong>res</strong>, select <strong>New > Directory</strong>, and name it <code>xml</code>.</p> </li>
+
+<li>
+    <p><strong>Create the Config File</strong></p>
+    <p>Right-click on the <code>res/xml</code> folder and select <strong>New > XML Resource File</strong>. Name it <code>network_security_config.xml</code> and replace its contents with the following:</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt; 
+    &lt;network-security-config&gt; 
+        &lt;domain-config cleartextTrafficPermitted="true"&gt; 
+            &lt;domain includeSubdomains="true"&gt;192.168.100.2&lt;/domain&gt; // Host IP
+            &lt;domain includeSubdomains="true"&gt;10.0.2.2&lt;/domain&gt; 
+            &lt;domain includeSubdomains="true" &gt;127.0.0.1&lt;/domain&gt; 
+        &lt;/domain-config&gt; 
+    &lt;/network-security-config&gt;</code></pre>
+
+</li>
+
+<li>
+    <p><strong>Link the Configuration in the Manifest</strong></p>
+    <p>Android requires you to register this file in the application manifest to apply the security exceptions.</p>
+    <p>Open <code>app/src/main/AndroidManifest.xml</code> and add the <code>android:networkSecurityConfig</code> attribute inside the <code>&lt;application&gt;</code> tag:</p>
+<pre><code>&lt;application android:name=".WikisourceApplication" android:networkSecurityConfig="@xml/network_security_config" 
+    ... &gt; &lt;!-- Activities and Services --&gt; 
+&lt;/application&gt;</code></pre>
+
+</li>
+</ol>
+
 
         
     </div>
