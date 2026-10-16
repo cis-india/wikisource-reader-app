@@ -111,6 +111,35 @@ body {
     background-color: #006699 !important;
 }
 
+/* Make code blocks easier to read in both light and dark mode*/
+pre {
+   background-color: #f1f3f5;
+   color: #212529;
+   padding: 12px 16px;
+   border-radius: 6px;
+   border: 1px solid #dee2e6;
+   text-align: left;
+   overflow-x: auto;
+}
+
+
+pre code {
+   color: inherit;
+   font-family: monospace;
+}
+
+
+/* This section make sure the code blocks remain visible in dark mode */
+.dark-mode pre {
+   background-color: #343a40;
+   color: #fff;
+}
+
+
+.dark-mode pre code {
+   color: inherit;
+}
+
 
 /* Navbar: Hack to jump to correct anchor position by @mnot */
 
