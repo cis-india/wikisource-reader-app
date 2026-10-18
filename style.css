@@ -265,7 +265,7 @@ transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
   background-color: #000205;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 70vh;
+  min-height: 50vh;
   width: 100%;
   color: white;
   text-align: center;
@@ -312,22 +312,7 @@ transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
   margin: 3px;
 }
 
-#front .btn-hero {
-  margin: 3px;
-  padding: 7px 15px;
-  background-color: transparent;
-  border: 2.5px solid white;
-  border-radius: 0;
-  color: white;
-  transition: all 0.3s ease-in-out;
-}
 
-#front .btn-hero:hover,
-#front .btn-hero:focus {
-  background-color: white;
-  color: #36c;
-  text-decoration: none;
-}
 
 @media (max-width: 767px) {
   #front h1 {
@@ -342,6 +327,116 @@ transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
     font-size: 17px;
   }
 }
+
+
+
+
+/* ===== App description section ===== */
+.app-section {
+    padding: 80px 0;
+    background-color: #f7f9fc;
+    color: #202122;
+}
+
+.app-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.app-eyebrow {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #36c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.app-heading {
+    margin-bottom: 24px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.app-heading span {
+    color: #36c;
+}
+
+.app-description-text {
+    margin: 0 auto 28px;
+    color: #54595d;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.app-description-text a,
+.app-text-links a {
+    color: #36c;
+    font-weight: 600;
+}
+
+.app-text-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.app-text-links a {
+    margin: 0 12px 8px;
+}
+
+@media (max-width: 767px) {
+    .app-section {
+        padding: 55px 0;
+    }
+
+    .app-heading {
+        font-size: 2.2rem;
+    }
+
+    .app-description-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .app-heading {
+        font-size: 1.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
