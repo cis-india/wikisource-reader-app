@@ -257,6 +257,96 @@ transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 
 
+/* ==== Home Page  ===== */
+#home {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg') center center;
+  background-color: #000205;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 70vh;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+#front {
+  background: rgba(0, 0, 0, 0.35);
+  min-height: 70vh;
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+.book-font {
+  font-family: 'Linden Hill', Georgia, serif;
+}
+
+#front h1 {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 29.7px;
+  line-height: 1.7;
+  -webkit-transform: scale(1.9, 1.7);
+  -moz-transform: scale(1.9, 1.7);
+  -ms-transform: scale(1.9, 1.7);
+  -o-transform: scale(1.9, 1.7);
+  transform: scale(1.9, 1.7);
+}
+
+#front h1 span {
+  font-size: 60.1px;
+}
+
+#front p {
+  margin-bottom: 21px;
+  font-size: 21.19px;
+}
+
+#front .store-badges {
+  margin-bottom: 25px;
+}
+
+#front .app-badge img {
+  height: 50px;
+  margin: 3px;
+}
+
+#front .btn-hero {
+  margin: 3px;
+  padding: 7px 15px;
+  background-color: transparent;
+  border: 2.5px solid white;
+  border-radius: 0;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#front .btn-hero:hover,
+#front .btn-hero:focus {
+  background-color: white;
+  color: #36c;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  #front h1 {
+    transform: scale(1.2, 1.1);
+  }
+
+  #front h1 span {
+    font-size: 45px;
+  }
+
+  #front p {
+    font-size: 17px;
+  }
+}
+
+
+
+
+
 
 
 
