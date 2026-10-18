@@ -1,5 +1,4 @@
 /* Navbar */
-
 body {
     text-align: center;
     padding-top: 50px;
@@ -30,37 +29,251 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
 }
 
+
+
+
+/* === Navbar ====*/
+.navbar {
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-light {
+  background-color: #EEE;
+  margin: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 17px;
+  padding-top: 16px;
+  padding-bottom: 13px;
+  color: #777;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #254117 !important;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #555 !important;
+  background: none;
+}
+
+.dark-mode .navbar-light {
+  background-color: #222;
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link {
+  color: #ddd !important;
+}
+
+/* ===== Navbar brand ==== */
+.navbar-brand.brand-logo {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  margin-right: 1rem;
+  color: #555 !important;
+}
+
+.brand-logo .logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background: #36c;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Linden Hill', Georgia, serif;
+  font-size: 30px;
+  line-height: 1;
+transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.brand-logo .logo-text {
+  font-size: 13px;
+  line-height: 1.15;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.brand-logo .logo-text strong {
+  font-weight: 700;
+  color: #36c;
+}
+
+.navbar-brand.brand-logo:hover,
+.navbar-brand.brand-logo:focus {
+  color: #081801 !important;
+  text-decoration: none;
+}
+
+.navbar-brand.brand-logo:hover .logo-mark,
+.navbar-brand.brand-logo:focus .logo-mark {
+  background: #2a4b8d;
+  transform: scale(1.06);
+}
+
+.dark-mode .navbar-brand.brand-logo {
+  color: #ddd !important;
+}
+
+.dark-mode .brand-logo .logo-text strong {
+  color: #6ea0ff;
+}
+
+/* ===== Navbar search ======= */
+.navbar-search {
+  margin-left: 1rem;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box .form-control {
+  width: 170px;
+  height: 34px;
+  padding: 4px 34px 4px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  color: #555;
+  font-size: 14px;
+  transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.search-box .form-control:focus {
+  width: 220px;
+  border-color: #36c;
+  box-shadow: 0 0 0 3px rgba(51, 102, 204, 0.2);
+}
+
+.search-box button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.search-box button:hover,
+.search-box button:focus {
+  color: #36c;
+  outline: none;
+}
+
+.dark-mode .search-box .form-control {
+  background: #333;
+  border-color: #555;
+  color: #eee;
+}
+
+.dark-mode .search-box .form-control::placeholder {
+  color: #999;
+}
+
+.dark-mode .search-box button {
+  color: #bbb;
+}
+
+.dark-mode .search-box button:hover,
+.dark-mode .search-box button:focus {
+  color: #6ea0ff;
+}
+
+.dark-mode .navbar-light .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.dark-mode .navbar-light .navbar-toggler {
+    border-color: #777;
+}
+@media (max-width: 991px) {
+  .navbar-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box .form-control,
+  .search-box .form-control:focus {
+    width: 100%;
+  }
+}
+
 .toggle-theme {
-    color: #fff;
-    opacity: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555 !important;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .toggle-theme:hover {
-    opacity: 100%;
+    opacity: 1;
 }
 
 .toggle-theme::after {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(356deg) brightness(106%) contrast(102%);
     display: block;
     width: 25px;
     height: 25px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.dark-mode .toggle-theme::after {
-    content: url("images/moon.svg");
+    line-height: 0;
 }
 
 .light-mode .toggle-theme::after {
     content: url("images/sun.svg");
+    filter: none;
 }
 
-.dark-mode {
-    background-color: #212529;
-    color: #fff !important;
-
+.dark-mode .toggle-theme::after {
+    content: url("images/moon.svg");
+    filter: invert(1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .dark-mode #docs h2>a,
 .dark-mode #docs h3>a {
@@ -87,9 +300,6 @@ body {
     border-color: #70cfff !important;
 }
 
-/* .badge-primary {
-        background-color: #99caff !important;
-    } */
 .dark-mode li::before {
     color: #70cfff !important;
 }
