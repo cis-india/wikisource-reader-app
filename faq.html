@@ -128,7 +128,9 @@
                 </p>
             </div>
 
-            <h2 class="h4 mb-3" id="who">
+             <div class="mb-4"> 
+
+            <h2 class="h3 mb-3" id="who">
                 <a href="#who">Who are behind the app?</a>
             </h2>
 
@@ -154,7 +156,42 @@
                 a fullstack software engineer from Nairobi, Kenya has contributed in the codebase as an
                 Outreachy intern to bring new features and resolve bugs.
             </p>
+            </div>
 
+           <div class="mb-4">
+                <h2 class="h3 mb-3" id="selection">
+                    <a href="#selection">Which books can be found on Wikisource?</a>
+                </h2>
+
+                <p class="mb-4">
+                    The app displays public domain and copyright free texts which are available on Wikisource. But the Wikisource community has to follow certain steps on Wikimedia websites to have the contents displayed in the app.
+                </p>
+
+                <ol class="pl-3 mb-0">
+                    <li class="mb-2">Digitised copy of the selected copyright-free content needs to be uploaded on Wikimedia sites.</li>
+                    <li class="mb-2">There should be corresponding index pages on Wikisource.</li>
+                    <li class="mb-2">The digitized contensts should be completely transcribed and proofread.</li>
+                    <li class="mb-2">The proofread contents should be completely transcluded with divisions of chapters, if any.</li>
+                    <li>
+                        The descriptive metadata of the transcluded contens should be stored on Wikidata following
+                        <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> its bibliographic data model</a>
+                        with the following linkages on respective Wikidata items.
+
+                        <ol type="a" class="pl-3 mt-2 mb-0">
+                            <li class="mb-2">Wikisource sitelink of transcluded page with proofread or validated badges.</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P1476"> title (P1476)</a> in native language</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P407"> language of work or name (P407)</a></li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P50"> author(s) (P50)</a></li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P655"> translator(s) (P655)</a>, if any</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P98"> editor(s) (P98)</a>, if any</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P123"> publisher (P123)</a>, if any</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P291"> place of publication (P291)</a></li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P577"> date of publication (P577)</a></li>
+                            <li><a href="https://www.wikidata.org/wiki/Property:P1957"> Wikisource index page url (P1957)</a></li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
 </section>
@@ -164,50 +201,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="container text-left my-3" id="faq">
         
-
-        <h2 id="selection"><a href="#selection">Which books can be found on Wikisource?</a></h2>
-        <p>The app displays public domain and copyright free texts which are available on Wikisource. 
-            But the Wikisource community has to follow certain steps on Wikimedia websites to have the contents displayed in the app.</p>
-        <ol>
-            <li>Digitised copy of the selected copyright-free content needs to be uploaded on Wikimedia sites.</li>
-            <li>There should be corresponding index pages on Wikisource.</li>
-            <li>The digitized contensts should be completely transcribed and proofread.</li>
-            <li>The proofread contents should be completely transcluded with divisions of chapters, if any.</li>
-          
-        </ol>
-        
-
         <h2 id="metadata-api"><a href="#metadata-api">How are the books catalogued?</a></h2>
 
         <p>An <a href="https://wsindex.toolforge.org/books/">API</a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://gitlab.wikimedia.org/toolforge-repos/wsindex">here</a></p>
