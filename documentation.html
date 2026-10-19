@@ -12,55 +12,94 @@
 
 <body class="documentation-page">
 
-    <!-- Navigation bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <div class="container">
-            <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
-                <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">W</span>
-                <span class="logo-text small text-uppercase">Wikisource<br><strong class="text-primary">Reader</strong></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Navigation bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
+            <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">
+                W
+            </span>
+            <span class="logo-text small text-uppercase">
+                Wikisource<br>
+                <strong class="text-primary">Reader</strong>
+            </span>
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./faq.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./privacy-policy.html">Privacy Policy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./documentation.html">Documentation</a></li>
-                    <li class="nav-item"><button type="button" class="nav-link bg-transparent border-0 toggle-theme" aria-label="Toggle theme"></button></li>
-                </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <form class="search-form" id="navbarSearch" role="search">
-                    <label class="sr-only" for="siteSearch">
-                        Search Wikisource Reader
-                    </label>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#description">About</a>
+                </li>
 
-                    <input class="form-control"
-                        id="siteSearch"
-                        type="search"
-                        placeholder="Search documentation..."
-                        autocomplete="off"
-                        aria-controls="searchResults"
-                        aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#community">Community</a>
+                </li>
 
-                    <div class="search-results"
-                        id="searchResults"
-                        role="listbox"
-                        aria-label="Search results"
-                        hidden>
-                    </div>
-                </form>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#features">Features</a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#usage">Usage</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./faq.html">FAQ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./privacy-policy.html">Privacy Policy</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./documentation.html">Documentation</a>
+                </li>
+            </ul>
+
+            <form class="search-form ml-lg-3 my-2 my-lg-0" id="navbarSearch" role="search">
+                <label class="sr-only" for="siteSearch">
+                    Search Wikisource Reader
+                </label>
+                <input
+                    class="form-control"
+                    id="siteSearch"
+                    type="search"
+                    placeholder="Search documentation..."
+                    autocomplete="off"
+                    aria-controls="searchResults"
+                    aria-expanded="false">
+
+                <div
+                    class="search-results"
+                    id="searchResults"
+                    role="listbox"
+                    aria-label="Search results"
+                    hidden>
+                </div>
+            </form>
+
+            <div class="d-flex justify-content-center align-items-center ml-lg-3 my-2 my-lg-0">
+                <button
+                    type="button"
+                    class="toggle-theme bg-transparent border-0"
+                    aria-label="Toggle theme"
+                    title="Toggle dark mode">
+                </button>
             </div>
         </div>
-    </nav>
-
-
+    </div>
+</nav>
 
     <!-- Documentation hero -->
     <header class="py-5 text-center bg-light">
@@ -68,11 +107,9 @@
             <h1 class="display-4 font-weight-bold" id="docs_title">
                 Wikisource Reader Docs
             </h1>
-
             <p class="lead text-muted mx-auto">
                 Welcome to Wikisource Reader app documentation!
             </p>
-
             <a href="#docs_what" class="btn btn-primary mt-3">
                 Explore Documentation
             </a>
@@ -134,7 +171,6 @@
             <!-- Documentation content -->
             <main class="col-lg-9">
 
-                <!-- Introduction -->
                 <section class="mb-5" id="docs_what">
                     <h2 class="font-weight-bold pb-3 mb-4 Doc-title-bar">
                         <a href="#docs_what">What is Wikisource Reader?</a>
@@ -155,7 +191,6 @@
                     </p>
                 </section>
 
-                <!-- How to use the documentation -->
                 <section class="mb-5" id="docs_usage">
                     <h2 class="Doc-title-bar font-weight-bold pb-3 mb-4">
                         <a href="#docs_usage">How to use the docs</a>
@@ -240,7 +275,6 @@
                         </div>
                     </div>
 
-                    <!-- WSIndex technologies -->
                     <section class="mt-5 mb-5" id="technologies_api">
                         <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">Built With:</h3>
 
@@ -272,7 +306,6 @@
                         </div>
                     </section>
 
-                    <!-- WSIndex getting started -->
                     <section class="mb-5" id="geting_started_api">
                         <h3 class="font-weight-bold border-bottom pb-3 mb-4">Getting Started Locally:</h3>
                         <p>
@@ -282,7 +315,6 @@
                         </p>
                     </section>
 
-                    <!-- WSIndex prerequisites -->
                     <section class="mb-5" id="Prerequisites_api">
                         <h3 class="font-weight-bold pb-3 mb-4">Prerequisites:</h3>
                         <p>You will need to ensure your system meets the following requirements:</p>
@@ -322,7 +354,6 @@
                         </div>
                     </section>
 
-                    <!-- Run WSIndex locally -->
                     <section class="mb-5" id="running_api_locally">
                         <h3 class="font-weight-bold border-bottom pb-3 mb-4">Running project Locally:</h3>
 
@@ -575,7 +606,6 @@ source venv/bin/activate
                         </div>
                     </div>
 
-                    <!-- Android technologies -->
                     <section class="mt-5 mb-5" id="technologies_android">
                         <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">Built With:</h3>
 
@@ -643,7 +673,6 @@ source venv/bin/activate
                         </div>
                     </section>
 
-                    <!-- Android getting started -->
                     <section class="mb-5" id="getting_started_android">
                         <h3 class="font-weight-bold border-bottom pb-3 mb-4">Getting Started Locally:</h3>
                         <p>
@@ -653,7 +682,6 @@ source venv/bin/activate
                         </p>
                     </section>
 
-                    <!-- Android prerequisites -->
                     <section class="mb-5" id="Prerequisites_android">
                         <h3 class="font-weight-bold pb-3 mb-4">Prerequisites:</h3>
                         <p>You will need to ensure your development environment meets the following requirements:</p>
@@ -680,7 +708,6 @@ source venv/bin/activate
                         </div>
                     </section>
 
-                    <!-- Run Android app locally -->
                     <section class="mb-5" id="running_android_locally">
                         <h3 class="font-weight-bold border-bottom pb-3 mb-4">Running project Locally:</h3>
 
@@ -775,7 +802,6 @@ private val baseApiUrl = "http://192.168.100.2:8000/books"</code></pre>
                         </ol>
                     </section>
 
-                    <!-- Allow HTTP traffic -->
                     <section class="mb-5" id="allow_http_traffic">
                         <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">
                             Allowing HTTP Traffic for Local Development:
@@ -871,38 +897,6 @@ private val baseApiUrl = "http://192.168.100.2:8000/books"</code></pre>
             </main>
         </div>
     </div>
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Footer -->
     <footer class="bg-light border-top py-4">
