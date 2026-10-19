@@ -421,6 +421,168 @@ transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 
 
+/* Features section */
+
+#features {
+    scroll-margin-top: 80px;
+}
+
+.feature-heading {
+    font-family: 'Linden Hill', Georgia, serif;
+    font-size: 2.6rem;
+}
+
+.feature-heading::after {
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 12px auto 0;
+    background-color: #36c;
+    border-radius: 2px;
+    content: "";
+}
+
+
+.item {
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.18);
+    margin: 10px -5px;
+}
+
+.item-image {
+    height: 440px;
+    background-color: rgba(230, 235, 250, 0.767);
+    padding: 20px 0;
+}
+
+.feature-image {
+    height: 100%;
+    width: auto;
+}
+
+.item-header {
+    padding-top: 20px;
+}
+
+.item-text {
+    padding-bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.feature-pills .nav-link {
+    margin-bottom: 8px;
+    padding: 12px 16px;
+    border: 1px solid #e3e8ef;
+    border-radius: 10px;
+    color: #444;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.feature-pills .nav-link:hover,
+.feature-pills .nav-link:focus {
+    border-color: #36c;
+    color: #36c;
+}
+
+.feature-pills .nav-link.active {
+    border-color: #36c;
+    background-color: #36c;
+    color: #fff;
+}
+
+.feature-pills .nav-link i {
+    width: 24px;
+    color: #36c;
+    text-align: center;
+}
+
+.feature-pills .nav-link.active i {
+    color: #fff;
+}
+
+
+.feature-image {
+    max-height: 520px;
+    filter: drop-shadow(0 4px 4px rgba(115, 114, 114, 0.18));
+}
+
+.feature-caption h3 {
+    margin-bottom: 12px;
+    font-family: 'Linden Hill', Georgia, serif;
+    font-size: 1.9rem;
+}
+
+.feature-caption p {
+    margin-bottom: 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Dark mode */
+
+.dark-mode .feature-pills .nav-link {
+    border-color: #495057;
+    background-color: #2b3035;
+    color: #ddd;
+}
+
+.dark-mode .feature-pills .nav-link:hover,
+.dark-mode .feature-pills .nav-link:focus {
+    border-color: #99caff;
+    color: #99caff;
+}
+
+.dark-mode .feature-pills .nav-link.active {
+    border-color: #36c;
+    background-color: #36c;
+    color: #fff;
+}
+
+.dark-mode .feature-pills .nav-link i {
+    color: #99caff;
+}
+
+.dark-mode .feature-pills .nav-link.active i {
+    color: #fff;
+}
+
+.dark-mode .feature-stage {
+    border-color: #495057 !important;
+    background: linear-gradient(135deg, #2b3035, #23272b) !important;
+}
+
+.dark-mode .feature-caption p {
+    color: #ccc;
+}
+
+/* Smaller screens */
+
+@media (max-width: 767.98px) {
+    .feature-heading {
+        font-size: 2.1rem;
+    }
+
+    .feature-caption {
+        text-align: center;
+    }
+
+    .feature-caption h3 {
+        font-size: 1.6rem;
+    }
+
+    .feature-image {
+        max-height: 420px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .feature-pills .nav-link {
+        transition: none;
+    }
+}
 
 
 
@@ -457,6 +619,47 @@ transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 
 
@@ -506,7 +709,7 @@ transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
     background-color: #006699 !important;
 }
 
-/* Make code blocks easier to read in both light and dark mode*/
+
 pre {
    background-color: #f1f3f5;
    color: #212529;
@@ -524,7 +727,7 @@ pre code {
 }
 
 
-/* This section make sure the code blocks remain visible in dark mode */
+
 .dark-mode pre {
    background-color: #343a40;
    color: #fff;
@@ -536,7 +739,7 @@ pre code {
 }
 
 
-/* Navbar: Hack to jump to correct anchor position by @mnot */
+
 
 *[id]:before {
     display: block;
@@ -547,7 +750,7 @@ pre code {
 }
 
 
-/* Jumbotron */
+
 
 .jumbotron {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg');
@@ -584,7 +787,6 @@ pre code {
     bottom: -20px;
 }
 
-/* Matching commons-app theme */
 
 .btn-outline-primary:hover {
     background-color: #006699;
@@ -603,7 +805,7 @@ pre code {
 }
 
 
-/* Feature items */
+
 
 .item {
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.18);
@@ -632,7 +834,7 @@ pre code {
 }
 
 
-/* Installation & Usage */
+
 
 .large-count {
     padding-left: 0;
@@ -663,7 +865,7 @@ pre code {
 }
 
 
-/* Photo guidelines */
+
 
 .guide-list {
     padding-left: 0;
@@ -676,14 +878,14 @@ pre code {
     font-size: 1.25rem;
 }
 
-/* Documentation Header */
+
 #docs h2>a,
 #docs h3>a {
     color: black;
     text-decoration: none;
 }
 
-/* Footer */
+
 
 footer {
     margin-bottom: 70px;
@@ -694,7 +896,7 @@ footer h2 {
 }
 
 
-/* Misc */
+
 
 .inner {
     max-width: 900px;
@@ -702,4 +904,4 @@ footer h2 {
 
 .qr-code-div {
     padding: 30px 15px;
-}
+} */
