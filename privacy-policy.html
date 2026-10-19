@@ -10,73 +10,233 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a href="./index.html" class="navbar-brand mb-0 h1">Wikisource Reader App</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Navigation bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
+           <span class="logo-mark d-flex align-items-center justify-content-center mr-2">
+                <img src="favicon.png"
+                    alt="Wikisource logo"
+                    width="45"
+                    height="45">
+            </span>
+            <span class="logo-text small text-uppercase">
+                Wikisource<br>
+                <strong class="text-primary">Reader</strong>
+            </span>
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./faq.html">FAQ</a></li>
-					<li class="nav-item"><a class="nav-link active" href="./privacy-policy.html">Privacy Policy</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./documentation.html">Documentation</a></li>
-                    <li class="nav-item "><btn class="nav-link scroll toggle-theme"></btn>
-                </ul>
-            </div> <!-- .collapse -->
-        </div> <!-- .container -->
-    </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <div class="container text-left my-3" id="privacy-policy">
-        
-    <h2>Privacy Policy</h2>
-    <p>
-        The Wikisource Reader Android app is a free, open-source app developed by volunteers of the Wikimedia community and support from CIS India to allow users to download and read books from the Wikisource project. This APPLICATION is provided by members of the Wikimedia community and is intended for use as is.
-    </p>
-    <p>
-        This Policy is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information. If you choose to use the Wikisource Reader Android app, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Application. We will not use or share your information with anyone except as described in this Privacy Policy, and we do not rent or sell your information to third parties.
-    </p>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#description">About</a>
+                </li>
 
-    <h3>Information Collection and Use</h3>
-    <p>
-        We do not collect any identifiable information since the app does not require a login.
-    </p>
-    <p>
-        The app does not use any third party services that may collect information used to identify you.
-    </p>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#community">Community</a>
+                </li>
 
-    <h3>Security</h3>
-    <p>
-        We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
-    </p>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#features">Features</a>
+                </li>
 
-    <h3>Links to Other Sites</h3>
-    <p>
-        This Application may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
-    </p>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#usage">Usage</a>
+                </li>
 
-    <h3>Children’s Privacy</h3>
-    <p>
-        We do not collect personal identifiable information from children under 13.
-    </p>
+                <li class="nav-item">
+                    <a class="nav-link" href="./faq.html">FAQ</a>
+                </li>
 
-    <h3>Changes to This Privacy Policy</h3>
-    <p>
-        We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.
-    </p>
+                <li class="nav-item">
+                    <a class="nav-link" href="./privacy-policy.html" aria-current="page">Privacy Policy</a>
+                </li>
 
-    <h3>Contact Us</h3>
-    <p>
-        If you have any questions or suggestions about our Privacy Policy, please do not hesitate to contact us by <a href="https://github.com/cis-india/wikisource-reader-app/issues/new">creating an issue</a> on GitHub or posting on our <a href="https://meta.wikimedia.org/wiki/Talk:Wikisource_reader_app">Meta Talk page</a>.
-    </p>
-    
-	</div>
-    
+                <li class="nav-item">
+                    <a class="nav-link" href="./documentation.html">Documentation</a>
+                </li>
+            </ul>
+
+            <form class="search-form ml-lg-3 my-2 my-lg-0" id="navbarSearch" role="search">
+                <label class="sr-only" for="siteSearch">
+                    Search Wikisource Reader
+                </label>
+                <input
+                    class="form-control"
+                    id="siteSearch"
+                    type="search"
+                    placeholder="Search documentation..."
+                    autocomplete="off"
+                    aria-controls="searchResults"
+                    aria-expanded="false">
+
+                <div
+                    class="search-results"
+                    id="searchResults"
+                    role="listbox"
+                    aria-label="Search results"
+                    hidden>
+                </div>
+            </form>
+
+            <div class="d-flex justify-content-center align-items-center ml-lg-3 my-2 my-lg-0">
+                <button
+                    type="button"
+                    class="toggle-theme bg-transparent border-0"
+                    aria-label="Toggle theme"
+                    title="Toggle dark mode">
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main id="privacy-policy">
+
+ <header class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="border-left border-primary pl-3 pl-md-4 py-2">
+                    <p class="text-primary text-uppercase font-weight-bold small mb-2">
+                        Wikisource Reader
+                    </p>
+                        <h1 class="font-weight-bold mb-3">
+                            Privacy Policy
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+
+                <section class="mb-2" aria-label="Privacy Policy introduction">
+                        <div class="card-body p-4 p-md-4">
+                            <p>
+                                The Wikisource Reader Android app is a free, open-source app developed by volunteers of the Wikimedia community and support from CIS India to allow users to download and read books from the Wikisource project. This APPLICATION is provided by members of the Wikimedia community and is intended for use as is.
+                            </p>
+                            <p class="mb-0">
+                                This Policy is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information. If you choose to use the Wikisource Reader Android app, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Application. We will not use or share your information with anyone except as described in this Privacy Policy, and we do not rent or sell your information to third parties.
+                            </p>
+                        </div>
+                </section>
+
+                <section class="mb-2">
+                    <div class="card-body p-4">
+                        <h2 class="h4 font-weight-bold mb-3">
+                            Information Collection and Use
+                        </h2>
+                        <p>
+                            We do not collect any identifiable information since the app does not require a login.
+                        </p>
+                        <p class="mb-0">
+                            The app does not use any third party services that may collect information used to identify you.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="mb-2">
+                        <div class="card-body p-4">
+                            <h2 class="h4 font-weight-bold mb-3">
+                                Security
+                            </h2>
+                            <p class="mb-0">
+                                We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+                            </p>
+                        </div>
+                </section>
+
+                <section class="mb-2">
+                        <div class="card-body p-4">
+                            <h2 class="h4 font-weight-bold mb-3">
+                                Links to Other Sites
+                            </h2>
+                            <p class="mb-0">
+                                This Application may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+                            </p>
+                        </div>
+                </section>
+
+                <section class="mb-2">
+                        <div class="card-body p-4">
+                            <h2 class="h4 font-weight-bold mb-3">
+                                Children’s Privacy
+                            </h2>
+                            <p class="mb-0">
+                               We do not collect personal identifiable information from children under 13.
+                            </p>
+                        </div>
+                </section>
+
+                <section class="mb-2">
+                        <div class="card-body p-4">
+                            <h2 class="h4 font-weight-bold mb-3">
+                                Changes to This Privacy Policy
+                            </h2>
+                            <p class="mb-0">
+                                We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.
+                            </p>
+                        </div>
+                </section>
+
+                <section class="mb-2">
+                        <div class="card-body p-4">
+                            <h2 class="h4 font-weight-bold mb-3">
+                                Contact Us
+                            </h2>
+                            <p class="mb-0">
+                                If you have any questions or suggestions about our Privacy Policy, please do not hesitate to contact us by <a href="https://github.com/cis-india/wikisource-reader-app/issues/new">creating an issue</a> on GitHub or posting on our <a href="https://meta.wikimedia.org/wiki/Talk:Wikisource_reader_app">Meta Talk page</a>.
+                            </p>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+
+     <!-- Footer -->
+<footer class="bg-light border-top py-4">
+        <div class="container text-center">
+            <p class="mb-2 font-weight-bold">
+                Wikisource Reader
+            </p>
+
+            <div class="mb-3">
+                <a href="./index.html" class="mx-2">
+                    Home
+                </a>
+
+                <a href="./faq.html" class="mx-2">
+                    FAQ
+                </a>
+
+                <a href="./documentation.html" class="mx-2">
+                    Documentation
+                </a>
+
+            </div>
+
+            <p class="text-muted small mb-0">
+                Wikisource Reader documentation
+            </p>
+        </div>
+    </footer>     
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

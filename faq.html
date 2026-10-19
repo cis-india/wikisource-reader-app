@@ -4,137 +4,445 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Wikisource Reader App</title>
+    <title> FAQ | Wikisource Reader App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a href="./index.html" class="navbar-brand mb-0 h1">Wikisource Reader App</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Navigation bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
+           <span class="logo-mark d-flex align-items-center justify-content-center mr-2">
+                <img src="favicon.png"
+                    alt="Wikisource logo"
+                    width="45"
+                    height="45">
+            </span>
+            <span class="logo-text small text-uppercase">
+                Wikisource<br>
+                <strong class="text-primary">Reader</strong>
+            </span>
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./faq.html">FAQ</a></li>
-					<li class="nav-item"><a class="nav-link scroll" href="./privacy-policy.html">Privacy Policy</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./documentation.html">Documentation</a></li>
-                    <li class="nav-item "><btn class="nav-link scroll toggle-theme"></btn>
-                </ul>
-            </div> <!-- .collapse -->
-        </div> <!-- .container -->
-    </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <div class="container text-left my-3" id="faq">
-        
-        <h2 id="what"><a href="#what">What is Wikisource Reader?</a></h2>
-        <p>Wikisource Reader app is a free and open-source mobile application built for Android users to read public domain and copyright free pre-published contents in various languages of the world, which are hosted in the open and free digital library website of Wikisource. The digitized contents on Wikisoruce are transcribed and proofread by a vibrant community to make them freely and openly accessible and searchable for everyone to read. Wikisource Reader App is a step further to make these contents available for android mobile users.</p>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#description">About</a>
+                </li>
 
-        <h2 id="who"><a href="#who">Who are behind the app?</a></h2>
-        <p><a href="https://meta.wikimedia.org/wiki/CIS-A2K">Centre for Internet and Society (CIS)</a> was approached to support the development of the app by September 2024, which sponsored the early development of the app until March 2025. The app has been developed by <a href="https://meta.wikimedia.org/wiki/User:Saiphani02"> Sai Phanindra</a> and <a href="https://meta.wikimedia.org/wiki/User:Bodhisattwa">Bodhisattwa</a> from the start and they continue to work in their volunteer capacity, since March 2025. CIS is hosting the app on Google Play store; special thanks to <a href="https://meta.wikimedia.org/wiki/User:Lahariyaniyathi">Tanveer Hasan A. K.,</a> the Executive Director of CIS, who had actively supported the development of the app. <a href="https://github.com/levy-web">Levy Muguro</a>, a fullstack software engineer from Nairobi, Kenya has contributed in the codebase as an Outreachy intern to bring new features and resolve bugs.</p>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#community">Community</a>
+                </li>
 
-        <h2 id="selection"><a href="#selection">Which books can be found on Wikisource?</a></h2>
-        <p>The app displays public domain and copyright free texts which are available on Wikisource. But the Wikisource community has to follow certain steps on Wikimedia websites to have the contents displayed in the app.</p>
-        <ol>
-            <li>Digitised copy of the selected copyright-free content needs to be uploaded on Wikimedia sites.</li>
-            <li>There should be corresponding index pages on Wikisource.</li>
-            <li>The digitized contensts should be completely transcribed and proofread.</li>
-            <li>The proofread contents should be completely transcluded with divisions of chapters, if any.</li>
-            <li>The descriptive metadata of the transcluded contens should be stored on Wikidata following <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> its bibliographic data model</a> with the following linkages on respective Wikidata items.</li>
-                <ol type="a">
-                    <li>Wikisource sitelink of transcluded page with proofread or validated badges.</li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P1476"> title (P1476)</a> in native language</li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P407"> language of work or name (P407)</a></li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P50"> author(s) (P50)</a></li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P655"> translator(s) (P655)</a>, if any</li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P98"> editor(s) (P98)</a>, if any</li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P123"> publisher (P123)</a>, if any</li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P291"> place of publication (P291)</a></li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P577"> date of publication (P577)</a></li>
-                    <li><a href="https://www.wikidata.org/wiki/Property:P1957"> Wikisource index page url (P1957)</a></li>
-                </ol>
-        </ol>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#features">Features</a>
+                </li>
 
-        <h2 id="metadata-api"><a href="#metadata-api">How are the books catalogued?</a></h2>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#usage">Usage</a>
+                </li>
 
-        <p>An <a href="https://wsindex.toolforge.org/books/">API</a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://gitlab.wikimedia.org/toolforge-repos/wsindex">here</a></p>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./faq.html" aria-current="page">FAQ</a>
+                </li>
 
-        <h2 id="language"><a href="#language">Which languages are supported in the app?</a></h2>
+                <li class="nav-item">
+                    <a class="nav-link" href="./privacy-policy.html">Privacy Policy</a>
+                </li>
 
-        <p>The app can support books written in any languages, however, in order to be displayed in the app, it is important that the descriptive metadata follow the above mentioned steps. After fullfiling above mentioned criteria, addition of new languages can be <a href="https://phabricator.wikimedia.org/tag/wikisource_reader_app_android/">requested here.</a></p>
-            
-        <p>The languages which are currently supported in the app are Arabic, Assamese, Bangla, Breton, Catalan, Czech, Danish, English, Esperanto, French, German, Gujarati, Hindi, Indonesian, Italian, Javanese, Kannada, Malay, Malayalam, Marathi, Norwegian, Persian, Polish, Portuguese, Punjabi, Russian Spanish, Sundanese, Swedish, Tamil, Telugu, Tulu, Ukrainian and Vietnamese.</p>
-            
-        <h2 id="thumbnail"><a href="#thumbnail">How are the thumbnails of the books generated?</a></h2>
+                <li class="nav-item">
+                    <a class="nav-link" href="./documentation.html">Documentation</a>
+                </li>
+            </ul>
 
-        <p>The thumbnails can be generated in either of the following two ways.</p>
+            <form class="search-form ml-lg-3 my-2 my-lg-0" id="navbarSearch" role="search">
+                <label class="sr-only" for="siteSearch">
+                    Search Wikisource Reader
+                </label>
+                <input
+                    class="form-control"
+                    id="siteSearch"
+                    type="search"
+                    placeholder="Search documentation..."
+                    autocomplete="off"
+                    aria-controls="searchResults"
+                    aria-expanded="false">
 
-        <ol>
-            <li><a href="https://www.wikidata.org/wiki/Property:P18"> image (P18)</a> added to the Wikidata item of the edition (image of cover page recommended); or,</li>
-            <li><a href="https://www.wikidata.org/wiki/Property:P4714"> title page number (P4714)</a> added as a qualifier to the value of <a href="https://www.wikidata.org/wiki/Property:P996"> document file on Wikimedia Commons (P996)</a></li>
-            <li><a href="https://www.wikidata.org/wiki/Property:P18"> image (P18)</a> added as a property to the item of <a href="https://www.wikidata.org/wiki/Property:P50"> author(s)</a> (author image).
-        </ol>
-            
-        <h2 id="categorization"><a href="#categorization">How are the books categorized in the app?</a></h2>
+                <div
+                    class="search-results"
+                    id="searchResults"
+                    role="listbox"
+                    aria-label="Search results"
+                    hidden>
+                </div>
+            </form>
 
-        <p>The books are categorized based on their literary forms which are stored on Wikidata. The literary forms, which are available for categorization in the apps are
-            
-        <ul>
-            <li>Novels</li>
-            <li>Plays</li>
-            <li>Poetry</li>
-            <li>Short Stories</li>
-            <li>Narration</li>
-            <li>Essays</li>
-            <li>Dictionaries</li>
-            <li>Encyclopedias</li>
-        </ul>
-
-        <p>It is important that the Wikidata statements for the literary forms are stored in the items for <a href="https://www.wikidata.org/wiki/Q7725634">literary works</a> and not in the items for <a href="https://www.wikidata.org/wiki/Q3331189">version, edition or translation</a> as compliant with the <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> Wikidata's bibliographic data model</a> </p>
-
-        <h2 id="format"><a href="#format">What is the book format and how is it generated?</a></h2>
-
-        <p>The books are displayed in <a href="https://en.wikipedia.org/wiki/EPUB">EPUB format</a>, a popular e-book format designed for book readers. The files are generated through <a href="https://ws-export-app.wmcloud.org/">WS-Export tool</a>. Issues related to EPUB file generation can be reported <a href="https://phabricator.wikimedia.org/tag/ws_export/">Wikimedia Phabricator.</a> 
-
-        <h2 id="reading"><a href="#reading">What is behind the reading experience of the app?</a></h2>
-
-        <p>The interface of the app is built upon <a href="https://github.com/Pool-Of-Tears/Myne/">Myne app</a> developed by <a href="https://krsh.dev/">Shivam</a>. <a href="https://github.com/readium/kotlin-toolkit">Readium mobile</a> by <a href="https://www.edrlab.org/software/readium-mobile/">The European Digital Reading Lab (EDRLab)</a> is used for the actual reading experience in the Wikisource reader app.</p>
-
-        <h2 id="reading"><a href="#reading">What features are in the app for the readers?</a></h2>
-
-        <p>There are several features in this app, which can give quality experience to the readers.</p>
-            <ol>
-                <li>Clean and beautiful user interface</li>
-                <li>Dark and Light theme</li>
-                <li>Option to browse free e-books in multiple languages</li>
-                <li>Option to filter books in different literary forms</li>
-                <li>Option to download books for offline access</li>
-                <li>Option to store, read and delete books from library</li>
-                <li>Indicator of book completion</li>
-                <li>Option to jump through chapters</li>
-                <li>In-built e-book reader</li>
-                <li>Customization of font color, size and weight</li>
-                <li>Light, Dark, Sepia and customized color mode for reading</li>
-                <li>Adjustment of page margins</li>
-                <li>LTR and RTL support</li>
-                <li>Horizontal and Vertical Scrolling</li>
-                <li>System default typeface along with options for Literata, Sans Sarif, IA Writer Duospace, AccsiibleDfa and OpenDyslexic typefaces </li>
-                <li>Option to choose among left, right and justified text alignments</li>
-                <li>Customization of line height, paragraph indent, paragraph spacing, word spacing and letter spacing</li>
-                <li>Options to highlight, underline and annotate texts</li>
-                <li>Option to bookmark</li>
-                <li>Text to Speech in different languages with customizable speed and pitch</li>
-            </ol>
+            <div class="d-flex justify-content-center align-items-center ml-lg-3 my-2 my-lg-0">
+                <button
+                    type="button"
+                    class="toggle-theme bg-transparent border-0"
+                    aria-label="Toggle theme"
+                    title="Toggle dark mode">
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="section-divider"></div>
-            
+</nav>
+
+
+<header class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="border-left border-primary pl-3 pl-md-4 py-2">
+                    <p class="text-primary text-uppercase font-weight-bold small mb-2">
+                        Wikisource Reader
+                    </p>
+
+                   <h1 class="h2 font-weight-bold mb-3">
+                        Frequently Asked Questions
+                    </h1>
+
+                    <p class="lead text-muted mb-0">
+                        Find answers about Wikisource Reader, supported languages,
+                        book availability, and the reading experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- About Wikisource Reader -->
+<section class="container py-4" aria-labelledby="what">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-9">
+
+            <div class="mb-4">
+                <h2 class="h4 font-weight-bold mb-3" id="what">
+                    <a href="#what">What is Wikisource Reader?</a>
+                </h2>
+
+                <p class="mb-0">
+                    Wikisource Reader app is a free and open-source mobile application built for Android users to read public domain and copyright free pre-published contents in various languages of the world, which are hosted in the open and free digital library website of Wikisource. The digitized contents on Wikisoruce are transcribed and proofread by a vibrant community to make them freely and openly accessible and searchable for everyone to read. Wikisource Reader App is a step further to make these contents available for android mobile users.
+                </p>
+            </div>
+
+             <div class="mb-4"> 
+
+         <h2 class="h4 font-weight-bold mb-3" id="who">
+                <a href="#who">Who are behind the app?</a>
+            </h2>
+
+            <p>
+                <a href="https://meta.wikimedia.org/wiki/CIS-A2K">Centre for Internet and Society (CIS)</a>
+                was approached to support the development of the app by September 2024, which sponsored
+                the early development of the app until March 2025.
+            </p>
+
+            <p>
+                The app has been developed by
+                <a href="https://meta.wikimedia.org/wiki/User:Saiphani02">Sai Phanindra</a>
+                and
+                <a href="https://meta.wikimedia.org/wiki/User:Bodhisattwa">Bodhisattwa</a>
+                from the start and they continue to work in their volunteer capacity, since March 2025.
+                CIS is hosting the app on Google Play store; special thanks to
+                <a href="https://meta.wikimedia.org/wiki/User:Lahariyaniyathi">Tanveer Hasan A. K.,</a>
+                the Executive Director of CIS, who had actively supported the development of the app.
+            </p>
+
+            <p class="mb-0">
+                <a href="https://github.com/levy-web">Levy Muguro</a>,
+                a fullstack software engineer from Nairobi, Kenya has contributed in the codebase as an
+                Outreachy intern to bring new features and resolve bugs.
+            </p>
+            </div>
+
+           <div class="mb-4">
+                 <h2 class="h4 font-weight-bold mb-3" id="selection">
+                    <a href="#selection">Which books can be found on Wikisource?</a>
+                </h2>
+
+                <p class="mb-4">
+                    The app displays public domain and copyright free texts which are available on Wikisource. But the Wikisource community has to follow certain steps on Wikimedia websites to have the contents displayed in the app.
+                </p>
+
+                <ol class="pl-3 mb-0">
+                    <li class="mb-2">Digitised copy of the selected copyright-free content needs to be uploaded on Wikimedia sites.</li>
+                    <li class="mb-2">There should be corresponding index pages on Wikisource.</li>
+                    <li class="mb-2">The digitized contensts should be completely transcribed and proofread.</li>
+                    <li class="mb-2">The proofread contents should be completely transcluded with divisions of chapters, if any.</li>
+                    <li>
+                        The descriptive metadata of the transcluded contens should be stored on Wikidata following
+                        <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> its bibliographic data model</a>
+                        with the following linkages on respective Wikidata items.
+
+                        <ol type="a" class="pl-3 mt-2 mb-0">
+                            <li class="mb-2">Wikisource sitelink of transcluded page with proofread or validated badges.</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P1476"> Title (P1476)</a> in native language</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P407"> language of work or name (P407)</a></li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P50"> author(s) (P50)</a></li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P655"> translator(s) (P655)</a>, if any</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P98"> editor(s) (P98)</a>, if any</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P123"> publisher (P123)</a>, if any</li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P291"> place of publication (P291)</a></li>
+                            <li class="mb-2"><a href="https://www.wikidata.org/wiki/Property:P577"> date of publication (P577)</a></li>
+                            <li><a href="https://www.wikidata.org/wiki/Property:P1957"> Wikisource index page url (P1957)</a></li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+
+
+            <div class="mb-4">
+                 <h2 class="h4 font-weight-bold mb-3" id="metadata-api">
+                    <a href="#metadata-api">How are the books catalogued?</a>
+                </h2>
+
+                <p>
+                    An <a href="https://wsindex.toolforge.org/books/">API</a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://gitlab.wikimedia.org/toolforge-repos/wsindex">here</a></p>
+            </div>
+
+            <div class="mb-4">
+                 <h2 class="h4 font-weight-bold mb-3" id="language">
+                    <a href="#language">Which languages are supported in the app?</a>
+                </h2>
+
+                <p>
+                    The app can support books written in any languages, however, in order to be displayed in the app, it is important that the descriptive metadata follow the above mentioned steps. After fullfiling above mentioned criteria, addition of new languages can be <a href="https://phabricator.wikimedia.org/tag/wikisource_reader_app_android/">requested here.</a>
+                </p>
+
+                <p class="mb-0">
+                    The languages which are currently supported in the app are Arabic, Assamese, Bangla, Breton, Catalan, Czech, Danish, English, Esperanto, French, German, Gujarati, Hindi, Indonesian, Italian, Javanese, Kannada, Malay, Malayalam, Marathi, Norwegian, Persian, Polish, Portuguese, Punjabi, Russian Spanish, Sundanese, Swedish, Tamil, Telugu, Tulu, Ukrainian and Vietnamese.
+                </p>
+            </div>
+
+            <div class="mb-4">
+                 <h2 class="h4 font-weight-bold mb-3" id="thumbnail">
+                    <a href="#thumbnail">How are the thumbnails of the books generated?</a>
+                </h2>
+
+                <p>The thumbnails can be generated in either of the following two ways.</p>
+
+                <ol class="pl-3 mb-0">
+                    <li class="mb-2">
+                        <a href="https://www.wikidata.org/wiki/Property:P18"> Image (P18)</a>
+                        added to the Wikidata item of the edition (image of cover page recommended); or,
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://www.wikidata.org/wiki/Property:P4714"> Title page number (P4714)</a>
+                        added as a qualifier to the value of
+                        <a href="https://www.wikidata.org/wiki/Property:P996"> Document file on Wikimedia Commons (P996)</a>
+                    </li>
+                    <li>
+                        <a href="https://www.wikidata.org/wiki/Property:P18"> Image (P18)</a>
+                        added as a property to the item of
+                        <a href="https://www.wikidata.org/wiki/Property:P50"> Author(s)</a>
+                        (author image).
+                    </li>
+                </ol>
+            </div>
+
+            <div class="mb-4">
+                <h2 class="h4 font-weight-bold mb-3" id="categorization">
+                    <a href="#categorization">How are the books categorized in the app?</a>
+                </h2>
+
+                <p>
+                    The books are categorized based on their literary forms which are stored on Wikidata. The literary forms, which are available for categorization in the apps are
+                </p>
+
+                <ul class="pl-3 mb-3">
+                    <li>Novels</li>
+                    <li>Plays</li>
+                    <li>Poetry</li>
+                    <li>Short Stories</li>
+                    <li>Narration</li>
+                    <li>Essays</li>
+                    <li>Dictionaries</li>
+                    <li>Encyclopedias</li>
+                </ul>
+
+                <p class="mb-0">
+                    It is important that the Wikidata statements for the literary forms are stored in the items for <a href="https://www.wikidata.org/wiki/Q7725634">literary works</a> and not in the items for <a href="https://www.wikidata.org/wiki/Q3331189">version, edition or translation</a> as compliant with the <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Books"> Wikidata's bibliographic data model</a>
+                </p>
+            </div>
+
+            <div class="mb-4">
+                 <h2 class="h4 font-weight-bold mb-3" id="format">
+                    <a href="#format">What is the book format and how is it generated?</a>
+                </h2>
+
+                <p class="mb-0">
+                    The books are displayed in <a href="https://en.wikipedia.org/wiki/EPUB">EPUB format</a>, a popular e-book format designed for book readers. The files are generated through <a href="https://ws-export-app.wmcloud.org/">WS-Export tool</a>. Issues related to EPUB file generation can be reported <a href="https://phabricator.wikimedia.org/tag/ws_export/">Wikimedia Phabricator.</a>
+                </p>
+            </div>
+
+            <div class="mb-4">
+                 <h2 class="h4 font-weight-bold mb-3" id="reading">
+                    <a href="#reading">What is behind the reading experience of the app?</a>
+                </h2>
+
+                <p class="mb-0">
+                    The interface of the app is built upon <a href="https://github.com/Pool-Of-Tears/Myne/">Myne app</a> developed by <a href="https://krsh.dev/">Shivam</a>. <a href="https://github.com/readium/kotlin-toolkit">Readium mobile</a> by <a href="https://www.edrlab.org/software/readium-mobile/">The European Digital Reading Lab (EDRLab)</a> is used for the actual reading experience in the Wikisource reader app.
+                </p>
+            </div>
+
+            <div class="mb-4">
+                 <h2 class="h4 font-weight-bold mb-3" id="reader-features">
+                    <a href="#reader-features">What features are in the app for the readers?</a>
+                </h2>
+
+                <p>
+                    There are several features in this app, which can give quality experience to the readers.
+                </p>
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="bi bi-palette text-primary mr-2" aria-hidden="true"></i>
+                                    Appearance
+                                </h5>
+                                <ul class="pl-3 mb-0">
+                                    <li>Clean and beautiful user interface</li>
+                                    <li>Dark and Light theme</li>
+                                    <li>Customization of font color, size and weight</li>
+                                    <li>Light, Dark, Sepia and customized color mode for reading</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="bi bi-collection text-primary mr-2" aria-hidden="true"></i>
+                                    Discover &amp; Collect
+                                </h5>
+                                <ul class="pl-3 mb-0">
+                                    <li>Option to browse free e-books in multiple languages</li>
+                                    <li>Option to filter books in different literary forms</li>
+                                    <li>Option to download books for offline access</li>
+                                    <li>Option to store, read and delete books from library</li>
+                                    <li>Option to bookmark</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="bi bi-book-half text-primary mr-2" aria-hidden="true"></i>
+                                    Reading Experience
+                                </h5>
+                                <ul class="pl-3 mb-0">
+                                    <li>Indicator of book completion</li>
+                                    <li>Option to jump through chapters</li>
+                                    <li>In-built e-book reader</li>
+                                    <li>Adjustment of page margins</li>
+                                    <li>Horizontal and Vertical Scrolling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="bi bi-sliders text-primary mr-2" aria-hidden="true"></i>
+                                    Reading Your Way
+                                </h5>
+                                <ul class="pl-3 mb-0">
+                                    <li>LTR and RTL support</li>
+                                    <li>System default typeface along with options for Literata, Sans Sarif, IA Writer Duospace, AccsiibleDfa and OpenDyslexic typefaces </li>
+                                    <li>Option to choose among left, right and justified text alignments</li>
+                                    <li>Customization of line height, paragraph indent, paragraph spacing, word spacing and letter spacing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="bi bi-highlighter text-primary mr-2" aria-hidden="true"></i>
+                                    Make It Yours
+                                </h5>
+                                <ul class="pl-3 mb-0">
+                                    <li>Options to highlight, underline and annotate texts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="bi bi-headphones text-primary mr-2" aria-hidden="true"></i>
+                                    Listen &amp; Enjoy
+                                </h5>
+                                <ul class="pl-3 mb-0">
+                                    <li>Text to Speech in different languages with customizable speed and pitch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-light border-top py-4">
+        <div class="container text-center">
+            <p class="mb-2 font-weight-bold">
+                Wikisource Reader
+            </p>
+
+            <div class="mb-3">
+                <a href="./index.html" class="mx-2">
+                    Home
+                </a>
+
+                <a href="./privacy-policy.html" class="mx-2">
+                    Privacy Policy
+                </a>
+
+                <a href="./documentation.html" class="mx-2">
+                    Documentation
+                </a>
+
+            </div>
+
+            <p class="text-muted small mb-0">
+                Wikisource Reader documentation
+            </p>
+        </div>
+    </footer>     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

@@ -1,310 +1,545 @@
-/* Navbar */
-
-body {
-    text-align: center;
-    padding-top: 50px;
-
-    /**
-     * System font stack for sans-serif fonts
-     *
-     * `-apple-system`('San Francisco' font) – Support: Safari 9+ macOS and iOS, Firefox macOS
-     * `BlinkMacSystemFont` ('San Francisco' font) – Chrome 48+ macOS and iOS
-     * `Segoe UI` – Windows Vista & newer
-     * `Roboto` – Android 4.0
-     * `Lato` – Wikimedia Design choice, OFL licensed
-     * `Helvetica, Arial, sans-serif` – (Generic) Web fallback
-     *
-     * Note that CSS Fonts Module Level 4's `system-ui` value has resulted in
-     * unresolved side-effects in certain OS/language combinations as of
-     * now and is therefore not included.
-     *
-     * Ref: [1]
-     * 
-     * NOTE: We do this to to override the font native font stack of Bootstrap[2] and
-     * use  the Wikimedia font stack[1] in it's place.
-     *
-     * References:
-     * [1]: https://phabricator.wikimedia.org/T175877
-     * [2]: https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack
-     */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
-}
-
-.toggle-theme {
-    color: #fff;
-    opacity: 75%;
-}
-
-.toggle-theme:hover {
-    opacity: 100%;
-}
-
-.toggle-theme::after {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(356deg) brightness(106%) contrast(102%);
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.dark-mode .toggle-theme::after {
-    content: url("images/moon.svg");
-}
-
-.light-mode .toggle-theme::after {
-    content: url("images/sun.svg");
+/* Theme */
+:root {
+  --primary: #4C8BC1;
+  --link: #345394;
+  --link-hover: #2a4b8d;
+  --bg: #fff;
+  --text: #212529;
+  --muted: #54595d;
+  --alt: #f7f9fc;
+  --surface: #fff;
+  --stage: rgba(230, 235, 250, .77);
+  --border: #e3e8ef;
+  --nav-bg: #eee;
+  --nav-link: #777;
+  --nav-active: #555;
+  --nav-hover: #254117;
+  --code-bg: #f1f3f5;
 }
 
 .dark-mode {
-    background-color: #212529;
-    color: #fff !important;
+  --link: #99caff;
+  --link-hover: #7bbaff;
+  --bg: #212529;
+  --text: #f8f9fa;
+  --muted: #ced4da;
+  --alt: #2b3035;
+  --surface: #2b3035;
+  --stage: #343a40;
+  --border: #495057;
+  --nav-bg: #222;
+  --nav-link: #ddd;
+  --nav-active: #fff;
+  --nav-hover: #7bbaff;
+  --code-bg: #343a40;
+}
+/**
+ * System font stack for sans-serif fonts
+ *
+ * `-apple-system`('San Francisco' font) – Support: Safari 9+ macOS and iOS, Firefox macOS
+ * `BlinkMacSystemFont` ('San Francisco' font) – Chrome 48+ macOS and iOS
+ * `Segoe UI` – Windows Vista & newer
+ * `Roboto` – Android 4.0
+ * `Lato` – Wikimedia Design choice, OFL licensed
+ * `Helvetica, Arial, sans-serif` – (Generic) Web fallback
+ *
+ * Note that CSS Fonts Module Level 4's `system-ui` value has resulted in
+ * unresolved side-effects in certain OS/language combinations as of
+ * now and is therefore not included.
+ *
+ * Ref: [1]
+ *
+ * NOTE: We do this to override the native font stack of Bootstrap[2] and
+ * use the Wikimedia font stack[1] in its place. Every element inherits it
+ * from <body>, so no other font-family is declared in this file.
+ *
+ * References:
+ * [1]: https://phabricator.wikimedia.org/T175877
+ * [2]: https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack
+ */
 
+/* Base */
+html {
+  scroll-padding-top: 70px;
 }
 
-.dark-mode #docs h2>a,
-.dark-mode #docs h3>a {
-    color: #fff !important;
+body {
+  padding-top: 50px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
 }
 
-.dark-mode .shadow {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.85) !important;
+a {
+  color: var(--link);
 }
 
-.dark-mode a {
-    color: #99caff !important;
+a:hover {
+  color: var(--link-hover);
 }
 
-.dark-mode a:hover {
-    color: #7bbaff !important;
+.lead a {
+  font-weight: 600;
 }
 
-.dark-mode .btn-outline-primary {
-    border-color: #99caff !important;
+.text-primary {
+  color: var(--primary) !important;
 }
 
-.dark-mode .btn-outline-primary:hover {
-    border-color: #70cfff !important;
+.text-muted {
+  color: var(--muted) !important;
 }
 
-/* .badge-primary {
-        background-color: #99caff !important;
-    } */
-.dark-mode li::before {
-    color: #70cfff !important;
+.bg-light {
+  background-color: var(--alt) !important;
 }
 
-.dark-mode .text-success {
-    color: #6cdc86 !important;
+.bg-white {
+  background-color: var(--surface) !important;
 }
 
-.dark-mode .text-danger {
-    color: #ea868f !important;
+.border {
+  border-color: var(--border) !important;
 }
 
-.dark-mode .section-divider {
-    filter: brightness(140%);
+.badge-primary {
+  background-color: var(--primary);
 }
 
-
-.dark-mode .bg-primary {
-    background-color: #006699 !important;
+.card {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
 }
 
-/* Make code blocks easier to read in both light and dark mode*/
-pre {
-   background-color: #f1f3f5;
-   color: #212529;
-   padding: 12px 16px;
-   border-radius: 6px;
-   border: 1px solid #dee2e6;
-   text-align: left;
-   overflow-x: auto;
+.form-control,
+.form-control:focus {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
 }
 
-
-pre code {
-   color: inherit;
-   font-family: monospace;
+.form-control:focus {
+  border-color: var(--primary);
 }
 
-
-/* This section make sure the code blocks remain visible in dark mode */
-.dark-mode pre {
-   background-color: #343a40;
-   color: #fff;
+.title-bar::after,
+.Doc-title-bar::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  margin: 10px auto 0;
+  background: var(--primary);
+  border-radius: 5px;
 }
 
-
-.dark-mode pre code {
-   color: inherit;
-}
-
-
-/* Navbar: Hack to jump to correct anchor position by @mnot */
-
-*[id]:before {
-    display: block;
-    content: " ";
-    margin-top: -75px;
-    height: 75px;
-    visibility: hidden;
+.Doc-title-bar::after {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 
-/* Jumbotron */
-
-.jumbotron {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg');
-    background-position: center center;
-    background-size: cover;
-    color: #fff;
+/* Navbar */
+.navbar {
+  background-color: var(--nav-bg);
 }
 
-.jumbotron h1 {
-    font-size: 4rem;
-    text-shadow: 0 0 0.5rem #000;
-    text-align: left;
+.navbar-nav {
+  font-size: 17px;
 }
 
-.jumbotron .container {
-    position: relative;
-    height: 500px;
+.navbar-light .navbar-nav .nav-link {
+  color: var(--nav-link);
 }
 
-.jumbotron .app-badge {
-    position: absolute;
-    right: 0;
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--nav-active);
 }
 
-.jumbotron .app-badge img {
-    width: 300px;
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--nav-hover);
 }
 
-.jumbotron .app-badge.f-droid-badge {
-    bottom: 70px;
+.dark-mode .navbar-toggler {
+  filter: invert(1);
 }
 
-.jumbotron .app-badge.play-store-badge {
-    bottom: -20px;
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 1;
+  transition: transform .3s;
 }
 
-/* Matching commons-app theme */
+.navbar-brand:hover .logo-mark {
+  transform: scale(1.06);
+}
 
+.logo-text {
+  line-height: 1.15;
+  letter-spacing: .4px;
+}
+
+.search-box {
+  width: 100%;
+}
+
+.search-box .form-control {
+  width: 100%;
+  padding-right: 2rem;
+  border-radius: 17px;
+  transition: width .3s;
+}
+
+.search-box button {
+  top: 0;
+  right: 0;
+}
+
+.toggle-theme {
+  cursor: pointer;
+}
+
+.toggle-theme::after {
+  content: url("images/sun.svg");
+  display: block;
+  width: 25px;
+  height: 25px;
+  line-height: 0;
+}
+
+.dark-mode .toggle-theme::after {
+  content: url("images/moon.svg");
+  filter: invert(1);
+}
+
+@media (min-width: 992px) {
+  .search-box {
+    width: auto;
+  }
+
+  .search-box .form-control {
+    width: 170px;
+  }
+
+  .search-box .form-control:focus {
+    width: 220px;
+  }
+}
+
+
+/* Navbar search suggestions */
+.search-form {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  max-width: 90vw;
+  max-height: 350px;
+  overflow-y: auto;
+  z-index: 1050;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+}
+
+.search-results[hidden] {
+  display: none !important;
+}
+
+.search-result-item {
+  display: block;
+  padding: 10px 14px;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover,
+.search-result-item:focus {
+  background: var(--alt);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.search-result-empty {
+  padding: 12px 14px;
+  color: inherit;
+}
+
+
+/* Home page */
+.hero {
+  background:
+    linear-gradient(rgba(0, 2, 3, .667), rgba(0, 0, 0, .5)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg')
+    center / cover fixed #000205;
+}
+
+.hero h1 {
+  font-size: 29.7px;
+  line-height: 1.7;
+  transform: scale(1.9, 1.7);
+}
+
+.hero h1 span {
+  font-size: 60.1px;
+}
+
+.download-badge {
+  height: 65px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero h1 {
+    transform: scale(1.2, 1.1);
+  }
+
+  .hero h1 span {
+    font-size: 45px;
+  }
+
+  .download-badge {
+    height: 55px;
+  }
+}
+
+
+/* Buttons */
+.btn-primary,
 .btn-outline-primary:hover {
-    background-color: #006699;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
+.btn-outline-primary {
+  color: var(--link);
+  border-color: var(--link);
+}
+
+.arrow {
+  width: .6em;
+  height: .7em;
+  background: currentColor;
+  -webkit-mask: url('top-right.png') center / contain no-repeat;
+  mask: url('top-right.png') center / contain no-repeat;
+}
+
+
+/* Features */
+.feature-pills .nav-link {
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.feature-pills .nav-link:hover {
+  border-color: var(--primary);
+  color: var(--link);
+}
+
+.feature-pills .nav-link.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.feature-pills .fa {
+  color: var(--link);
+}
+
+.feature-pills .active .fa {
+  color: #fff;
+}
+
+.stage {
+  height: 440px;
+  background: var(--stage);
+}
+
+.stage img {
+  filter: drop-shadow(0 4px 4px rgba(115, 114, 114, .18));
+}
+
+
+/* Usage steps */
+.usage-step {
+  border-radius: 12px;
+  transition: all .3s ease-in-out;
+}
+
+.usage-step:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 6px 16px rgba(51, 102, 204, .18) !important;
+  transform: translateY(-2px);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  font-size: 22px;
+}
+
+
+/* Shared by all pages */
+pre {
+  padding: 12px 16px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: inherit;
+  text-align: left;
+  overflow-x: auto;
 }
 
 .section-divider {
-    background-image: url('images/section-divider.svg');
-    width: 100%;
-    max-width: 600px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+  max-width: 900px;
+  height: 50px;
+  margin: 10px auto;
+  background:
+    url('images/section-divider.svg') center no-repeat,
+    linear-gradient(to right,
+      var(--primary) calc(50% - 300px), transparent calc(50% - 300px),
+      transparent calc(50% + 300px), var(--primary) calc(50% + 300px))
+      center / 100% 2px no-repeat;
+}
+
+.dark-mode .section-divider {
+  filter: brightness(1.4);
 }
 
 
-/* Feature items */
-
-.item {
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.18);
-    margin: 10px -5px;
+/* Documentation */
+.documentation-page {
+  padding-top: 70px;
 }
 
-.item-image {
-    height: 440px;
-    background-color: lavender;
-    padding: 20px 0;
+#docs h2 > a,
+#docs h3 > a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.feature-image {
-    height: 100%;
-    width: auto;
+.code-container {
+  position: relative;
+  text-align: left;
 }
 
-.item-header {
-    padding-top: 20px;
+.code-container pre {
+  padding-top: 2.5rem !important;
 }
 
-.item-text {
-    padding-bottom: 20px;
-    width: 80%;
-    margin: 0 auto;
+.copy-code-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  cursor: pointer;
 }
 
-
-/* Installation & Usage */
-
-.large-count {
-    padding-left: 0;
-    text-align: left;
-    list-style: none;
-    counter-reset: first-order-counter;
+.copy-code-btn:hover {
+  background: var(--alt);
 }
 
-.large-count li {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 300;
-    line-height: 40px;
-    margin-left: 70px;
-    position: relative;
-    padding-bottom: 20px;
+.copy-code-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-.large-count li:before {
-    content: counter(first-order-counter);
-    counter-increment: first-order-counter;
-    font-size: 30px;
-    line-height: 70px;
-    position: absolute;
-    left: -50px;
-    top: -15px;
-    color: #006699;
+.copy-icon {
+  font-size: 18px;
+  line-height: 1;
 }
 
-
-/* Photo guidelines */
-
-.guide-list {
-    padding-left: 0;
-    text-align: left;
-    list-style: none;
+@media (min-width: 992px) {
+  .docs-toc {
+    top: 90px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
 }
 
-.guide-list li {
-    padding: 10px;
-    font-size: 1.25rem;
-}
-
-/* Documentation Header */
-#docs h2>a,
-#docs h3>a {
-    color: black;
-    text-decoration: none;
-}
-
-/* Footer */
-
-footer {
-    margin-bottom: 70px;
-}
-
-footer h2 {
-    margin-bottom: 20px;
+@media (max-width: 767.98px) {
+  .documentation-page {
+    padding-top: 65px;
+  }
 }
 
 
-/* Misc */
-
-.inner {
-    max-width: 900px;
+/* Large screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1600px;
+  }
 }
 
-.qr-code-div {
-    padding: 30px 15px;
+@media (min-width: 1400px) {
+  #features {
+    max-width: 1000px !important;
+  }
+}
+
+.feature-text {
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .stage {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-text {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
