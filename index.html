@@ -15,214 +15,154 @@
 
 <body>
 
-
-    <!-- Navbar section -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <div class="container">
-            <a href="./index.html" class="navbar-brand brand-logo">
-            <span class="logo-mark">W</span>
-            <span class="logo-text">Wikisource<br><strong>Reader</strong></span>
-            </a>
+<!-- navigation bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
+            <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">W</span>
+            <span class="logo-text small text-uppercase">Wikisource<br><strong class="text-primary">Reader</strong></span>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link scroll" href="#description">About</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="#community">Community</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="#features">Features</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="#usage">Usage</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="./faq.html#faq">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="./privacy-policy.html">Privacy Policy</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="./documentation.html">Documentation</a></li>
-                <li class="nav-item"><btn class="nav-link toggle-theme"></btn></li>
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
+                <li class="nav-item"><a class="nav-link" href="./faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="./privacy-policy.html">Privacy Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="./documentation.html">Documentation</a></li>
+                <li class="nav-item"><button type="button" class="nav-link bg-transparent border-0 toggle-theme" aria-label="Toggle theme"></button></li>
             </ul>
-   
 
-        <form class="form-inline navbar-search"
-          role="search"
-          action="https://wikisource.org/w/index.php"
-          method="get"
-          target="_blank">
-        <input type="hidden" name="title" value="Special:Search">
-
-        <div class="search-box">
-            <input
-                class="form-control"
-                type="search"
-                name="search"
-                placeholder="Search Wikisource"
-                aria-label="Search Wikisource">
-
-            <button type="submit" aria-label="Search">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-        </div>
-    </form>
-     </div>
-        </div>
-    </nav>
-
-
-
-    
-<!--  Hopme page section -->
-    <div id="home">
-    <div id="front" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1 class="book-font"><span>W</span>ikisource <span>R</span>eader</h1>
-                <p class="book-font">Read | Download | Annotate | Share free books</p>
-
-                <div class="store-badges">
-                    <a class="app-badge f-droid-badge" href="https://f-droid.org/en/packages/org.cis_india.wsreader/">
-                        <img src="images/f-droid-badge.png" alt="F-Droid Logo" />
-                    </a>
-                    <a class="app-badge play-store-badge" href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader">
-                        <img src="images/google-play-badge.png" alt="Google Play Store badge" />
-                    </a>
+            <form class="form-inline ml-lg-3 my-2 my-lg-0" role="search"
+                  action="https://wikisource.org/w/index.php" method="get" target="_blank">
+                <input type="hidden" name="title" value="Special:Search">
+                <div class="search-box position-relative">
+                    <input class="form-control form-control-sm" type="search" name="search"
+                           placeholder="Search Wikisource" aria-label="Search Wikisource">
+                    <button type="submit" class="btn btn-link text-secondary position-absolute h-100 py-0 px-2" aria-label="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-</div>
+</nav>
 
+
+<header id="home" class="hero text-center text-white py-4 d-flex flex-column justify-content-center">
+    <div class="container-fluid">
+        <h1 class="d-inline-block mb-3">
+            <span>W</span>ikisource <span>R</span>eader
+        </h1>
+
+        <p class="lead mb-3">Read | Download | Annotate | Share free books</p>
+
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <a href="https://f-droid.org/en/packages/org.cis_india.wsreader/">
+                <img class="m-2 img-fluid download-badge"
+                     src="images/f-droid-badge.png"
+                     alt="F-Droid Logo" />
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader">
+                <img class="m-2 img-fluid download-badge"
+                     src="images/google-play-badge.png"
+                     alt="Google Play Store badge" />
+            </a>
+        </div>
+    </div>
+</header>
 
 
 <!-- App about section -->
-<section id="description" class="app-section">
-    <div class="container">
-        <div class="app-content text-center">
-            <span class="app-eyebrow">MEET WIKISOURCE READER</span>
+<section id="description" class="py-5 text-center">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-lg-9 mx-auto">
+                <h2 class="title-bar h1 font-weight-bold mb-4">
+                    The App
+                </h2>
 
-            <h2 class="app-heading">
-                The <span>App</span>
-            </h2>
+                <p class="lead text-muted mb-4">
+                    The Wikisource Reader App is a
+                    <a href="https://github.com/cis-india/Wikisource-Reader">
+                        community-maintained
+                    </a>
+                    mobile application for Android users that lets you download
+                    and read freely licensed works from the open and free digital
+                    library of
+                    <a href="https://wikisource.org/wiki/Main_Page">
+                        Wikisource
+                    </a>.
+                </p>
 
-            <p class="lead app-description-text">
-                The Wikisource Reader App is a
-                <a href="https://github.com/cis-india/Wikisource-Reader">
-                    community-maintained
-                </a>
-                mobile application for Android users that lets you download
-                and read freely licensed works from the open and free digital
-                library of
-                <a href="https://wikisource.org/wiki/Main_Page">
-                    Wikisource
-                </a>.
-            </p>
+                <div class="d-flex flex-wrap justify-content-center mt-2">
+                    <a class="btn btn-primary d-inline-flex align-items-center px-4 m-2" role="button"
+                    href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader">
+                        Google Play Store<span class="arrow ml-2" aria-hidden="true"></span>
+                    </a>
 
-            <div class="app-text-links">
-                <a href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader">
-                    Google Play Store  &rarr;
-                </a>
-
-                <a
+                    <a class="btn btn-outline-primary d-inline-flex align-items-center px-4 m-2" role="button"
                     href="https://github.com/cis-india/Wikisource-Reader"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View source code &rarr;
-                </a>
+                    target="_blank" rel="noopener noreferrer">
+                        View source code<span class="arrow ml-2" aria-hidden="true"></span>
+                    </a>
 
-
-                <a
-                     href="https://phabricator.wikimedia.org/maniphest/task/edit/form/43/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Report an issue &rarr;
-                </a>
+                    <a class="btn btn-outline-primary d-inline-flex align-items-center px-4 m-2" role="button"
+                    href="https://phabricator.wikimedia.org/maniphest/task/edit/form/43/"
+                    target="_blank" rel="noopener noreferrer">
+                        Report an issue<span class="arrow ml-2" aria-hidden="true"></span>
+                    </a>
+                </div>
+            
             </div>
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- Community section -->
 <div class="section-divider"></div>
 
-<section id="community" class="app-section community-section">
-    <div class="container">
-        <div class="app-content text-center">
-            <span class="app-eyebrow">JOIN THE MOVEMENT</span>
+<section id="community" class="py-5 text-center">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-lg-9 mx-auto">
+                <h2 class=" title-bar h1 font-weight-bold mb-4">
+                    The Community
+                </h2> 
 
-            <h2 class="app-heading">
-                The <span>Community</span>
-            </h2>
+                <p class="lead text-muted mb-4">
+                    Join <a href="https://www.wikimedia.org/">Wikimedia</a> — one of the largest open knowledge communities in the world.
+                    Wikisource is not only a digital library of the Wikimedia world containing innumerable scans of 
+                    copyright-free books, newspapers, periodicals, manuscripts etc., but it is a unique 
+                    transcription platform to make these materials freely and openly available, searchable and
+                    accesible over internet.
+                </p>
 
-            <p class="lead app-description-text">
-                Join Wikimedia, one of the largest open knowledge communities
-                in the world. Wikisource is a digital library containing
-                countless scans of copyright-free books, newspapers,
-                periodicals, and manuscripts. It is also a transcription
-                platform that makes these materials freely available,
-                searchable, and accessible online.
-            </p>
-
-            <div class="app-text-links">
-                <a
+                <div class="d-flex flex-wrap justify-content-center">
+                    <a class="btn btn-primary font-weight-bold mx-3 mb-2 d-inline-flex align-items-center"
                     href="https://wikisource.org/w/index.php?title=Special:UserLogin&returnto=Special:MyLanguage/Main+Page">
-                    Join Wikisource &rarr;
-                </a>
+                        Join Wikisource <span class="arrow ml-2" aria-hidden="true"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <!-- Features section -->
-<section class="container inner py-5" id="features">
+ <div class="section-divider"></div>
+<section class="container py-5" id="features">
 
-    <!-- Section heading -->
     <div class="text-center mb-4">
-        <h2 class="feature-heading mb-3">Features</h2>
+        <h2 class="title-bar h1 mb-3">Features</h2>
         <p class="lead mb-4">
             Discover the tools that make finding, organising, and reading books from Wikisource easier.
         </p>
@@ -230,338 +170,213 @@
 
     <div class="row">
 
-        <!-- Feature navigation: left side -->
-        <div class="col-4 col-lg-4">
+        <div class="col-4">
+            <div class="nav nav-pills flex-column feature-pills" id="feature-tabs" role="tablist">
 
-            <div class="nav nav-pills flex-column feature-pills"
-                 id="feature-tabs"
-                 role="tablist">
-
-                <a class="nav-link active"
-                   id="tab-search"
-                   data-toggle="pill"
-                   href="#feat-search"
-                   role="tab"
-                   aria-controls="feat-search"
-                   aria-selected="true">
-                    <i class="fa fa-search mr-2" aria-hidden="true"></i>
+                <a class="nav-link active" id="tab-search" data-toggle="pill" href="#feat-search" role="tab" aria-controls="feat-search" aria-selected="true">
+                    <i class="fa fa-fw fa-search mr-2" aria-hidden="true"></i>
                     <span>Search books</span>
                 </a>
 
-                <a class="nav-link"
-                   id="tab-language"
-                   data-toggle="pill"
-                   href="#feat-language"
-                   role="tab"
-                   aria-controls="feat-language"
-                   aria-selected="false">
-                    <i class="fa fa-language mr-2" aria-hidden="true"></i>
+                <a class="nav-link" id="tab-language" data-toggle="pill" href="#feat-language" role="tab" aria-controls="feat-language" aria-selected="false">
+                    <i class="fa fa-fw fa-language mr-2" aria-hidden="true"></i>
                     <span>Filter languages</span>
                 </a>
 
-                <a class="nav-link"
-                   id="tab-library"
-                   data-toggle="pill"
-                   href="#feat-library"
-                   role="tab"
-                   aria-controls="feat-library"
-                   aria-selected="false">
-                    <i class="fa fa-bookmark mr-2" aria-hidden="true"></i>
+                <a class="nav-link" id="tab-library" data-toggle="pill" href="#feat-library" role="tab" aria-controls="feat-library" aria-selected="false">
+                    <i class="fa fa-fw fa-bookmark mr-2" aria-hidden="true"></i>
                     <span>Your library</span>
                 </a>
 
-                <a class="nav-link"
-                   id="tab-download"
-                   data-toggle="pill"
-                   href="#feat-download"
-                   role="tab"
-                   aria-controls="feat-download"
-                   aria-selected="false">
-                    <i class="fa fa-download mr-2" aria-hidden="true"></i>
+                <a class="nav-link" id="tab-download" data-toggle="pill" href="#feat-download" role="tab" aria-controls="feat-download" aria-selected="false">
+                    <i class="fa fa-fw fa-download mr-2" aria-hidden="true"></i>
                     <span>Download books</span>
                 </a>
 
-                <a class="nav-link"
-                   id="tab-navigate"
-                   data-toggle="pill"
-                   href="#feat-navigate"
-                   role="tab"
-                   aria-controls="feat-navigate"
-                   aria-selected="false">
-                    <i class="fa fa-list-ul mr-2" aria-hidden="true"></i>
+                <a class="nav-link" id="tab-navigate" data-toggle="pill" href="#feat-navigate" role="tab" aria-controls="feat-navigate" aria-selected="false">
+                    <i class="fa fa-fw fa-list-ul mr-2" aria-hidden="true"></i>
                     <span>Chapters</span>
                 </a>
 
-                <a class="nav-link"
-                   id="tab-read"
-                   data-toggle="pill"
-                   href="#feat-read"
-                   role="tab"
-                   aria-controls="feat-read"
-                   aria-selected="false">
-                    <i class="fa fa-book mr-2" aria-hidden="true"></i>
+                <a class="nav-link" id="tab-read" data-toggle="pill" href="#feat-read" role="tab" aria-controls="feat-read" aria-selected="false">
+                    <i class="fa fa-fw fa-book mr-2" aria-hidden="true"></i>
                     <span>Read</span>
                 </a>
 
-                <a class="nav-link"
-                   id="tab-annotate"
-                   data-toggle="pill"
-                   href="#feat-annotate"
-                   role="tab"
-                   aria-controls="feat-annotate"
-                   aria-selected="false">
-                    <i class="fa fa-pencil mr-2" aria-hidden="true"></i>
+                <a class="nav-link" id="tab-annotate" data-toggle="pill" href="#feat-annotate" role="tab" aria-controls="feat-annotate" aria-selected="false">
+                    <i class="fa fa-fw fa-pencil mr-2" aria-hidden="true"></i>
                     <span>Annotate</span>
                 </a>
 
-                <a class="nav-link"
-                   id="tab-theme"
-                   data-toggle="pill"
-                   href="#feat-theme"
-                   role="tab"
-                   aria-controls="feat-theme"
-                   aria-selected="false">
-                    <i class="fa fa-sliders mr-2" aria-hidden="true"></i>
+                <a class="nav-link" id="tab-theme" data-toggle="pill" href="#feat-theme" role="tab" aria-controls="feat-theme" aria-selected="false">
+                    <i class="fa fa-fw fa-sliders mr-2" aria-hidden="true"></i>
                     <span>Customise</span>
                 </a>
 
             </div>
         </div>
 
-        <!-- Feature cards: right side -->
-        <div class="col-8 col-lg-8">
-
+        <!-- Feature cards:-> right side -->
+        <div class="col-8">
             <div class="tab-content">
 
-                <!-- Search books -->
-                <div class="tab-pane fade show active"
-                     id="feat-search"
-                     role="tabpanel"
-                     aria-labelledby="tab-search">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade show active" id="feat-search" role="tabpanel" aria-labelledby="tab-search">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-search-screen.png"
                                  alt="Search screen where users search books from Wikisource."
                                  title="Search screen where users search books from Wikisource.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
-                            Search books
-                            <span class="badge badge-pill badge-primary">New</span>
-                        </h3>
-
-                        <p class="item-text">
-                            Search books in different languages from Wikisource which are ready to be read.
+                        <div class="card-body text-center">
+                            <h3 class="card-title">
+                                Search books
+                                <span class="badge badge-pill badge-primary">New</span>
+                            </h3>
+                            <p class="card-text w-75 mx-auto">
+                              Search books in different languages from Wikisource which are ready to be read.
                         </p>
-
+                        </div>
                     </div>
                 </div>
 
-                <!-- Filter languages -->
-                <div class="tab-pane fade"
-                     id="feat-language"
-                     role="tabpanel"
-                     aria-labelledby="tab-language">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade" id="feat-language" role="tabpanel" aria-labelledby="tab-language">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-language-screen.png"
                                  alt="Filter screen where users filter for books in different languages."
                                  title="Filter screen where users filter for books in different languages.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
-                            Filter languages
-                            <span class="badge badge-pill badge-primary">New</span>
-                        </h3>
-
-                        <p class="item-text">
-                            Filter books in different languages to search them easily.
+                        <div class="card-body text-center">
+                            <h3 class="card-title">
+                                Filter languages
+                                <span class="badge badge-pill badge-primary">New</span>
+                            </h3>
+                            <p class="card-text w-75 mx-auto">
+                                 Filter books in different languages to search them easily.
                         </p>
-
+                        </div>
                     </div>
                 </div>
 
-                <!-- Store books in your library -->
-                <div class="tab-pane fade"
-                     id="feat-library"
-                     role="tabpanel"
-                     aria-labelledby="tab-library">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade" id="feat-library" role="tabpanel" aria-labelledby="tab-library">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-library-screen.png"
                                  alt="Library screen where users can store selected books to read."
                                  title="Library screen where users can store selected books to read.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
-                            Store books in your library
-                            <span class="badge badge-pill badge-primary">New</span>
-                        </h3>
-
-                        <p class="item-text">
-                            Store all your selected books in your library, so that you can read them, share with others and delete them as you like.
+                       <div class="card-body text-center">
+                            <h3 class="card-title">
+                                Store books in your library
+                                <span class="badge badge-pill badge-primary">New</span>
+                            </h3>
+                            <p class="card-text w-75 mx-auto">
+                              Store all your selected books in your library, so that you can read them, share with others and delete them as you like. 
                         </p>
-
+                        </div>
                     </div>
                 </div>
 
-                <!-- Download and read selected books -->
-                <div class="tab-pane fade"
-                     id="feat-download"
-                     role="tabpanel"
-                     aria-labelledby="tab-download">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade" id="feat-download" role="tabpanel" aria-labelledby="tab-download">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-download-screen.png"
                                  alt="Download screen where users can download selected books before reading."
                                  title="Download screen where users can download selected books before reading.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
-                            Download and read selected books
-                            <span class="badge badge-pill badge-primary">New</span>
-                        </h3>
-
-                        <p class="item-text">
-                            Download selected books in Epub format and start reading.
+                        <div class="card-body text-center">
+                            <h3 class="card-title">
+                                Download and read selected books
+                                <span class="badge badge-pill badge-primary">New</span>
+                            </h3>
+                            <p class="card-text w-75 mx-auto">
+                                Download selected books in Epub format and start reading.
                         </p>
-
+                        </div>
                     </div>
                 </div>
 
-                <!-- Navigate through chapters -->
-                <div class="tab-pane fade"
-                     id="feat-navigate"
-                     role="tabpanel"
-                     aria-labelledby="tab-navigate">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade" id="feat-navigate" role="tabpanel" aria-labelledby="tab-navigate">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-navigate-screen.png"
                                  alt="Content screen to navigate between chapters."
                                  title="Content screen to navigate between chapters.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
-                            Navigate through chapters
-                            <span class="badge badge-pill badge-primary">New</span>
-                        </h3>
-
-                        <p class="item-text">
-                            Search for chapters listed in the book and directly navigate to specific chapters as you need.
+                        <div class="card-body text-center">
+                            <h3 class="card-title">
+                                Navigate through chapters
+                                <span class="badge badge-pill badge-primary">New</span>
+                            </h3>
+                            <p class="card-text w-75 mx-auto">
+                               Search for chapters listed in the book and directly navigate to specific chapters as you need. 
                         </p>
-
+                        </div>
                     </div>
                 </div>
 
-                <!-- Read books -->
-                <div class="tab-pane fade"
-                     id="feat-read"
-                     role="tabpanel"
-                     aria-labelledby="tab-read">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade" id="feat-read" role="tabpanel" aria-labelledby="tab-read">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-read-screen.png"
                                  alt="Reading screen where users can read selected books."
                                  title="Reading screen where users can read selected books.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
-                            Read books
-                            <span class="badge badge-pill badge-primary">New</span>
-                        </h3>
-
-                        <p class="item-text">
-                            Read your selected books from the Wikisource app! You can resume reading from the page where you have left last time.
+                        <div class="card-body text-center">
+                            <h3 class="card-title">
+                                Read books
+                                <span class="badge badge-pill badge-primary">New</span>
+                            </h3>
+                            <p class="card-text w-75 mx-auto">
+                                Read your selected books from the Wikisource app! You can resume reading from the page where you have left last time.
                         </p>
-
+                        </div>
                     </div>
                 </div>
 
-                <!-- Annotate texts -->
-                <div class="tab-pane fade"
-                     id="feat-annotate"
-                     role="tabpanel"
-                     aria-labelledby="tab-annotate">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade" id="feat-annotate" role="tabpanel" aria-labelledby="tab-annotate">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-annotate-screen.png"
                                  alt="Annotate screen where users can select texts to highlight, underline, take notes, copy and search the web."
                                  title="Annotate screen where users can select texts to highlight, underline, take notes, copy and search the web.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
-                            Annotate texts
-                            <span class="badge badge-pill badge-primary">New</span>
-                        </h3>
-
-                        <p class="item-text">
-                            Highlight, underline and take notes from selected texts and check them later as you need.
+                        <div class="card-body text-center">
+                            <h3 class="card-title">
+                                Annotate texts
+                                <span class="badge badge-pill badge-primary">New</span>
+                            </h3>
+                            <p class="card-text w-75 mx-auto">
+                               Highlight, underline and take notes from selected texts and check them later as you need.
                         </p>
-
+                        </div>
                     </div>
                 </div>
 
-                <!-- Customise reading screen -->
-                <div class="tab-pane fade"
-                     id="feat-theme"
-                     role="tabpanel"
-                     aria-labelledby="tab-theme">
-
-                    <div class="item">
-
-                        <div class="item-image">
-                            <img class="img-fluid feature-image"
+                <div class="tab-pane fade" id="feat-theme" role="tabpanel" aria-labelledby="tab-theme">
+                    <div class="card border-0 shadow-sm bg-white">
+                        <div class="stage text-center py-3">
+                            <img class="img-fluid h-100"
                                  src="images/wikisource-theme-screen.png"
                                  alt="Screen with customised background and text colors, font size, and page margins."
                                  title="Screen with customised background and text colors, font size, and page margins.">
                         </div>
-
-                        <div class="hover-bar"></div>
-
-                        <h3 class="item-header">
+                        <div class="card-body text-center">
+                        <h3 class="card-title">
                             Customise reading screen
                             <span class="badge badge-pill badge-primary">New</span>
                         </h3>
-
-                        <p class="item-text">
+                        <p class="card-text">
                             Change background and text colors, font size, page margins etc. to adjust your reading experience.
                         </p>
-
+                    </div>
                     </div>
                 </div>
 
@@ -572,83 +387,65 @@
 </section>
 
 
+<!-- Installation & Usage -->
+<div class="section-divider"></div>
+<div class="container py-5 text-center" id="usage">
+    <h2 class="title-bar h1">Installation &amp; Usage</h2>
+    <p class="lead">Installing and using the app is easy:</p>
 
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-left">
+            <ol class="list-unstyled mt-4 mb-0">
 
+                <li class="usage-step media align-items-center bg-white border shadow-sm p-3 mb-3">
+                    <span class="step-number rounded-circle d-flex align-items-center justify-content-center text-white mr-3" aria-hidden="true">1</span>
+                    <div class="media-body"><strong class="text-primary">Install the app.</strong> Download Wikisource Reader from the 
+                        <a href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader">Google Play Store</a>.</div>
+                </li>
 
+                <li class="usage-step media align-items-center bg-white border shadow-sm p-3 mb-3">
+                    <span class="step-number rounded-circle d-flex align-items-center justify-content-center text-white mr-3" aria-hidden="true">2</span>
+                    <div class="media-body"><strong class="text-primary">Find a book.</strong> Search for books of your interest in your preferred languages.</div>
+                </li>
 
+                <li class="usage-step media align-items-center bg-white border shadow-sm p-3 mb-3">
+                    <span class="step-number rounded-circle d-flex align-items-center justify-content-center text-white mr-3" aria-hidden="true">3</span>
+                    <div class="media-body"><strong class="text-primary">Save it.</strong> Download, store and read books directly from the app.</div>
+                </li>
 
+                <li class="usage-step media align-items-center bg-white border shadow-sm p-3 mb-3">
+                    <span class="step-number rounded-circle d-flex align-items-center justify-content-center text-white mr-3" aria-hidden="true">4</span>
+                    <div class="media-body"><strong class="text-primary">Jump around.</strong> Navigate the book easily by jumping through the chapters.</div>
+                </li>
 
+                <li class="usage-step media align-items-center bg-white border shadow-sm p-3 mb-3">
+                    <span class="step-number rounded-circle d-flex align-items-center justify-content-center text-white mr-3" aria-hidden="true">5</span>
+                    <div class="media-body"><strong class="text-primary">Mark it up.</strong> Highlight, underline, annotate or copy texts as you need.</div>
+                </li>
 
+                <li class="usage-step media align-items-center bg-white border shadow-sm p-3 mb-3">
+                    <span class="step-number rounded-circle d-flex align-items-center justify-content-center text-white mr-3" aria-hidden="true">6</span>
+                    <div class="media-body"><strong class="text-primary">Make it yours.
+                    </strong> Set background and text colors, font size, page margins etc. to match your reading preferences.</div>
 
+                    
+                </li>
 
+                <li class="usage-step media align-items-center bg-white border shadow-sm p-3 mb-3">
+                    <span class="step-number rounded-circle d-flex align-items-center justify-content-center text-white mr-3" aria-hidden="true">7</span>
+                    <div class="media-body"><strong class="text-primary">Listen.</strong> Use text to speech audio when you are not reading.</div>
+                </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="section-divider"></div>
-    <div class="inner container" id="usage">
-        <h2>Installation &amp; Usage</h2>
-        <p class="lead">Installing and using the app is easy:</p>
-        <ol class="large-count">
-            <li>Download Wikisource Reader app from the <a href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader">Google Play Store</a>.</li>
-            <li>Search for books of your interest in your prefered languages.</li>
-            <li>Download, store and read books directly from the app.</li>
-            <li>Navigate the book easily by jumping through the chapters.</li>
-            <li>Highlight, Underline, Annotate or Copy texts as you need</li>
-            <li>Set background and text colors, font size, page margins etc. compatible with your reading preferences.</li>
-            <li>Listen to text to speech audio when you are not reading.</li>
-        </ol>
+            </ol>
+        </div>
     </div>
-    <div class="section-divider"></div>
+</div>
+<div class="section-divider"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-    <script  src="js/index.js"></script>
+<script  src="js/index.js"></script>
 </body>
 </html>

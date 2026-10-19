@@ -1,907 +1,359 @@
-/* Navbar */
+/* === Color pallete === */
+:root {
+  --primary: #4C8BC1;
+  --link: #345394;
+  --link-hover: #2a4b8d;
+  --bg: #fff;
+  --text: #212529;
+  --muted: #54595d;
+  --alt: #f7f9fc;               
+  --surface: #fff;            
+  --stage: rgba(230, 235, 250, .77);
+  --border: #e3e8ef;
+  --nav-bg: #eee;
+  --nav-link: #777;
+  --nav-active: #555;
+  --nav-hover: #254117;
+  --code-bg: #f1f3f5;
+}
+
+.dark-mode {
+  --link: #99caff;
+  --link-hover: #7bbaff;
+  --bg: #212529;
+  --text: #f8f9fa;
+  --muted: #ced4da;
+  --alt: #2b3035;
+  --surface: #2b3035;
+  --stage: #343a40;
+  --border: #495057;
+  --nav-bg: #222;
+  --nav-link: #ddd;
+  --nav-active: #fff;
+  --nav-hover: #7bbaff;
+  --code-bg: #343a40;
+}
+
+html { 
+    scroll-padding-top: 70px; 
+} 
+
+/**
+ * System font stack for sans-serif fonts
+ *
+ * `-apple-system`('San Francisco' font) – Support: Safari 9+ macOS and iOS, Firefox macOS
+ * `BlinkMacSystemFont` ('San Francisco' font) – Chrome 48+ macOS and iOS
+ * `Segoe UI` – Windows Vista & newer
+ * `Roboto` – Android 4.0
+ * `Lato` – Wikimedia Design choice, OFL licensed
+ * `Helvetica, Arial, sans-serif` – (Generic) Web fallback
+ *
+ * Note that CSS Fonts Module Level 4's `system-ui` value has resulted in
+ * unresolved side-effects in certain OS/language combinations as of
+ * now and is therefore not included.
+ *
+ * Ref: [1]
+ *
+ * NOTE: We do this to override the native font stack of Bootstrap[2] and
+ * use the Wikimedia font stack[1] in its place. Every element inherits it
+ * from <body>, so no other font-family is declared in this file.
+ *
+ * References:
+ * [1]: https://phabricator.wikimedia.org/T175877
+ * [2]: https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack
+ */
+
 body {
-    text-align: center;
-    padding-top: 50px;
+  padding-top: 50px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
+}
 
-    /**
-     * System font stack for sans-serif fonts
-     *
-     * `-apple-system`('San Francisco' font) – Support: Safari 9+ macOS and iOS, Firefox macOS
-     * `BlinkMacSystemFont` ('San Francisco' font) – Chrome 48+ macOS and iOS
-     * `Segoe UI` – Windows Vista & newer
-     * `Roboto` – Android 4.0
-     * `Lato` – Wikimedia Design choice, OFL licensed
-     * `Helvetica, Arial, sans-serif` – (Generic) Web fallback
-     *
-     * Note that CSS Fonts Module Level 4's `system-ui` value has resulted in
-     * unresolved side-effects in certain OS/language combinations as of
-     * now and is therefore not included.
-     *
-     * Ref: [1]
-     * 
-     * NOTE: We do this to to override the font native font stack of Bootstrap[2] and
-     * use  the Wikimedia font stack[1] in it's place.
-     *
-     * References:
-     * [1]: https://phabricator.wikimedia.org/T175877
-     * [2]: https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack
-     */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
+a { 
+    color: var(--link); 
+}
+a:hover { 
+    color: var(--link-hover); 
+}
+.lead a { 
+    font-weight: 600; 
+}
+
+.text-primary  { 
+    color: var(--primary) !important; 
+}
+.text-muted    { 
+    color: var(--muted) !important; 
+}
+.bg-light      { 
+    background-color: var(--alt) !important; 
+}
+.bg-white      { 
+    background-color: var(--surface) !important; 
+}
+.border        { 
+    border-color: var(--border) !important; 
+}
+.badge-primary { 
+    background-color: var(--primary); 
+}
+
+.form-control,
+.form-control:focus { 
+    background-color: var(--surface); 
+    color: var(--text); 
+    border-color: var(--border); 
+}
+.form-control:focus { 
+    border-color: var(--primary); 
+}
+
+.title-bar::after {            
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  margin: 10px auto 0;
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+/* ==== NAVBAR ==== */
+.navbar { background-color: var(--nav-bg); }
+.navbar-nav { font-size: 17px; }
+
+.navbar-light .navbar-nav .nav-link { 
+    color: var(--nav-link); 
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active { 
+    color: var(--nav-active); 
+}
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+     color: var(--nav-hover);
+     }
+
+.dark-mode .navbar-toggler {
+     filter: invert(1); 
+}
+
+.logo-mark { 
+    width: 40px; 
+    height: 40px;
+    background: var(--primary); 
+    font-size: 30px; 
+    line-height: 1; 
+    transition: transform .3s; 
+}
+.navbar-brand:hover .logo-mark { 
+    transform: scale(1.06); 
+}
+.logo-text { 
+    line-height: 1.15; 
+    letter-spacing: .4px; 
+}
+
+.search-box { 
+    width: 100%; 
+}
+.search-box .form-control { 
+    width: 100%; 
+    padding-right: 2rem; 
+    border-radius: 17px; 
+    transition: width .3s; 
+}
+.search-box button { 
+    top: 0; 
+    right: 0; 
+}
+@media (min-width: 992px) {
+  .search-box { 
+    width: auto; 
+}
+  .search-box .form-control { 
+    width: 170px; 
+}
+  .search-box .form-control:focus { 
+    width: 220px; 
+}
+}
+
+.toggle-theme { 
+    cursor: pointer; 
+}
+.toggle-theme::after { 
+    content: url("images/sun.svg"); 
+    display: block; 
+    width: 25px; 
+    height: 25px; 
+    line-height: 0; 
+}
+.dark-mode .toggle-theme::after { 
+    content: url("images/moon.svg"); 
+    filter: invert(1); 
 }
 
 
-
-
-/* === Navbar ====*/
-.navbar {
-  border: none;
-  padding-top: 0;
-  padding-bottom: 0;
+/* ==== Home page styling ==== */
+.hero {
+    background:
+        linear-gradient(
+            rgba(0, 2, 3, 0.667),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg')
+        center / cover fixed #000205;
 }
 
-.navbar-light {
-  background-color: #EEE;
-  margin: 0;
+.hero h1 {
+    font-size: 29.7px;
+    line-height: 1.7;
+    transform: scale(1.9, 1.7);
 }
 
-.navbar-light .navbar-nav .nav-link {
-  font-size: 17px;
-  padding-top: 16px;
-  padding-bottom: 13px;
-  color: #777;
+.hero h1 span {
+    font-size: 60.1px;
 }
 
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #254117 !important;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-}
-
-.navbar-light .navbar-nav .active > .nav-link {
-  color: #555 !important;
-  background: none;
-}
-
-.dark-mode .navbar-light {
-  background-color: #222;
-}
-
-.dark-mode .navbar-light .navbar-nav .nav-link {
-  color: #ddd !important;
-}
-
-/* ===== Navbar brand ==== */
-.navbar-brand.brand-logo {
-  display: flex;
-  align-items: center;
-  padding: 7px 10px;
-  margin-right: 1rem;
-  color: #555 !important;
-}
-
-.brand-logo .logo-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  background: #36c;
-  border-radius: 6px;
-  color: #fff;
-  font-family: 'Linden Hill', Georgia, serif;
-  font-size: 30px;
-  line-height: 1;
-transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.brand-logo .logo-text {
-  font-size: 13px;
-  line-height: 1.15;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  transition: color 0.3s ease-in-out;
-}
-
-.brand-logo .logo-text strong {
-  font-weight: 700;
-  color: #36c;
-}
-
-.navbar-brand.brand-logo:hover,
-.navbar-brand.brand-logo:focus {
-  color: #081801 !important;
-  text-decoration: none;
-}
-
-.navbar-brand.brand-logo:hover .logo-mark,
-.navbar-brand.brand-logo:focus .logo-mark {
-  background: #2a4b8d;
-  transform: scale(1.06);
-}
-
-.dark-mode .navbar-brand.brand-logo {
-  color: #ddd !important;
-}
-
-.dark-mode .brand-logo .logo-text strong {
-  color: #6ea0ff;
-}
-
-/* ===== Navbar search ======= */
-.navbar-search {
-  margin-left: 1rem;
-}
-
-.search-box {
-  position: relative;
-}
-
-.search-box .form-control {
-  width: 170px;
-  height: 34px;
-  padding: 4px 34px 4px 14px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 17px;
-  color: #555;
-  font-size: 14px;
-  transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.search-box .form-control:focus {
-  width: 220px;
-  border-color: #36c;
-  box-shadow: 0 0 0 3px rgba(51, 102, 204, 0.2);
-}
-
-.search-box button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  background: transparent;
-  border: none;
-  color: #777;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
-.search-box button:hover,
-.search-box button:focus {
-  color: #36c;
-  outline: none;
-}
-
-.dark-mode .search-box .form-control {
-  background: #333;
-  border-color: #555;
-  color: #eee;
-}
-
-.dark-mode .search-box .form-control::placeholder {
-  color: #999;
-}
-
-.dark-mode .search-box button {
-  color: #bbb;
-}
-
-.dark-mode .search-box button:hover,
-.dark-mode .search-box button:focus {
-  color: #6ea0ff;
-}
-
-.dark-mode .navbar-light .navbar-toggler-icon {
-    filter: invert(1);
-}
-
-.dark-mode .navbar-light .navbar-toggler {
-    border-color: #777;
-}
-@media (max-width: 991px) {
-  .navbar-search {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .search-box {
-    width: 100%;
-  }
-
-  .search-box .form-control,
-  .search-box .form-control:focus {
-    width: 100%;
-  }
-}
-
-.toggle-theme {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555 !important;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.toggle-theme:hover {
-    opacity: 1;
-}
-
-.toggle-theme::after {
-    display: block;
-    width: 25px;
-    height: 25px;
-    line-height: 0;
-}
-
-.light-mode .toggle-theme::after {
-    content: url("images/sun.svg");
-    filter: none;
-}
-
-.dark-mode .toggle-theme::after {
-    content: url("images/moon.svg");
-    filter: invert(1);
-}
-
-
-
-
-
-
-
-
-/* ==== Home Page  ===== */
-#home {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg') center center;
-  background-color: #000205;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 50vh;
-  width: 100%;
-  color: white;
-  text-align: center;
-}
-
-#front {
-  background: rgba(0, 0, 0, 0.35);
-  min-height: 70vh;
-  padding-top: 110px;
-  padding-bottom: 40px;
-}
-
-.book-font {
-  font-family: 'Linden Hill', Georgia, serif;
-}
-
-#front h1 {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 29.7px;
-  line-height: 1.7;
-  -webkit-transform: scale(1.9, 1.7);
-  -moz-transform: scale(1.9, 1.7);
-  -ms-transform: scale(1.9, 1.7);
-  -o-transform: scale(1.9, 1.7);
-  transform: scale(1.9, 1.7);
-}
-
-#front h1 span {
-  font-size: 60.1px;
-}
-
-#front p {
-  margin-bottom: 21px;
-  font-size: 21.19px;
-}
-
-#front .store-badges {
-  margin-bottom: 25px;
-}
-
-#front .app-badge img {
-  height: 50px;
-  margin: 3px;
-}
-
-
-
-@media (max-width: 767px) {
-  #front h1 {
-    transform: scale(1.2, 1.1);
-  }
-
-  #front h1 span {
-    font-size: 45px;
-  }
-
-  #front p {
-    font-size: 17px;
-  }
-}
-
-
-
-
-/* ===== App description section ===== */
-.app-section {
-    padding: 80px 0;
-    background-color: #f7f9fc;
-    color: #202122;
-}
-
-.app-content {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.app-eyebrow {
-    display: inline-block;
-    margin-bottom: 15px;
-    color: #36c;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.app-heading {
-    margin-bottom: 24px;
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.app-heading span {
-    color: #36c;
-}
-
-.app-description-text {
-    margin: 0 auto 28px;
-    color: #54595d;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.app-description-text a,
-.app-text-links a {
-    color: #36c;
-    font-weight: 600;
-}
-
-.app-text-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 28px;
-}
-
-.app-text-links a {
-    margin: 0 12px 8px;
-}
-
-@media (max-width: 767px) {
-    .app-section {
-        padding: 55px 0;
-    }
-
-    .app-heading {
-        font-size: 2.2rem;
-    }
-
-    .app-description-text {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 575px) {
-    .app-heading {
-        font-size: 1.9rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Features section */
-
-#features {
-    scroll-margin-top: 80px;
-}
-
-.feature-heading {
-    font-family: 'Linden Hill', Georgia, serif;
-    font-size: 2.6rem;
-}
-
-.feature-heading::after {
-    display: block;
-    width: 60px;
-    height: 4px;
-    margin: 12px auto 0;
-    background-color: #36c;
-    border-radius: 2px;
-    content: "";
-}
-
-
-.item {
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.18);
-    margin: 10px -5px;
-}
-
-.item-image {
-    height: 440px;
-    background-color: rgba(230, 235, 250, 0.767);
-    padding: 20px 0;
-}
-
-.feature-image {
-    height: 100%;
+.download-badge {
+    height: 65px;
     width: auto;
 }
 
-.item-header {
-    padding-top: 20px;
+@media (max-width: 767px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        transform: scale(1.2, 1.1);
+    }
+
+    .hero h1 span {
+        font-size: 45px;
+    }
+
+    .download-badge {
+        height: 55px;
+    }
 }
 
-.item-text {
-    padding-bottom: 20px;
-    width: 80%;
-    margin: 0 auto;
+@media (min-width: 768px) {
+    .hero {
+        min-height: 70vh;
+    }
 }
 
+
+.btn-primary,
+.btn-outline-primary:hover { 
+    background-color: var(--primary); 
+    border-color: var(--primary); 
+    color: #fff; 
+}
+.btn-primary:hover { 
+    background-color: var(--link-hover); 
+    border-color: var(--link-hover); 
+}
+.btn-outline-primary { 
+    color: var(--link); 
+    border-color: var(--link); 
+}
+
+/* ==== Features page styling ==== */
 .feature-pills .nav-link {
-    margin-bottom: 8px;
-    padding: 12px 16px;
-    border: 1px solid #e3e8ef;
-    border-radius: 10px;
-    color: #444;
-    font-weight: 600;
-    transition: background-color 0.2s, color 0.2s;
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  font-weight: 600;
+}
+.feature-pills .nav-link:hover { 
+    border-color: var(--primary); 
+    color: var(--link); 
+}
+.feature-pills .nav-link.active { 
+    background-color: var(--primary); 
+    border-color: var(--primary); 
+    color: #fff; 
+}
+.feature-pills .fa { 
+    color: var(--link); 
+}
+.feature-pills .active .fa { 
+    color: #fff; 
 }
 
-.feature-pills .nav-link:hover,
-.feature-pills .nav-link:focus {
-    border-color: #36c;
-    color: #36c;
+.stage { 
+    height: 440px; 
+    background: var(--stage); 
+}
+.stage img { 
+    filter: drop-shadow(0 4px 4px rgba(115, 114, 114, .18)); 
 }
 
-.feature-pills .nav-link.active {
-    border-color: #36c;
-    background-color: #36c;
-    color: #fff;
+/* ==== Usage steps ==== */
+.usage-step {
+    border-radius: 12px; 
+    transition: all .3s ease-in-out; 
+}
+.usage-step:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 6px 16px rgba(51, 102, 204, .18) !important;
+  transform: translateY(-2px);
+}
+.step-number { 
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: var(--primary);
+    font-size: 22px; 
 }
 
-.feature-pills .nav-link i {
-    width: 24px;
-    color: #36c;
-    text-align: center;
+/*  ==== share styling ==== */
+#docs h2 > a,
+#docs h3 > a { 
+    color: inherit; 
+    -decoration: none; 
 }
-
-.feature-pills .nav-link.active i {
-    color: #fff;
-}
-
-
-.feature-image {
-    max-height: 520px;
-    filter: drop-shadow(0 4px 4px rgba(115, 114, 114, 0.18));
-}
-
-.feature-caption h3 {
-    margin-bottom: 12px;
-    font-family: 'Linden Hill', Georgia, serif;
-    font-size: 1.9rem;
-}
-
-.feature-caption p {
-    margin-bottom: 0;
-    color: #555;
-    line-height: 1.7;
-}
-
-/* Dark mode */
-
-.dark-mode .feature-pills .nav-link {
-    border-color: #495057;
-    background-color: #2b3035;
-    color: #ddd;
-}
-
-.dark-mode .feature-pills .nav-link:hover,
-.dark-mode .feature-pills .nav-link:focus {
-    border-color: #99caff;
-    color: #99caff;
-}
-
-.dark-mode .feature-pills .nav-link.active {
-    border-color: #36c;
-    background-color: #36c;
-    color: #fff;
-}
-
-.dark-mode .feature-pills .nav-link i {
-    color: #99caff;
-}
-
-.dark-mode .feature-pills .nav-link.active i {
-    color: #fff;
-}
-
-.dark-mode .feature-stage {
-    border-color: #495057 !important;
-    background: linear-gradient(135deg, #2b3035, #23272b) !important;
-}
-
-.dark-mode .feature-caption p {
-    color: #ccc;
-}
-
-/* Smaller screens */
-
-@media (max-width: 767.98px) {
-    .feature-heading {
-        font-size: 2.1rem;
-    }
-
-    .feature-caption {
-        text-align: center;
-    }
-
-    .feature-caption h3 {
-        font-size: 1.6rem;
-    }
-
-    .feature-image {
-        max-height: 420px;
-    }
-}
-
-/* Respect reduced-motion preferences */
-
-@media (prefers-reduced-motion: reduce) {
-    .feature-pills .nav-link {
-        transition: none;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-
-
-.dark-mode #docs h2>a,
-.dark-mode #docs h3>a {
-    color: #fff !important;
-}
-
-.dark-mode .shadow {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.85) !important;
-}
-
-.dark-mode a {
-    color: #99caff !important;
-}
-
-.dark-mode a:hover {
-    color: #7bbaff !important;
-}
-
-.dark-mode .btn-outline-primary {
-    border-color: #99caff !important;
-}
-
-.dark-mode .btn-outline-primary:hover {
-    border-color: #70cfff !important;
-}
-
-.dark-mode li::before {
-    color: #70cfff !important;
-}
-
-.dark-mode .text-success {
-    color: #6cdc86 !important;
-}
-
-.dark-mode .text-danger {
-    color: #ea868f !important;
-}
-
-.dark-mode .section-divider {
-    filter: brightness(140%);
-}
-
-
-.dark-mode .bg-primary {
-    background-color: #006699 !important;
-}
-
 
 pre {
-   background-color: #f1f3f5;
-   color: #212529;
-   padding: 12px 16px;
-   border-radius: 6px;
-   border: 1px solid #dee2e6;
-   text-align: left;
-   overflow-x: auto;
-}
-
-
-pre code {
-   color: inherit;
-   font-family: monospace;
-}
-
-
-
-.dark-mode pre {
-   background-color: #343a40;
-   color: #fff;
-}
-
-
-.dark-mode pre code {
-   color: inherit;
-}
-
-
-
-
-*[id]:before {
-    display: block;
-    content: " ";
-    margin-top: -75px;
-    height: 75px;
-    visibility: hidden;
-}
-
-
-
-
-.jumbotron {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg/1280px-John_Tenniel_-_Illustration_from_The_Nursery_Alice_%281890%29_-_c03757_07.jpg');
-    background-position: center center;
-    background-size: cover;
-    color: #fff;
-}
-
-.jumbotron h1 {
-    font-size: 4rem;
-    text-shadow: 0 0 0.5rem #000;
-    text-align: left;
-}
-
-.jumbotron .container {
-    position: relative;
-    height: 500px;
-}
-
-.jumbotron .app-badge {
-    position: absolute;
-    right: 0;
-}
-
-.jumbotron .app-badge img {
-    width: 300px;
-}
-
-.jumbotron .app-badge.f-droid-badge {
-    bottom: 70px;
-}
-
-.jumbotron .app-badge.play-store-badge {
-    bottom: -20px;
-}
-
-
-.btn-outline-primary:hover {
-    background-color: #006699;
+  padding: 12px 16px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: inherit;
+  text-align: left;
+  overflow-x: auto;
 }
 
 .section-divider {
-    background-image: url('images/section-divider.svg');
-    width: 100%;
-    max-width: 600px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+  max-width: 900px;         
+  height: 50px;
+  margin: 10px auto;
+  background:
+    url('images/section-divider.svg') center no-repeat,
+    linear-gradient(to right,
+      var(--primary) calc(50% - 300px), transparent calc(50% - 300px),
+      transparent calc(50% + 300px), var(--primary) calc(50% + 300px))
+      center / 100% 2px no-repeat;
 }
 
-
-
-
-.item {
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.18);
-    margin: 10px -5px;
+.dark-mode .section-divider {
+  filter: brightness(1.4);
 }
 
-.item-image {
-    height: 440px;
-    background-color: lavender;
-    padding: 20px 0;
+.arrow {
+  width: 0.6em;
+  height: 0.7em;
+  background: currentColor;
+  -webkit-mask: url('top-right.png') center / contain no-repeat;
+  mask: url('top-right.png') center / contain no-repeat;
 }
-
-.feature-image {
-    height: 100%;
-    width: auto;
-}
-
-.item-header {
-    padding-top: 20px;
-}
-
-.item-text {
-    padding-bottom: 20px;
-    width: 80%;
-    margin: 0 auto;
-}
-
-
-
-
-.large-count {
-    padding-left: 0;
-    text-align: left;
-    list-style: none;
-    counter-reset: first-order-counter;
-}
-
-.large-count li {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 300;
-    line-height: 40px;
-    margin-left: 70px;
-    position: relative;
-    padding-bottom: 20px;
-}
-
-.large-count li:before {
-    content: counter(first-order-counter);
-    counter-increment: first-order-counter;
-    font-size: 30px;
-    line-height: 70px;
-    position: absolute;
-    left: -50px;
-    top: -15px;
-    color: #006699;
-}
-
-
-
-
-.guide-list {
-    padding-left: 0;
-    text-align: left;
-    list-style: none;
-}
-
-.guide-list li {
-    padding: 10px;
-    font-size: 1.25rem;
-}
-
-
-#docs h2>a,
-#docs h3>a {
-    color: black;
-    text-decoration: none;
-}
-
-
-
-footer {
-    margin-bottom: 70px;
-}
-
-footer h2 {
-    margin-bottom: 20px;
-}
-
-
-
-
-.inner {
-    max-width: 900px;
-}
-
-.qr-code-div {
-    padding: 30px 15px;
-} */
