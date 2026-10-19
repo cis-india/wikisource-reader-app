@@ -38,21 +38,30 @@
                 <li class="nav-item"><button type="button" class="nav-link bg-transparent border-0 toggle-theme" aria-label="Toggle theme"></button></li>
             </ul>
 
-            <form class="form-inline ml-lg-3 my-2 my-lg-0" role="search"
-                  action="https://wikisource.org/w/index.php" method="get" target="_blank">
-                <input type="hidden" name="title" value="Special:Search">
-                <div class="search-box position-relative">
-                    <input class="form-control form-control-sm" type="search" name="search"
-                           placeholder="Search Wikisource" aria-label="Search Wikisource">
-                    <button type="submit" class="btn btn-link text-secondary position-absolute h-100 py-0 px-2" aria-label="Search">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
+            <form class="search-form" id="navbarSearch" role="search">
+                <label class="sr-only" for="siteSearch">
+                    Search Wikisource Reader
+                </label>
+
+                <input class="form-control"
+                       id="siteSearch"
+                       type="search"
+                       placeholder="Search documentation..."
+                       autocomplete="off"
+                       aria-controls="searchResults"
+                       aria-expanded="false">
+
+                <div class="search-results"
+                     id="searchResults"
+                     role="listbox"
+                     aria-label="Search results"
+                     hidden>
                 </div>
             </form>
+
         </div>
     </div>
 </nav>
-
 
 <header id="home" class="hero text-center text-white py-4 d-flex flex-column justify-content-center">
     <div class="container-fluid">
