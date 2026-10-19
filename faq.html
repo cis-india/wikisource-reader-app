@@ -192,6 +192,59 @@
                     </li>
                 </ol>
             </div>
+
+
+            <div class="mb-4">
+                <h2 class="h3 mb-3" id="metadata-api">
+                    <a href="#metadata-api">How are the books catalogued?</a>
+                </h2>
+
+                <p>
+                    An <a href="https://wsindex.toolforge.org/books/">API</a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://gitlab.wikimedia.org/toolforge-repos/wsindex">here</a></p>
+            </div>
+
+            <div class="mb-4">
+                <h2 class="h3 mb-3" id="language">
+                    <a href="#language">Which languages are supported in the app?</a>
+                </h2>
+
+                <p>
+                    The app can support books written in any languages, however, in order to be displayed in the app, it is important that the descriptive metadata follow the above mentioned steps. After fullfiling above mentioned criteria, addition of new languages can be <a href="https://phabricator.wikimedia.org/tag/wikisource_reader_app_android/">requested here.</a>
+                </p>
+
+                <p class="mb-0">
+                    The languages which are currently supported in the app are Arabic, Assamese, Bangla, Breton, Catalan, Czech, Danish, English, Esperanto, French, German, Gujarati, Hindi, Indonesian, Italian, Javanese, Kannada, Malay, Malayalam, Marathi, Norwegian, Persian, Polish, Portuguese, Punjabi, Russian Spanish, Sundanese, Swedish, Tamil, Telugu, Tulu, Ukrainian and Vietnamese.
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <h2 class="h3 mb-3" id="thumbnail">
+                    <a href="#thumbnail">How are the thumbnails of the books generated?</a>
+                </h2>
+
+                <p>The thumbnails can be generated in either of the following two ways.</p>
+
+                <ol class="pl-3 mb-0">
+                    <li class="mb-2">
+                        <a href="https://www.wikidata.org/wiki/Property:P18"> image (P18)</a>
+                        added to the Wikidata item of the edition (image of cover page recommended); or,
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://www.wikidata.org/wiki/Property:P4714"> title page number (P4714)</a>
+                        added as a qualifier to the value of
+                        <a href="https://www.wikidata.org/wiki/Property:P996"> document file on Wikimedia Commons (P996)</a>
+                    </li>
+                    <li>
+                        <a href="https://www.wikidata.org/wiki/Property:P18"> image (P18)</a>
+                        added as a property to the item of
+                        <a href="https://www.wikidata.org/wiki/Property:P50"> author(s)</a>
+                        (author image).
+                    </li>
+                </ol>
+            </div>
+
+            
+
         </div>
     </div>
 </section>
@@ -199,29 +252,9 @@
 
 
 
-
-
     <div class="container text-left my-3" id="faq">
         
-        <h2 id="metadata-api"><a href="#metadata-api">How are the books catalogued?</a></h2>
-
-        <p>An <a href="https://wsindex.toolforge.org/books/">API</a> was developed to serve as a catalogue or index of books which follow the above mentioned bibliographical data model. Initially it contained works from English, French, and Bangla languages since they were already following the data model, but later support for other languages has been added. The API was built using Django and deployed on Toolforge. It periodically runs a set of SPARQL queries to retrieve data, process that data and update the database. The source code can be found <a href="https://gitlab.wikimedia.org/toolforge-repos/wsindex">here</a></p>
-
-        <h2 id="language"><a href="#language">Which languages are supported in the app?</a></h2>
-
-        <p>The app can support books written in any languages, however, in order to be displayed in the app, it is important that the descriptive metadata follow the above mentioned steps. After fullfiling above mentioned criteria, addition of new languages can be <a href="https://phabricator.wikimedia.org/tag/wikisource_reader_app_android/">requested here.</a></p>
-            
-        <p>The languages which are currently supported in the app are Arabic, Assamese, Bangla, Breton, Catalan, Czech, Danish, English, Esperanto, French, German, Gujarati, Hindi, Indonesian, Italian, Javanese, Kannada, Malay, Malayalam, Marathi, Norwegian, Persian, Polish, Portuguese, Punjabi, Russian Spanish, Sundanese, Swedish, Tamil, Telugu, Tulu, Ukrainian and Vietnamese.</p>
-            
-        <h2 id="thumbnail"><a href="#thumbnail">How are the thumbnails of the books generated?</a></h2>
-
-        <p>The thumbnails can be generated in either of the following two ways.</p>
-
-        <ol>
-            <li><a href="https://www.wikidata.org/wiki/Property:P18"> image (P18)</a> added to the Wikidata item of the edition (image of cover page recommended); or,</li>
-            <li><a href="https://www.wikidata.org/wiki/Property:P4714"> title page number (P4714)</a> added as a qualifier to the value of <a href="https://www.wikidata.org/wiki/Property:P996"> document file on Wikimedia Commons (P996)</a></li>
-            <li><a href="https://www.wikidata.org/wiki/Property:P18"> image (P18)</a> added as a property to the item of <a href="https://www.wikidata.org/wiki/Property:P50"> author(s)</a> (author image).
-        </ol>
+    
             
         <h2 id="categorization"><a href="#categorization">How are the books categorized in the app?</a></h2>
 
