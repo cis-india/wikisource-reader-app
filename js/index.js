@@ -161,19 +161,31 @@ $(document).ready(function() {
 
 
 document.querySelectorAll(".copy-code-btn").forEach(function (button) {
+    const icon = button.querySelector("i");
+
     button.addEventListener("click", async function () {
         const code = button.closest(".code-container").querySelector("code").innerText;
-        const icon = button.querySelector("span");
 
         try {
-            await navigator.clipboard.writeText(code);
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(code);
+            } else {
+                const area = document.createElement("textarea");
+                area.value = code;
+                area.style.position = "fixed";
+                area.style.opacity = "0";
+                document.body.appendChild(area);
+                area.select();
+                document.execCommand("copy");
+                document.body.removeChild(area);
+            }
 
-            icon.textContent = "✓";
+            icon.className = "bi bi-check2";
             button.title = "Copied!";
             button.setAttribute("aria-label", "Copied!");
 
             setTimeout(function () {
-                icon.textContent = "▢";
+                icon.className = "bi bi-copy";
                 button.title = "Copy code";
                 button.setAttribute("aria-label", "Copy code");
             }, 2000);
