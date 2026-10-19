@@ -1,142 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Wikisource Reader Documentation</title>
-
-    <!-- Bootstrap 4.1.1 -->
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-
-    <!-- Shared website styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="documentation-page">
 
     <!-- Navigation bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <div class="container">
+  <!-- navigation bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
+            <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">W</span>
+            <span class="logo-text small text-uppercase">Wikisource<br><strong class="text-primary">Reader</strong></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <a href="./index.html"
-               class="navbar-brand d-flex align-items-center py-2">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
+                <li class="nav-item"><a class="nav-link" href="./faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="./privacy-policy.html">Privacy Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="./documentation.html">Documentation</a></li>
+                <li class="nav-item"><button type="button" class="nav-link bg-transparent border-0 toggle-theme" aria-label="Toggle theme"></button></li>
+            </ul>
 
-                <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">
-                    W
-                </span>
+            <form class="search-form" id="navbarSearch" role="search">
+                <label class="sr-only" for="siteSearch">
+                    Search Wikisource Reader
+                </label>
 
-                <span class="logo-text small text-uppercase">
-                    Wikisource<br>
-                    <strong class="text-primary">Reader</strong>
-                </span>
-            </a>
+                <input class="form-control"
+                       id="siteSearch"
+                       type="search"
+                       placeholder="Search documentation..."
+                       autocomplete="off"
+                       aria-controls="searchResults"
+                       aria-expanded="false">
 
-            <button class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <div class="search-results"
+                     id="searchResults"
+                     role="listbox"
+                     aria-label="Search results"
+                     hidden>
+                </div>
+            </form>
 
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse"
-                 id="navbarSupportedContent">
-
-                <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link scroll"
-                           href="./index.html#description">
-                            About
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link scroll"
-                           href="./index.html#community">
-                            Community
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link scroll"
-                           href="./index.html#features">
-                            Features
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link scroll"
-                           href="./index.html#usage">
-                            Usage
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="./faq.html">
-                            FAQ
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="./privacy-policy.html">
-                            Privacy Policy
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active"
-                           href="./documentation.html">
-                            Documentation
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <button type="button"
-                                class="nav-link bg-transparent border-0 toggle-theme"
-                                aria-label="Toggle theme">
-                        </button>
-                    </li>
-
-                </ul>
-
-                <!-- Search -->
-                <form class="search-form"
-                      id="navbarSearch"
-                      role="search">
-
-                    <label class="sr-only" for="siteSearch">
-                        Search Wikisource Reader
-                    </label>
-
-                    <input class="form-control"
-                           id="siteSearch"
-                           type="search"
-                           placeholder="Search documentation..."
-                           autocomplete="off"
-                           aria-controls="searchResults"
-                           aria-expanded="false">
-
-                    <div class="search-results"
-                         id="searchResults"
-                         role="listbox"
-                         aria-label="Search results"
-                         hidden>
-                    </div>
-
-                </form>
-
-            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
 
     <!-- Documentation hero -->
@@ -288,12 +210,10 @@
 
             <!-- Documentation content -->
             <main class="col-lg-9">
-
-                <!-- Introduction -->
                 <section class="mb-5"
                          id="docs_what">
 
-                    <h2 class="font-weight-bold pb-3 mb-4 title-bar">
+                    <h2 class="font-weight-bold pb-3 mb-4 Doc-title-bar">
                         <a href="#docs_what">
                             What is Wikisource Reader?
                         </a>
@@ -315,12 +235,10 @@
 
                 </section>
 
-
-                <!-- How to use the documentation -->
                 <section class="mb-5"
                          id="docs_usage">
 
-                    <h2 class="title-bar font-weight-bold pb-3 mb-4">
+                    <h2 class="Doc-title-bar font-weight-bold pb-3 mb-4">
                         <a href="#docs_usage">
                             How to use the docs
                         </a>
@@ -330,7 +248,6 @@
 
                     <div class="row">
 
-                        <!-- WSIndex card -->
                         <div class="col-md-6 mb-4">
 
                             <div class="card h-100">
@@ -354,7 +271,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         <!-- Android card -->
                         <div class="col-md-6 mb-4">
@@ -385,12 +301,11 @@
                     </div>
                 </section>
 
-
                 <!-- WSIndex -->
                 <section class="mb-5"
                          id="api">
 
-                    <h2 class="font-weight-bold pb-3 mb-4 title-bar">
+                    <h2 class="font-weight-bold pb-3 mb-4 Doc-title-bar">
                         <a href="#api">WSIndex</a>
                     </h2>
 
@@ -456,15 +371,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-
-                    <!-- WSIndex technologies -->
                     <section class="mt-5 mb-5"
                              id="technologies_api">
 
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
+                        <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">
                             Built With:
                         </h3>
 
@@ -517,12 +429,9 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </section>
 
-
-                    <!-- WSIndex getting started -->
                     <section class="mb-5"
                              id="geting_started_api">
 
@@ -538,12 +447,10 @@
 
                     </section>
 
-
-                    <!-- WSIndex prerequisites -->
                     <section class="mb-5"
                              id="Prerequisites_api">
 
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
+                        <h3 class="font-weight-bold pb-3 mb-4">
                             Prerequisites:
                         </h3>
 
@@ -581,12 +488,10 @@
                                     <li>Linux: Kernel 3.8+</li>
                                     <li>MacOS: X 10.7+</li>
                                 </ul>
-
                             </div>
                         </div>
 
                         <div class="card mb-4">
-
                             <div class="card-body">
 
                                 <h4 class="h5 font-weight-bold">
@@ -604,11 +509,8 @@
 
                             </div>
                         </div>
-
                     </section>
 
-
-                    <!-- Running WSIndex locally -->
                     <section class="mb-5"
                              id="running_api_locally">
 
@@ -644,47 +546,34 @@
                                 </p>
 
                                 <pre class="p-3 rounded border"><code>git clone YOUR_FORK_CLONE_URL</code></pre>
-
                                 <pre class="p-3 rounded border"><code>cd wsindex</code></pre>
 
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p>
                                     <strong>
-                                        Initialize and Activate Virtual
-                                        Environment
+                                        Initialize and Activate Virtual Environment
                                     </strong>
                                 </p>
 
-                                <pre class="p-3 rounded border"><code># Initialize virtual environment:</code></pre>
+                                <pre class="p-3 rounded border"><code>
+                                # Initialize virtual environment
+                                virtualenv venv
 
-                                <pre class="p-3 rounded border"><code>virtualenv venv</code></pre>
+                                # Activate on Linux/macOS
+                                source venv/bin/activate
 
-                                <pre class="p-3 rounded border"><code># For Linux/macOS:</code></pre>
-
-                                <pre class="p-3 rounded border"><code>source venv/bin/activate</code></pre>
-
-                                <pre class="p-3 rounded border"><code># For Windows:</code></pre>
-
-                                <pre class="p-3 rounded border"><code>.\venv\Scripts\activate</code></pre>
-
+                                # Activate on Windows
+                                .\venv\Scripts\activate</code></pre>
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p><strong>Install Dependencies</strong></p>
-
                                 <pre class="p-3 rounded border"><code>pip install -r requirements.txt</code></pre>
-
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p>
                                     <strong>
                                         Replace the database settings in
@@ -693,64 +582,45 @@
                                     </strong>
                                 </p>
 
-                                <pre class="p-3 rounded border"><code>DATABASES = {</code></pre>
-
-                                <pre class="p-3 rounded border"><code>    'default': {</code></pre>
-
-                                <pre class="p-3 rounded border"><code>        'ENGINE': 'django.db.backends.sqlite3',</code></pre>
-
-                                <pre class="p-3 rounded border"><code>        'NAME': BASE_DIR / 'db.sqlite3',</code></pre>
-
-                                <pre class="p-3 rounded border"><code>    }</code></pre>
-
-                                <pre class="p-3 rounded border"><code>}</code></pre>
+                            <pre class="p-3 rounded border"><code>DATABASES = {
+                                    'default': {
+                                        'ENGINE': 'django.db.backends.sqlite3',
+                                        'NAME': BASE_DIR / 'db.sqlite3',
+                                    }
+                                }</code>
+                            </pre>
 
                             </li>
 
 
                             <li class="mb-4">
-
                                 <p><strong>Apply Database Migrations</strong></p>
-
                                 <pre class="p-3 rounded border"><code>python manage.py migrate</code></pre>
-
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p><strong>Import Books from Wikidata</strong></p>
-
                                 <pre class="p-3 rounded border"><code>python manage.py updatecatalog</code></pre>
-
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p><strong>Run Local Server</strong></p>
-
                                 <pre class="p-3 rounded border"><code>python manage.py runserver</code></pre>
-
                             </li>
 
 
                             <li class="mb-4">
-
                                 <p>
                                     <strong>
                                         Navigate to the following address to
                                         view imported books.
                                     </strong>
                                 </p>
-
                                 <pre class="p-3 rounded border"><code>http://127.0.0.1:8000/books/</code></pre>
-
                             </li>
 
 
                             <li class="mb-4">
-
                                 <p>
                                     Incase of a
                                     <strong>404 or Not found</strong>
@@ -759,25 +629,20 @@
                                     to allowed hosts in
                                     <strong>wsindex/settings.py</strong>.
                                 </p>
-
                             </li>
 
                         </ol>
-
                     </section>
 
                 </section>
 
-
-                <!-- Divider between WSIndex and Android -->
                 <div class="section-divider"></div>
-
 
                 <!-- Wikisource Reader Android App -->
                 <section class="mb-5"
                          id="android">
 
-                    <h2 class="font-weight-bold pb-3 mb-4 title-bar">
+                    <h2 class="font-weight-bold pb-3 mb-4 Doc-title-bar">
                         <a href="#android">
                             Wikisource Reader App
                         </a>
@@ -796,11 +661,8 @@
                     </p>
 
                     <div class="row">
-
                         <div class="col-md-6 mb-3">
-
                             <div class="card h-100">
-
                                 <div class="card-body">
 
                                     <h3 class="h5 font-weight-bold">
@@ -815,7 +677,6 @@
                                             https://github.com/cis-india/Wikisource-Reader
                                         </a>
                                     </p>
-
                                 </div>
                             </div>
                         </div>
@@ -845,12 +706,10 @@
 
                     </div>
 
-
-                    <!-- Android technologies -->
                     <section class="mt-5 mb-5"
                              id="technologies_android">
 
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
+                        <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">
                             Built With:
                         </h3>
 
@@ -885,7 +744,6 @@
                                 </div>
                             </div>
 
-
                             <div class="col-md-6 mb-3">
 
                                 <div class="card h-100">
@@ -908,7 +766,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class="col-md-6 mb-3">
 
@@ -934,7 +791,6 @@
                                 </div>
                             </div>
 
-
                             <div class="col-md-6 mb-3">
 
                                 <div class="card h-100">
@@ -958,12 +814,9 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </section>
 
-
-                    <!-- Android getting started -->
                     <section class="mb-5"
                              id="getting_started_android">
 
@@ -979,12 +832,10 @@
 
                     </section>
 
-
-                    <!-- Android prerequisites -->
                     <section class="mb-5"
                              id="Prerequisites_android">
 
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
+                        <h3 class="font-weight-bold pb-3 mb-4">
                             Prerequisites:
                         </h3>
 
@@ -1016,7 +867,6 @@
                             </div>
                         </div>
 
-
                         <div class="card mb-4">
 
                             <div class="card-body">
@@ -1045,11 +895,8 @@
 
                             </div>
                         </div>
-
                     </section>
 
-
-                    <!-- Running Android locally -->
                     <section class="mb-5"
                              id="running_android_locally">
 
@@ -1062,20 +909,13 @@
                         </p>
 
                         <ol>
-
                             <li class="mb-4">
-
                                 <p><strong>Clone the Repository</strong></p>
-
                                 <pre class="p-3 rounded border"><code>git clone https://github.com/cis-india/Wikisource-Reader.git</code></pre>
-
                                 <pre class="p-3 rounded border"><code>cd Wikisource-Reader</code></pre>
-
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p><strong>Open in Android Studio</strong></p>
 
                                 <p>
@@ -1085,14 +925,10 @@
                                     Allow Gradle to sync and download
                                     necessary dependencies.
                                 </p>
-
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p><strong>Run on Device or Emulator</strong></p>
-
                                 <p>
                                     Connect a physical device via USB
                                     (with Debugging enabled) or start a
@@ -1108,12 +944,9 @@
                                     developer mode on your android phone,
                                     You will find both pair via usb or WIFI.
                                 </p>
-
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p>
                                     <strong>
                                         Pointing to Local API (Optional)
@@ -1127,26 +960,20 @@
                                     <code>api/BookApi</code> to your local IP:
                                 </p>
 
-                                <pre class="p-3 rounded border"><code>// If you are running on Emulator</code></pre>
+                                <pre class="p-3 rounded border"><code>// If you are running on an emulator
+                                private val baseApiUrl = "http://10.0.2.2:8000/books"
 
-                                <pre class="p-3 rounded border"><code>private val baseApiUrl = "http://10.0.2.2:8000/books"</code></pre>
-
-                                <pre class="p-3 rounded border"><code>// Use IP address of your host machine(PC), when you want to run in physical device.</code></pre>
-
-                                <pre class="p-3 rounded border"><code>private val baseApiUrl = "http://192.168.100.2:8000/books".</code></pre>
-
+                                // Use the IP address of your host machine (PC)
+                                // when running on a physical device.
+                                private val baseApiUrl = "http://192.168.100.2:8000/books"</code></pre>
                             </li>
-
                         </ol>
-
                     </section>
 
-
-                    <!-- Allowing HTTP traffic -->
                     <section class="mb-5"
                              id="allow_http_traffic">
 
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
+                        <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">
                             Allowing HTTP Traffic for Local Development:
                         </h3>
 
@@ -1159,7 +986,6 @@
                         </p>
 
                         <ol>
-
                             <li class="mb-4">
 
                                 <p>
@@ -1176,12 +1002,9 @@
                                     <strong>New &gt; Directory</strong>,
                                     and name it <code>xml</code>.
                                 </p>
-
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p><strong>Create the Config File</strong></p>
 
                                 <p>
@@ -1194,19 +1017,17 @@
                                 </p>
 
                                 <pre class="p-3 rounded border"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;network-security-config&gt;
-    &lt;domain-config cleartextTrafficPermitted="true"&gt;
-        &lt;domain includeSubdomains="true"&gt;192.168.100.2&lt;/domain&gt; // Host IP
-        &lt;domain includeSubdomains="true"&gt;10.0.2.2&lt;/domain&gt;
-        &lt;domain includeSubdomains="true"&gt;127.0.0.1&lt;/domain&gt;
-    &lt;/domain-config&gt;
-&lt;/network-security-config&gt;</code></pre>
-
+                                    &lt;network-security-config&gt;
+                                        &lt;domain-config cleartextTrafficPermitted="true"&gt;
+                                            &lt;domain includeSubdomains="true"&gt;192.168.100.2&lt;/domain&gt; // Host IP
+                                            &lt;domain includeSubdomains="true"&gt;10.0.2.2&lt;/domain&gt;
+                                            &lt;domain includeSubdomains="true"&gt;127.0.0.1&lt;/domain&gt;
+                                        &lt;/domain-config&gt;
+                                    &lt;/network-security-config&gt;</code>
+                                </pre>
                             </li>
 
-
                             <li class="mb-4">
-
                                 <p>
                                     <strong>
                                         Link the Configuration in the Manifest
@@ -1218,7 +1039,6 @@
                                     file in the application manifest to
                                     apply the security exceptions.
                                 </p>
-
                                 <p>
                                     Open
                                     <code>app/src/main/AndroidManifest.xml</code>
@@ -1228,35 +1048,27 @@
                                     <code>&lt;application&gt;</code> tag:
                                 </p>
 
-                                <pre class="p-3 rounded border"><code>&lt;application android:name=".WikisourceApplication" android:networkSecurityConfig="@xml/network_security_config"
-    ... &gt; &lt;!-- Activities and Services --&gt;
-&lt;/application&gt;</code></pre>
-
+                                <pre class="p-3 rounded border"><code>
+                                    &lt;application android:name=".WikisourceApplication" android:networkSecurityConfig="@xml/network_security_config"
+                                    ... &gt; &lt;!-- Activities and Services --&gt;
+                                    &lt;/application&gt;</code>
+                                </pre>
                             </li>
-
                         </ol>
-
                     </section>
-
                 </section>
-
             </main>
-
         </div>
     </div>
 
-
     <!-- Footer -->
     <footer class="bg-light border-top py-4">
-
         <div class="container text-center">
-
             <p class="mb-2 font-weight-bold">
                 Wikisource Reader
             </p>
 
             <div class="mb-3">
-
                 <a href="./index.html" class="mx-2">
                     Home
                 </a>
@@ -1278,21 +1090,13 @@
             <p class="text-muted small mb-0">
                 Wikisource Reader documentation
             </p>
-
         </div>
-
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-    <!-- JavaScript dependencies for Bootstrap 4.1.1 -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-    <!-- Shared website search and theme logic -->
-    <script src="js/index.js"></script>
-
+    <script  src="js/index.js"></script>
 </body>
 </html>
