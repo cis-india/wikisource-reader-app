@@ -173,7 +173,6 @@ a:hover {
 .logo-mark {
   width: 40px;
   height: 40px;
-  background: var(--primary);
   font-size: 30px;
   line-height: 1;
   transition: transform .3s;
