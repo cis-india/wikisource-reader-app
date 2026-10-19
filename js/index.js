@@ -158,3 +158,27 @@ $(document).ready(function() {
     }
   });
 });
+
+
+document.querySelectorAll(".copy-code-btn").forEach(function (button) {
+    button.addEventListener("click", async function () {
+        const code = button.closest(".code-container").querySelector("code").innerText;
+        const icon = button.querySelector("span");
+
+        try {
+            await navigator.clipboard.writeText(code);
+
+            icon.textContent = "✓";
+            button.title = "Copied!";
+            button.setAttribute("aria-label", "Copied!");
+
+            setTimeout(function () {
+                icon.textContent = "▢";
+                button.title = "Copy code";
+                button.setAttribute("aria-label", "Copy code");
+            }, 2000);
+        } catch (error) {
+            console.error("Unable to copy code:", error);
+        }
+    });
+});

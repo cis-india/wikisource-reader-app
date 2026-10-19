@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Wikisource Reader Documentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,63 +13,59 @@
 <body class="documentation-page">
 
     <!-- Navigation bar -->
-  <!-- navigation bar -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-    <div class="container">
-        <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
-            <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">W</span>
-            <span class="logo-text small text-uppercase">Wikisource<br><strong class="text-primary">Reader</strong></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
+                <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">W</span>
+                <span class="logo-text small text-uppercase">Wikisource<br><strong class="text-primary">Reader</strong></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
-                <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
-                <li class="nav-item"><a class="nav-link" href="./faq.html">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" href="./privacy-policy.html">Privacy Policy</a></li>
-                <li class="nav-item"><a class="nav-link" href="./documentation.html">Documentation</a></li>
-                <li class="nav-item"><button type="button" class="nav-link bg-transparent border-0 toggle-theme" aria-label="Toggle theme"></button></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./documentation.html">Documentation</a></li>
+                    <li class="nav-item"><button type="button" class="nav-link bg-transparent border-0 toggle-theme" aria-label="Toggle theme"></button></li>
+                </ul>
 
-            <form class="search-form" id="navbarSearch" role="search">
-                <label class="sr-only" for="siteSearch">
-                    Search Wikisource Reader
-                </label>
+                <form class="search-form" id="navbarSearch" role="search">
+                    <label class="sr-only" for="siteSearch">
+                        Search Wikisource Reader
+                    </label>
 
-                <input class="form-control"
-                       id="siteSearch"
-                       type="search"
-                       placeholder="Search documentation..."
-                       autocomplete="off"
-                       aria-controls="searchResults"
-                       aria-expanded="false">
+                    <input class="form-control"
+                        id="siteSearch"
+                        type="search"
+                        placeholder="Search documentation..."
+                        autocomplete="off"
+                        aria-controls="searchResults"
+                        aria-expanded="false">
 
-                <div class="search-results"
-                     id="searchResults"
-                     role="listbox"
-                     aria-label="Search results"
-                     hidden>
-                </div>
-            </form>
+                    <div class="search-results"
+                        id="searchResults"
+                        role="listbox"
+                        aria-label="Search results"
+                        hidden>
+                    </div>
+                </form>
 
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
 
 
     <!-- Documentation hero -->
     <header class="py-5 text-center bg-light">
-
         <div class="container py-4">
-
-            <h1 class="display-4 font-weight-bold"
-                id="docs_title">
-
+            <h1 class="display-4 font-weight-bold" id="docs_title">
                 Wikisource Reader Docs
             </h1>
 
@@ -76,147 +73,71 @@
                 Welcome to Wikisource Reader app documentation!
             </p>
 
-            <a href="#docs_what"
-               class="btn btn-primary mt-3">
-
+            <a href="#docs_what" class="btn btn-primary mt-3">
                 Explore Documentation
             </a>
-
         </div>
     </header>
 
-
     <!-- Documentation layout -->
     <div class="container py-5" id="docs">
-
         <div class="row">
 
             <!-- Table of contents -->
-            <aside class="col-lg-3 mb-4"
-                   aria-labelledby="contents-title">
-
-                <div class="position-sticky"
-                     style="top: 100px;">
-
+            <aside class="col-lg-3 mb-4" aria-labelledby="contents-title">
+                <div class="position-sticky" style="top: 100px;">
                     <div class="card bg-light">
-
                         <div class="card-body">
-
-                            <h2 class="h5 font-weight-bold mb-3"
-                                id="contents-title">
-
+                            <h2 class="h5 font-weight-bold mb-3" id="contents-title">
                                 On this page
                             </h2>
 
                             <nav aria-label="Documentation sections">
-
                                 <ul class="list-unstyled mb-0">
-
                                     <li class="mb-3">
-                                        <a href="#docs_what">
-                                            What is Wikisource Reader?
-                                        </a>
+                                        <a href="#docs_what">What is Wikisource Reader?</a>
                                     </li>
 
                                     <li class="mb-3">
-                                        <a href="#docs_usage">
-                                            How to use the docs
-                                        </a>
+                                        <a href="#docs_usage">How to use the docs</a>
                                     </li>
 
                                     <li class="mb-3">
-                                        <a href="#api">
-                                            WSIndex
-                                        </a>
+                                        <a href="#api">WSIndex</a>
 
                                         <ul class="list-unstyled ml-3 mt-2">
-
-                                            <li class="mb-2">
-                                                <a href="#technologies_api">
-                                                    Built With
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-2">
-                                                <a href="#geting_started_api">
-                                                    Getting Started Locally
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-2">
-                                                <a href="#Prerequisites_api">
-                                                    Prerequisites
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#running_api_locally">
-                                                    Running project Locally
-                                                </a>
-                                            </li>
-
+                                            <li class="mb-2"><a href="#technologies_api">Built With</a></li>
+                                            <li class="mb-2"><a href="#geting_started_api">Getting Started Locally</a></li>
+                                            <li class="mb-2"><a href="#Prerequisites_api">Prerequisites</a></li>
+                                            <li><a href="#running_api_locally">Running project Locally</a></li>
                                         </ul>
                                     </li>
 
                                     <li class="mb-3">
-                                        <a href="#android">
-                                            Wikisource Reader App
-                                        </a>
+                                        <a href="#android">Wikisource Reader App</a>
 
                                         <ul class="list-unstyled ml-3 mt-2">
-
-                                            <li class="mb-2">
-                                                <a href="#technologies_android">
-                                                    Built With
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-2">
-                                                <a href="#getting_started_android">
-                                                    Getting Started Locally
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-2">
-                                                <a href="#Prerequisites_android">
-                                                    Prerequisites
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-2">
-                                                <a href="#running_android_locally">
-                                                    Running project Locally
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#allow_http_traffic">
-                                                    Allowing HTTP Traffic
-                                                </a>
-                                            </li>
-
+                                            <li class="mb-2"><a href="#technologies_android">Built With</a></li>
+                                            <li class="mb-2"><a href="#getting_started_android">Getting Started Locally</a></li>
+                                            <li class="mb-2"><a href="#Prerequisites_android">Prerequisites</a></li>
+                                            <li class="mb-2"><a href="#running_android_locally">Running project Locally</a></li>
+                                            <li><a href="#allow_http_traffic">Allowing HTTP Traffic</a></li>
                                         </ul>
                                     </li>
-
                                 </ul>
-
                             </nav>
-
                         </div>
                     </div>
                 </div>
             </aside>
 
-
             <!-- Documentation content -->
             <main class="col-lg-9">
-                <section class="mb-5"
-                         id="docs_what">
 
+                <!-- Introduction -->
+                <section class="mb-5" id="docs_what">
                     <h2 class="font-weight-bold pb-3 mb-4 Doc-title-bar">
-                        <a href="#docs_what">
-                            What is Wikisource Reader?
-                        </a>
+                        <a href="#docs_what">What is Wikisource Reader?</a>
                     </h2>
 
                     <p>
@@ -225,86 +146,51 @@
                         domain and copyright free pre-published contents in
                         various languages of the world, which are hosted in
                         the open and free digital library website of
-                        Wikisoruce. The digitized contents on Wikisource are
+                        Wikisource. The digitized contents on Wikisource are
                         transcribed and proofread by a vibrant community to
                         make them freely and openly accessible and searchable
                         for everyone to read. Wikisource Reader App is a step
-                        further to make these contents available for android
+                        further to make these contents available for Android
                         mobile users.
                     </p>
-
                 </section>
 
-                <section class="mb-5"
-                         id="docs_usage">
-
+                <!-- How to use the documentation -->
+                <section class="mb-5" id="docs_usage">
                     <h2 class="Doc-title-bar font-weight-bold pb-3 mb-4">
-                        <a href="#docs_usage">
-                            How to use the docs
-                        </a>
+                        <a href="#docs_usage">How to use the docs</a>
                     </h2>
 
                     <p>The docs are organized into 2 sections:</p>
 
                     <div class="row">
-
                         <div class="col-md-6 mb-4">
-
                             <div class="card h-100">
-
                                 <div class="card-body">
-
-                                    <h3 class="h5 card-title font-weight-bold">
-                                        WSIndex
-                                    </h3>
-
-                                    <p class="card-text">
-                                        Which is an API built in Django.
-                                    </p>
-
-                                    <a href="#api"
-                                       class="card-link">
-
-                                        Explore WSIndex
-                                    </a>
-
+                                    <h3 class="h5 card-title font-weight-bold">WSIndex</h3>
+                                    <p class="card-text">Which is an API built in Django.</p>
+                                    <a href="#api" class="card-link">Explore WSIndex</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Android card -->
                         <div class="col-md-6 mb-4">
-
                             <div class="card h-100">
-
                                 <div class="card-body">
-
-                                    <h3 class="h5 card-title font-weight-bold">
-                                        Wikisource Reader App
-                                    </h3>
-
+                                    <h3 class="h5 card-title font-weight-bold">Wikisource Reader App</h3>
                                     <p class="card-text">
-                                        Which is an Android Application Built
-                                        in Kotlin
+                                        Which is an Android Application built
+                                        in Kotlin.
                                     </p>
-
-                                    <a href="#android"
-                                       class="card-link">
-
-                                        Explore Wikisource Reader App
-                                    </a>
-
+                                    <a href="#android" class="card-link">Explore Wikisource Reader App</a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
 
                 <!-- WSIndex -->
-                <section class="mb-5"
-                         id="api">
-
+                <section class="mb-5" id="api">
                     <h2 class="font-weight-bold pb-3 mb-4 Doc-title-bar">
                         <a href="#api">WSIndex</a>
                     </h2>
@@ -313,8 +199,8 @@
                         Wikisource catalog API for proofread and validated
                         books. Loosely based on
                         <a href="https://github.com/garethbjohnson/gutendex"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                            target="_blank"
+                            rel="noopener noreferrer">
                             https://github.com/garethbjohnson/gutendex
                         </a>
                     </p>
@@ -325,213 +211,131 @@
                     </p>
 
                     <div class="row">
-
                         <div class="col-md-6 mb-3">
-
                             <div class="card h-100">
-
                                 <div class="card-body">
-
-                                    <h3 class="h5 font-weight-bold">
-                                        Source Code
-                                    </h3>
-
+                                    <h3 class="h5 font-weight-bold">Source Code</h3>
                                     <p>Source Code:</p>
-
                                     <a href="https://gitlab.wikimedia.org/toolforge-repos/wsindex"
-                                       target="_blank"
-                                       rel="noopener noreferrer">
-
+                                        target="_blank"
+                                        rel="noopener noreferrer">
                                         https://gitlab.wikimedia.org/toolforge-repos/wsindex
                                     </a>
-
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-6 mb-3">
-
                             <div class="card h-100">
-
                                 <div class="card-body">
-
-                                    <h3 class="h5 font-weight-bold">
-                                        Hosted API
-                                    </h3>
-
-                                    <p>Hosted on toolforge at:</p>
-
+                                    <h3 class="h5 font-weight-bold">Hosted API</h3>
+                                    <p>Hosted on Toolforge at:</p>
                                     <a href="https://wsindex.toolforge.org/books/"
-                                       target="_blank"
-                                       rel="noopener noreferrer">
-
+                                        target="_blank"
+                                        rel="noopener noreferrer">
                                         https://wsindex.toolforge.org/books/
                                     </a>
-
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <section class="mt-5 mb-5"
-                             id="technologies_api">
+                    <!-- WSIndex technologies -->
+                    <section class="mt-5 mb-5" id="technologies_api">
+                        <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">Built With:</h3>
 
-                        <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">
-                            Built With:
-                        </h3>
-
-                        <p>
-                            The following core technologies were used to
-                            build this application:
-                        </p>
+                        <p>The following core technologies were used to build this application:</p>
 
                         <div class="row">
-
                             <div class="col-md-6 mb-3">
-
                                 <div class="card h-100">
-
                                     <div class="card-body">
-
-                                        <h4 class="h5 font-weight-bold">
-                                            Python
-                                        </h4>
-
-                                        <p>
-                                            Python ^3.10 - The primary
-                                            programming language.
-                                        </p>
-
+                                        <h4 class="h5 font-weight-bold">Python</h4>
+                                        <p>Python 3.10 or above — the primary programming language.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 mb-3">
-
                                 <div class="card h-100">
-
                                     <div class="card-body">
-
-                                        <h4 class="h5 font-weight-bold">
-                                            Django
-                                        </h4>
-
+                                        <h4 class="h5 font-weight-bold">Django</h4>
                                         <p>
                                             <a href="https://docs.djangoproject.com/en/6.0/"
-                                               target="_blank"
-                                               rel="noopener noreferrer">
-                                                Django ^5.1.3
-                                            </a>
-                                            - The high-level Python Web
-                                            framework.
+                                                target="_blank"
+                                                rel="noopener noreferrer">Django 5.1.3</a>
+                                            — the high-level Python web framework.
                                         </p>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section class="mb-5"
-                             id="geting_started_api">
-
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
-                            Getting Started Locally:
-                        </h3>
-
+                    <!-- WSIndex getting started -->
+                    <section class="mb-5" id="geting_started_api">
+                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">Getting Started Locally:</h3>
                         <p>
                             Follow these instructions to get a copy of the
                             project up and running on your local machine for
                             development and testing purposes.
                         </p>
-
                     </section>
 
-                    <section class="mb-5"
-                             id="Prerequisites_api">
-
-                        <h3 class="font-weight-bold pb-3 mb-4">
-                            Prerequisites:
-                        </h3>
-
-                        <p>
-                            You will need to ensure your system meets the
-                            following requirements:
-                        </p>
+                    <!-- WSIndex prerequisites -->
+                    <section class="mb-5" id="Prerequisites_api">
+                        <h3 class="font-weight-bold pb-3 mb-4">Prerequisites:</h3>
+                        <p>You will need to ensure your system meets the following requirements:</p>
 
                         <div class="card mb-4">
-
                             <div class="card-body">
-
-                                <h4 class="h5 font-weight-bold">
-                                    Hardware Requirements
-                                </h4>
-
+                                <h4 class="h5 font-weight-bold">Hardware Requirements</h4>
                                 <ul class="mb-0">
                                     <li>RAM: 4GB or higher</li>
                                     <li>Storage: 20GB or more of free space</li>
                                 </ul>
-
                             </div>
                         </div>
 
                         <div class="card mb-4">
-
                             <div class="card-body">
-
-                                <h4 class="h5 font-weight-bold">
-                                    Supported Operating Systems
-                                </h4>
-
+                                <h4 class="h5 font-weight-bold">Supported Operating Systems</h4>
                                 <ul class="mb-0">
                                     <li>Windows: 10+</li>
                                     <li>Linux: Kernel 3.8+</li>
-                                    <li>MacOS: X 10.7+</li>
+                                    <li>macOS: X 10.7+</li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="card mb-4">
                             <div class="card-body">
-
-                                <h4 class="h5 font-weight-bold">
-                                    Software Environment
-                                </h4>
-
+                                <h4 class="h5 font-weight-bold">Software Environment</h4>
                                 <ul class="mb-0">
                                     <li>Python: version 3.10 or above</li>
                                     <li>
                                         Environment: A tool to manage your
-                                        python environment (e.g., virtualenv,
-                                        venv)
+                                        Python environment, such as virtualenv or venv.
                                     </li>
                                 </ul>
-
                             </div>
                         </div>
                     </section>
 
-                    <section class="mb-5"
-                             id="running_api_locally">
-
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
-                            Running project Locally:
-                        </h3>
+                    <!-- Run WSIndex locally -->
+                    <section class="mb-5" id="running_api_locally">
+                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">Running project Locally:</h3>
 
                         <p>
                             To run WSIndex locally, fork the
                             <a href="https://gitlab.wikimedia.org/toolforge-repos/wsindex"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                WSIndex repository
-                            </a>
+                                target="_blank"
+                                rel="noopener noreferrer">WSIndex repository</a>
                             to your GitLab account, then follow these steps:
                         </p>
 
                         <ol>
-
                             <li class="mb-4">
-
                                 <p>
                                     After forking the WSIndex repository to
                                     your GitLab account, open your fork on
@@ -539,38 +343,75 @@
                                 </p>
 
                                 <p>
-                                    Replace
-                                    <code>YOUR_FORK_CLONE_URL</code>
-                                    in the command below with the SSH URL
-                                    you copied.
+                                    Replace <code>YOUR_FORK_CLONE_URL</code>
+                                    in the command below with the SSH URL you copied.
                                 </p>
 
-                                <pre class="p-3 rounded border"><code>git clone YOUR_FORK_CLONE_URL</code></pre>
-                                <pre class="p-3 rounded border"><code>cd wsindex</code></pre>
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>git clone YOUR_FORK_CLONE_URL</code></pre>
+                                </div>
 
+                                <div class="code-container">
+                                
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>cd wsindex</code></pre>
+                                </div>
                             </li>
 
                             <li class="mb-4">
-                                <p>
-                                    <strong>
-                                        Initialize and Activate Virtual Environment
-                                    </strong>
-                                </p>
+                                <p><strong>Initialize and Activate Virtual Environment</strong></p>
 
-                                <pre class="p-3 rounded border"><code>
-                                # Initialize virtual environment
-                                virtualenv venv
+                                <div class="code-container">
+                               
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code># Initialize virtual environment
+virtualenv venv
 
-                                # Activate on Linux/macOS
-                                source venv/bin/activate
+# Activate on Linux/macOS
+source venv/bin/activate
 
-                                # Activate on Windows
-                                .\venv\Scripts\activate</code></pre>
+# Activate on Windows
+.\venv\Scripts\activate</code></pre>
+                                </div>
                             </li>
 
                             <li class="mb-4">
                                 <p><strong>Install Dependencies</strong></p>
-                                <pre class="p-3 rounded border"><code>pip install -r requirements.txt</code></pre>
+
+                                <div class="code-container">
+                               
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>pip install -r requirements.txt</code></pre>
+                                </div>
                             </li>
 
                             <li class="mb-4">
@@ -582,32 +423,73 @@
                                     </strong>
                                 </p>
 
-                            <pre class="p-3 rounded border"><code>DATABASES = {
-                                    'default': {
-                                        'ENGINE': 'django.db.backends.sqlite3',
-                                        'NAME': BASE_DIR / 'db.sqlite3',
-                                    }
-                                }</code>
-                            </pre>
-
+                                <div class="code-container">
+                               
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}</code></pre>
+                                </div>
                             </li>
-
 
                             <li class="mb-4">
                                 <p><strong>Apply Database Migrations</strong></p>
-                                <pre class="p-3 rounded border"><code>python manage.py migrate</code></pre>
+
+                                <div class="code-container">
+
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>python manage.py migrate</code></pre>
+                                </div>
                             </li>
 
                             <li class="mb-4">
                                 <p><strong>Import Books from Wikidata</strong></p>
-                                <pre class="p-3 rounded border"><code>python manage.py updatecatalog</code></pre>
+
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>python manage.py updatecatalog</code></pre>
+                                </div>
                             </li>
 
                             <li class="mb-4">
                                 <p><strong>Run Local Server</strong></p>
-                                <pre class="p-3 rounded border"><code>python manage.py runserver</code></pre>
-                            </li>
 
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>python manage.py runserver</code></pre>
+                                </div>
+                            </li>
 
                             <li class="mb-4">
                                 <p>
@@ -616,36 +498,37 @@
                                         view imported books.
                                     </strong>
                                 </p>
-                                <pre class="p-3 rounded border"><code>http://127.0.0.1:8000/books/</code></pre>
-                            </li>
 
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>http://127.0.0.1:8000/books/</code></pre>
+                                </div>
+                            </li>
 
                             <li class="mb-4">
                                 <p>
-                                    Incase of a
-                                    <strong>404 or Not found</strong>
-                                    error, add
-                                    <strong>127.0.0.1:8000</strong>
-                                    to allowed hosts in
-                                    <strong>wsindex/settings.py</strong>.
+                                    In case of a <strong>404 or Not Found</strong>
+                                    error, add <strong>127.0.0.1:8000</strong>
+                                    to allowed hosts in <strong>wsindex/settings.py</strong>.
                                 </p>
                             </li>
-
                         </ol>
                     </section>
-
                 </section>
 
                 <div class="section-divider"></div>
 
                 <!-- Wikisource Reader Android App -->
-                <section class="mb-5"
-                         id="android">
-
+                <section class="mb-5" id="android">
                     <h2 class="font-weight-bold pb-3 mb-4 Doc-title-bar">
-                        <a href="#android">
-                            Wikisource Reader App
-                        </a>
+                        <a href="#android">Wikisource Reader App</a>
                     </h2>
 
                     <p>
@@ -664,16 +547,12 @@
                         <div class="col-md-6 mb-3">
                             <div class="card h-100">
                                 <div class="card-body">
-
-                                    <h3 class="h5 font-weight-bold">
-                                        Source Code
-                                    </h3>
-
+                                    <h3 class="h5 font-weight-bold">Source Code</h3>
                                     <p>
                                         Source Code:
                                         <a href="https://github.com/cis-india/Wikisource-Reader"
-                                           target="_blank"
-                                           rel="noopener noreferrer">
+                                            target="_blank"
+                                            rel="noopener noreferrer">
                                             https://github.com/cis-india/Wikisource-Reader
                                         </a>
                                     </p>
@@ -682,36 +561,23 @@
                         </div>
 
                         <div class="col-md-6 mb-3">
-
                             <div class="card h-100">
-
                                 <div class="card-body">
-
-                                    <h3 class="h5 font-weight-bold">
-                                        Google Play Store
-                                    </h3>
-
+                                    <h3 class="h5 font-weight-bold">Google Play Store</h3>
                                     <p>
                                         Available on:
                                         <a href="https://play.google.com/store/apps/details?id=org.cis_india.wsreader"
-                                           target="_blank"
-                                           rel="noopener noreferrer">
-                                            Google Play Store
-                                        </a>
+                                            target="_blank"
+                                            rel="noopener noreferrer">Google Play Store</a>
                                     </p>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <section class="mt-5 mb-5"
-                             id="technologies_android">
-
-                        <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">
-                            Built With:
-                        </h3>
+                    <!-- Android technologies -->
+                    <section class="mt-5 mb-5" id="technologies_android">
+                        <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">Built With:</h3>
 
                         <p>
                             The following core technologies and frameworks
@@ -719,200 +585,134 @@
                         </p>
 
                         <div class="row">
-
                             <div class="col-md-6 mb-3">
-
                                 <div class="card h-100">
-
                                     <div class="card-body">
-
-                                        <h4 class="h5 font-weight-bold">
-                                            Kotlin
-                                        </h4>
-
+                                        <h4 class="h5 font-weight-bold">Kotlin</h4>
                                         <p>
                                             <a href="https://kotlinlang.org/docs/home.html"
-                                               target="_blank"
-                                               rel="noopener noreferrer">
-                                                Kotlin ^2.0.21
-                                            </a>
-                                            - The primary programming language
-                                            for modern Android development.
+                                                target="_blank"
+                                                rel="noopener noreferrer">Kotlin 2.0.21</a>
+                                            — the primary programming language for modern Android development.
                                         </p>
-
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 mb-3">
-
                                 <div class="card h-100">
-
                                     <div class="card-body">
-
-                                        <h4 class="h5 font-weight-bold">
-                                            Jetpack Compose
-                                        </h4>
-
+                                        <h4 class="h5 font-weight-bold">Jetpack Compose</h4>
                                         <p>
                                             <a href="https://developer.android.com/develop/ui/compose/documentation"
-                                               target="_blank"
-                                               rel="noopener noreferrer">
-                                                Jetpack Compose
-                                            </a>
-                                            - The modern toolkit for building UI.
+                                                target="_blank"
+                                                rel="noopener noreferrer">Jetpack Compose</a>
+                                            — the modern toolkit for building UI.
                                         </p>
-
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 mb-3">
-
                                 <div class="card h-100">
-
                                     <div class="card-body">
-
-                                        <h4 class="h5 font-weight-bold">
-                                            Room Database
-                                        </h4>
-
+                                        <h4 class="h5 font-weight-bold">Room Database</h4>
                                         <p>
                                             <a href="https://developer.android.com/training/data-storage/room"
-                                               target="_blank"
-                                               rel="noopener noreferrer">
-                                                Room Database
-                                            </a>
-                                            - For local storage of book metadata
-                                            and reading progress.
+                                                target="_blank"
+                                                rel="noopener noreferrer">Room Database</a>
+                                            — for local storage of book metadata and reading progress.
                                         </p>
-
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 mb-3">
-
                                 <div class="card h-100">
-
                                     <div class="card-body">
-
-                                        <h4 class="h5 font-weight-bold">
-                                            Readium
-                                        </h4>
-
+                                        <h4 class="h5 font-weight-bold">Readium</h4>
                                         <p>
                                             <a href="https://readium.org/kotlin-toolkit/2.4.0/"
-                                               target="_blank"
-                                               rel="noopener noreferrer">
-                                                Readium
-                                            </a>
-                                            - The heavy-duty engine used for
-                                            ePUB parsing and rendering.
+                                                target="_blank"
+                                                rel="noopener noreferrer">Readium</a>
+                                            — the engine used for ePUB parsing and rendering.
                                         </p>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section class="mb-5"
-                             id="getting_started_android">
-
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
-                            Getting Started Locally:
-                        </h3>
-
+                    <!-- Android getting started -->
+                    <section class="mb-5" id="getting_started_android">
+                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">Getting Started Locally:</h3>
                         <p>
                             Follow these instructions to set up the
                             development environment and run the application
                             on an emulator or physical device.
                         </p>
-
                     </section>
 
-                    <section class="mb-5"
-                             id="Prerequisites_android">
-
-                        <h3 class="font-weight-bold pb-3 mb-4">
-                            Prerequisites:
-                        </h3>
-
-                        <p>
-                            You will need to ensure your development
-                            environment meets the following requirements:
-                        </p>
+                    <!-- Android prerequisites -->
+                    <section class="mb-5" id="Prerequisites_android">
+                        <h3 class="font-weight-bold pb-3 mb-4">Prerequisites:</h3>
+                        <p>You will need to ensure your development environment meets the following requirements:</p>
 
                         <div class="card mb-4">
-
                             <div class="card-body">
-
-                                <h4 class="h5 font-weight-bold">
-                                    Hardware Requirements
-                                </h4>
-
+                                <h4 class="h5 font-weight-bold">Hardware Requirements</h4>
                                 <ul class="mb-0">
-                                    <li>
-                                        RAM: 8GB or higher (16GB recommended
-                                        for Android Studio)
-                                    </li>
-
-                                    <li>
-                                        Storage: 10GB or more of free space
-                                        for SDKs and Build tools
-                                    </li>
+                                    <li>RAM: 8GB or higher (16GB recommended for Android Studio)</li>
+                                    <li>Storage: 10GB or more of free space for SDKs and build tools</li>
                                 </ul>
-
                             </div>
                         </div>
 
                         <div class="card mb-4">
-
                             <div class="card-body">
-
-                                <h4 class="h5 font-weight-bold">
-                                    Software Environment
-                                </h4>
-
+                                <h4 class="h5 font-weight-bold">Software Environment</h4>
                                 <ul class="mb-0">
-
-                                    <li>
-                                        Android Studio: Ladybug (2024.2.1)
-                                        or above
-                                    </li>
-
-                                    <li>
-                                        JDK: Java Development Kit (JDK) 17
-                                    </li>
-
-                                    <li>
-                                        Android SDK: API Level 34
-                                        (Target SDK)
-                                    </li>
-
+                                    <li>Android Studio: Ladybug (2024.2.1) or above</li>
+                                    <li>JDK: Java Development Kit (JDK) 17</li>
+                                    <li>Android SDK: API Level 34 (Target SDK)</li>
                                 </ul>
-
                             </div>
                         </div>
                     </section>
 
-                    <section class="mb-5"
-                             id="running_android_locally">
+                    <!-- Run Android app locally -->
+                    <section class="mb-5" id="running_android_locally">
+                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">Running project Locally:</h3>
 
-                        <h3 class="font-weight-bold border-bottom pb-3 mb-4">
-                            Running project Locally:
-                        </h3>
-
-                        <p>
-                            To build and run the app locally, follow these steps:
-                        </p>
+                        <p>To build and run the app locally, follow these steps:</p>
 
                         <ol>
                             <li class="mb-4">
                                 <p><strong>Clone the Repository</strong></p>
-                                <pre class="p-3 rounded border"><code>git clone https://github.com/cis-india/Wikisource-Reader.git</code></pre>
-                                <pre class="p-3 rounded border"><code>cd Wikisource-Reader</code></pre>
+
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>git clone https://github.com/cis-india/Wikisource-Reader.git</code></pre>
+                                </div>
+
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>cd Wikisource-Reader</code></pre>
+                                </div>
                             </li>
 
                             <li class="mb-4">
@@ -922,36 +722,31 @@
                                     Launch Android Studio, select
                                     <strong>File &gt; Open</strong>, and
                                     navigate to the cloned project directory.
-                                    Allow Gradle to sync and download
-                                    necessary dependencies.
+                                    Allow Gradle to sync and download necessary dependencies.
                                 </p>
                             </li>
 
                             <li class="mb-4">
                                 <p><strong>Run on Device or Emulator</strong></p>
+
                                 <p>
                                     Connect a physical device via USB
-                                    (with Debugging enabled) or start a
+                                    (with debugging enabled) or start a
                                     Virtual Device (AVD). Press
                                     <strong>Shift + F10</strong> or click
-                                    the green <strong>Run</strong> button
-                                    in the toolbar.
+                                    the green <strong>Run</strong> button in the toolbar.
                                 </p>
 
                                 <p>
-                                    You can also pair your devece via WIFI
+                                    You can also pair your device via Wi-Fi
                                     instead of using USB. Once you enable
-                                    developer mode on your android phone,
-                                    You will find both pair via usb or WIFI.
+                                    developer mode on your Android phone,
+                                    you will find options to pair via USB or Wi-Fi.
                                 </p>
                             </li>
 
                             <li class="mb-4">
-                                <p>
-                                    <strong>
-                                        Pointing to Local API (Optional)
-                                    </strong>
-                                </p>
+                                <p><strong>Pointing to Local API (Optional)</strong></p>
 
                                 <p>
                                     If you are running WSIndex locally and
@@ -960,19 +755,28 @@
                                     <code>api/BookApi</code> to your local IP:
                                 </p>
 
-                                <pre class="p-3 rounded border"><code>// If you are running on an emulator
-                                private val baseApiUrl = "http://10.0.2.2:8000/books"
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>// If you are running on an emulator
+private val baseApiUrl = "http://10.0.2.2:8000/books"
 
-                                // Use the IP address of your host machine (PC)
-                                // when running on a physical device.
-                                private val baseApiUrl = "http://192.168.100.2:8000/books"</code></pre>
+// Use the IP address of your host machine (PC)
+// when running on a physical device.
+private val baseApiUrl = "http://192.168.100.2:8000/books"</code></pre>
+                                </div>
                             </li>
                         </ol>
                     </section>
 
-                    <section class="mb-5"
-                             id="allow_http_traffic">
-
+                    <!-- Allow HTTP traffic -->
+                    <section class="mb-5" id="allow_http_traffic">
                         <h3 class="font-weight-bold Doc-title-bar pb-3 mb-4">
                             Allowing HTTP Traffic for Local Development:
                         </h3>
@@ -980,19 +784,13 @@
                         <p>
                             By default, Android prevents apps from connecting
                             to servers via unencrypted HTTP. To connect the
-                            app to your local instance of
-                            <strong>WSIndex</strong>, follow these steps to
-                            configure Network Security:
+                            app to your local instance of <strong>WSIndex</strong>,
+                            follow these steps to configure network security:
                         </p>
 
                         <ol>
                             <li class="mb-4">
-
-                                <p>
-                                    <strong>
-                                        Create the Network Security Directory
-                                    </strong>
-                                </p>
+                                <p><strong>Create the Network Security Directory</strong></p>
 
                                 <p>
                                     In your project explorer, navigate to
@@ -1009,50 +807,63 @@
 
                                 <p>
                                     Right-click on the <code>res/xml</code>
-                                    folder and select
-                                    <strong>New &gt; XML Resource File</strong>.
-                                    Name it
-                                    <code>network_security_config.xml</code>
+                                    folder and select <strong>New &gt; XML Resource File</strong>.
+                                    Name it <code>network_security_config.xml</code>
                                     and replace its contents with the following:
                                 </p>
 
-                                <pre class="p-3 rounded border"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-                                    &lt;network-security-config&gt;
-                                        &lt;domain-config cleartextTrafficPermitted="true"&gt;
-                                            &lt;domain includeSubdomains="true"&gt;192.168.100.2&lt;/domain&gt; // Host IP
-                                            &lt;domain includeSubdomains="true"&gt;10.0.2.2&lt;/domain&gt;
-                                            &lt;domain includeSubdomains="true"&gt;127.0.0.1&lt;/domain&gt;
-                                        &lt;/domain-config&gt;
-                                    &lt;/network-security-config&gt;</code>
-                                </pre>
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;network-security-config&gt;
+    &lt;domain-config cleartextTrafficPermitted="true"&gt;
+        &lt;!-- Host IP --&gt;
+        &lt;domain includeSubdomains="true"&gt;192.168.100.2&lt;/domain&gt;
+        &lt;domain includeSubdomains="true"&gt;10.0.2.2&lt;/domain&gt;
+        &lt;domain includeSubdomains="true"&gt;127.0.0.1&lt;/domain&gt;
+    &lt;/domain-config&gt;
+&lt;/network-security-config&gt;</code></pre>
+                                </div>
                             </li>
 
                             <li class="mb-4">
-                                <p>
-                                    <strong>
-                                        Link the Configuration in the Manifest
-                                    </strong>
-                                </p>
+                                <p><strong>Link the Configuration in the Manifest</strong></p>
 
                                 <p>
                                     Android requires you to register this
-                                    file in the application manifest to
-                                    apply the security exceptions.
-                                </p>
-                                <p>
-                                    Open
-                                    <code>app/src/main/AndroidManifest.xml</code>
-                                    and add the
-                                    <code>android:networkSecurityConfig</code>
-                                    attribute inside the
-                                    <code>&lt;application&gt;</code> tag:
+                                    file in the application manifest to apply
+                                    the security exceptions.
                                 </p>
 
-                                <pre class="p-3 rounded border"><code>
-                                    &lt;application android:name=".WikisourceApplication" android:networkSecurityConfig="@xml/network_security_config"
-                                    ... &gt; &lt;!-- Activities and Services --&gt;
-                                    &lt;/application&gt;</code>
-                                </pre>
+                                <p>
+                                    Open <code>app/src/main/AndroidManifest.xml</code>
+                                    and add the <code>android:networkSecurityConfig</code>
+                                    attribute inside the <code>&lt;application&gt;</code> tag:
+                                </p>
+
+                                <div class="code-container">
+                                  <button
+                                    type="button"
+                                    class="copy-code-btn"
+                                    aria-label="Copy code"
+                                    title="Copy code"
+                                >
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                                    <pre class="p-3 rounded border"><code>&lt;application
+    android:name=".WikisourceApplication"
+    android:networkSecurityConfig="@xml/network_security_config"
+    ...&gt;
+    &lt;!-- Activities and Services --&gt;
+&lt;/application&gt;</code></pre>
+                                </div>
                             </li>
                         </ol>
                     </section>
@@ -1060,6 +871,38 @@
             </main>
         </div>
     </div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="bg-light border-top py-4">
