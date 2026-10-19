@@ -66,3 +66,95 @@ function toggleClass() {
     ? saveColorMode("dark-mode")
     : saveColorMode("light-mode");
 }
+
+
+
+// Navbar search
+$(document).ready(function() {
+  var searchInput = $('#siteSearch');
+  var searchResults = $('#searchResults');
+  var searchForm = $('#navbarSearch');
+
+  function searchPage(query) {
+    searchResults.empty();
+
+    if (!query) {
+      searchResults.prop('hidden', true);
+      searchInput.attr('aria-expanded', 'false');
+      return;
+    }
+
+    var matches = [];
+
+    $('h1, h2, h3, p, li').each(function() {
+      var text = $(this).text().trim();
+
+      if (text.toLowerCase().includes(query.toLowerCase())) {
+        var section = $(this).closest('[id]');
+        var target = section.length ? section : $(this);
+        var id = target.attr('id');
+
+        if (!id) {
+          id = 'search-result-' + matches.length;
+          target.attr('id', id);
+        }
+
+        if (!matches.some(function(match) {
+          return match.id === id;
+        })) {
+          matches.push({
+            id: id,
+            text: text
+          });
+        }
+      }
+    });
+
+    if (matches.length === 0) {
+      searchResults
+        .append($('<div>').addClass('search-result-empty')
+        .text('No results found.'));
+    } else {
+      matches.slice(0, 8).forEach(function(match) {
+        var link = $('<a>')
+          .addClass('search-result-item')
+          .attr('href', '#' + match.id)
+          .attr('role', 'option')
+          .text(match.text);
+
+        searchResults.append(link);
+      });
+    }
+
+    searchResults.prop('hidden', false);
+    searchInput.attr('aria-expanded', 'true');
+  }
+
+  searchInput.on('input', function() {
+    searchPage($(this).val().trim());
+  });
+
+  searchForm.on('submit', function(event) {
+    event.preventDefault();
+
+    var firstResult = searchResults.find('a').first();
+
+    if (firstResult.length) {
+      window.location.hash = firstResult.attr('href').substring(1);
+      searchResults.prop('hidden', true);
+      searchInput.attr('aria-expanded', 'false');
+    }
+  });
+
+  searchResults.on('click', 'a', function() {
+    searchResults.prop('hidden', true);
+    searchInput.attr('aria-expanded', 'false');
+  });
+
+  $(document).on('click', function(event) {
+    if (!$(event.target).closest('#navbarSearch').length) {
+      searchResults.prop('hidden', true);
+      searchInput.attr('aria-expanded', 'false');
+    }
+  });
+});
