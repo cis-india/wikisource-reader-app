@@ -10,27 +10,94 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a href="./index.html" class="navbar-brand mb-0 h1">Wikisource Reader App</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Navigation bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+        <a href="./index.html" class="navbar-brand d-flex align-items-center py-2">
+            <span class="logo-mark d-flex align-items-center justify-content-center text-white rounded mr-2">
+                W
+            </span>
+            <span class="logo-text small text-uppercase">
+                Wikisource<br>
+                <strong class="text-primary">Reader</strong>
+            </span>
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#description">About</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#community">Community</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./index.html#usage">Usage</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./faq.html">FAQ</a></li>
-					<li class="nav-item"><a class="nav-link active" href="./privacy-policy.html">Privacy Policy</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="./documentation.html">Documentation</a></li>
-                    <li class="nav-item "><btn class="nav-link scroll toggle-theme"></btn>
-                </ul>
-            </div> <!-- .collapse -->
-        </div> <!-- .container -->
-    </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#description">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#community">Community</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#features">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="./index.html#usage">Usage</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./faq.html">FAQ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./privacy-policy.html">Privacy Policy</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./documentation.html">Documentation</a>
+                </li>
+            </ul>
+
+            <form class="search-form ml-lg-3 my-2 my-lg-0" id="navbarSearch" role="search">
+                <label class="sr-only" for="siteSearch">
+                    Search Wikisource Reader
+                </label>
+                <input
+                    class="form-control"
+                    id="siteSearch"
+                    type="search"
+                    placeholder="Search documentation..."
+                    autocomplete="off"
+                    aria-controls="searchResults"
+                    aria-expanded="false">
+
+                <div
+                    class="search-results"
+                    id="searchResults"
+                    role="listbox"
+                    aria-label="Search results"
+                    hidden>
+                </div>
+            </form>
+
+            <div class="d-flex justify-content-center align-items-center ml-lg-3 my-2 my-lg-0">
+                <button
+                    type="button"
+                    class="toggle-theme bg-transparent border-0"
+                    aria-label="Toggle theme"
+                    title="Toggle dark mode">
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
 
     <div class="container text-left my-3" id="privacy-policy">
         
